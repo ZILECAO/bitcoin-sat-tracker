@@ -51,6 +51,7 @@ def track_satpoint(satpoint):
     print(f"TRACKING SATPOINT: {satpoint}")
     print("="*80)
     while True:
+        # we break down the old satpoint into 3 parts
         (txid, vout, offset) = satpoint.split(":")
         vout = int(vout)
         offset = int(offset)
@@ -81,6 +82,8 @@ def track_satpoint(satpoint):
             prev_vout = input["vout"]
             if f"{prev_txid}:{prev_vout}" == output:
                 break
+
+            # look up the value of each input
             prev_tx = get_raw_transaction(prev_txid)
             offset += int(round(prev_tx["vout"][prev_vout]["value"] * 1e8))
 
@@ -125,6 +128,11 @@ def track_satpoint(satpoint):
         hop += 1
 
 def main():
+    # Sys.argv should have 3 arguments and looks something like this: 
+    # python3 track-forwards.py 5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451:0
+    # The sys.argv[1] is the txid:vout of the output we want to track backwards
+    # The sys.argv[2] is the offset amount we want to start tracking from
+
     if len(sys.argv) != 2:
         print("Usage: python3 track-forwards.py <txid:vout>")
         sys.exit(1)
@@ -135,7 +143,9 @@ def main():
     vout = int(vout)
     value = int(round(raw_tx["vout"][vout]["value"] * 1e8))
 
-    # Calculate the interval to have 25 queries
+    # Here, we scan the satoshis within the output in increments. 
+    # The idea here is that satoshis in the original output may have been divided up and sent to multiple addresses. We want to track all of them.
+    # The interval is dynamically calculated to always have 25 queries.
     interval = (value + 24) // 25  # Round up to ensure we cover all sats
 
     print("\n" + "="*80)
