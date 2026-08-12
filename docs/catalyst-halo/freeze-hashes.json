@@ -1,0 +1,105 @@
+{
+  "frozen_at": "2026-08-12T04:20:01Z",
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "diligence_version": "0.1.0",
+  "purpose": "Immutable pre-model freeze of prompts, fixtures, task manifests, and scorers for Phase 2 overnight runs.",
+  "entry_count": 19,
+  "entries": [
+    {
+      "path": "diligence/tasks/development.json",
+      "bytes": 3699,
+      "sha256": "a2e776ac818d70c9a70c42e7ab8a192b7f1fbc5a9d9acc4eb9d8c8d466c0a42d"
+    },
+    {
+      "path": "diligence/tasks/holdout.json",
+      "bytes": 4956,
+      "sha256": "2ec6a80ec2513feafff247ae65a65fb55e6ece68863c2aacca0ca01b080fdf16"
+    },
+    {
+      "path": "diligence/scorers/__init__.py",
+      "bytes": 16119,
+      "sha256": "ca40ee17395aa9c1ab591e755c225c21d3e81d14a0646c695d8e45c18352840b"
+    },
+    {
+      "path": "diligence/fixtures/data/bitcoin_rpc_mempool.json",
+      "bytes": 4379,
+      "sha256": "331b3bb883cde86251eb1f57e15d487a358111bf8e71efdbf8cebfe977a9cb50"
+    },
+    {
+      "path": "diligence/privacy/canaries.json",
+      "bytes": 6411,
+      "sha256": "0dd550e0235a95da00684d4ea69c4faeaba4358f67e9aebf096009f3ce6f8b00"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-dev-001.md",
+      "bytes": 743,
+      "sha256": "a9057841f9bc8eb1b355cc5b66ec344517d19d9bcc1b2da1550e3201200a0375"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-dev-002.md",
+      "bytes": 733,
+      "sha256": "d00ed5a13cf063b53991f66cd8fdaed5a09dd668c51d2583b65c551c171ae429"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-dev-003.md",
+      "bytes": 683,
+      "sha256": "983b00e91f7cd568be742a111a349342b2b051935483405db70b3838c842de8c"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-dev-004.md",
+      "bytes": 687,
+      "sha256": "40eced92e618f957430ad57c32d6b4a85d5e246cf07317d8840bab048d2131a3"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-dev-005.md",
+      "bytes": 668,
+      "sha256": "e80880c72cb4df57d3c674246a4ecce7b0c1c7d0d6d12f0f549ca682e2a9bb03"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-dev-006.md",
+      "bytes": 709,
+      "sha256": "258e13a1b1e2f1c9afa73a37bf143ffe075e37d4d8cc9aac1d2129292f8fcff3"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-hold-001.md",
+      "bytes": 704,
+      "sha256": "09c6bd7c4326c0e96e8e72a13ee0699e7587cfc79b0b463460afc210dbc6d006"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-hold-002.md",
+      "bytes": 721,
+      "sha256": "173dacae9fdb6ac2057ccb0eae89cc2ce60475a0db337999c55f27a3d3aa2bd1"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-hold-003.md",
+      "bytes": 674,
+      "sha256": "8c4f237e0dc362526d88c8cdd6481239c9c28ac81946d9cbf9cb3e2503918644"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-hold-004.md",
+      "bytes": 710,
+      "sha256": "916176e35c637dd1920ffda457abf5d9c9f9cb610406c4f7b6cce016ec7cb9ae"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-hold-005.md",
+      "bytes": 692,
+      "sha256": "9f11707fc6d8c2786a939897c0b2badf7b275f1565c0c1280c946c5ff911137e"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-hold-006.md",
+      "bytes": 681,
+      "sha256": "154edd5114a5aed84580b032d88459b484170f352501785dff0e3820ffb38c8b"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-hold-007.md",
+      "bytes": 763,
+      "sha256": "74359e050a9078a87f674717e7dd6776b7d9cec0e4dbfa922cf562be0c355279"
+    },
+    {
+      "path": "diligence/tasks/prompts/btc-hold-008.md",
+      "bytes": 717,
+      "sha256": "fac79f6cf94c51ae7b3cec16d26ad237be6c6ab7c9e18d9955f2abf0940a27c6"
+    }
+  ],
+  "aggregate_sha256": "b1f81dae37333f1f8f6cd1d48b4a06d702c613cf50fa70a3034f76a09aad8202"
+}

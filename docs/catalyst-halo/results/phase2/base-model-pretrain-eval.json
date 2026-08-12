@@ -1,0 +1,26 @@
+{
+  "note": "Unchanged serverless model smoke on development eval tasks before any training submission",
+  "held_out_included": false,
+  "results": [
+    {
+      "model": "deepseek-v4-flash",
+      "task_id": "btc-dev-005",
+      "http_code": 200,
+      "latency_s": 3.008058,
+      "prompt_tokens": 47,
+      "completion_tokens": 128,
+      "output_excerpt": "Here's a short generic harness plan for making Bitcoin RPC and mempool HTTP dependencies injectable:\n\n## Harness Plan\n\n### 1. Define Interface Abstractions\n\n```python\n# Core interfaces\nclass BitcoinRPCInterface(ABC):\n    @abstractmethod\n    def get_blockchain_info(self) -> dict: ...\n    @abstractmet",
+      "ok": true
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "task_id": "btc-dev-006",
+      "http_code": 200,
+      "latency_s": 2.679268,
+      "prompt_tokens": 62,
+      "completion_tokens": 128,
+      "output_excerpt": "# Unit Test Harness Plan for `block_reward`\n\n## Overview\nAdd deterministic unit tests for the `block_reward` function covering three key scenarios: pre-halving, halving boundary, and post-halving heights.\n\n## Test Harness Structure\n\n```python\nimport pytest\nfrom your_module import block_reward  # Adj",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "status": "ready_to_submit_blocked_by_nonzero_or_unknown_price",
+  "submission": "not_started",
+  "stop_rule": "Submit only when platform explicitly shows total price USD $0",
+  "displayed_price_usd": null,
+  "price_evidence": "inf training create --dry-run returns payload only; no total price field. Recipe specifies gpuType=H100 gpusPerNode=8 numNodes=1 \u2014 not an explicit $0 offer.",
+  "base_model": {
+    "id": "qwen3.5-0.8b",
+    "canonical_alias": "qwen3.5-0.8b",
+    "name": "Qwen 3.5 0.8B",
+    "revision_note": "Platform catalog id; exact weight revision/hash not exposed by CLI list"
+  },
+  "recipe": {
+    "id": "inf-public-training-recipe:qwen-3.5-0.8b-fft",
+    "title": "Tiny (Qwen 3.5 0.8B)",
+    "gpuType": "H100",
+    "gpusPerNode": 8,
+    "numNodes": 1,
+    "judgeModelId": "gemini-3-flash-preview",
+    "trainingConfig": {
+      "adapter": null,
+      "micro_batch_size": 1,
+      "gradient_accumulation_steps": 1,
+      "learning_rate": 0.0002,
+      "lr_scheduler": "cosine",
+      "warmup_ratio": 0.1,
+      "bf16": true,
+      "flash_attention": true,
+      "fsdp_version": 2,
+      "fsdp_config": {
+        "use_orig_params": true,
+        "auto_wrap_policy": "TRANSFORMER_BASED_WRAP",
+        "transformer_layer_cls_to_wrap": "Qwen3_5DecoderLayer"
+      },
+      "logging_steps": 1,
+      "judge_temperature": 0.1,
+      "judge_max_tokens": 1500,
+      "trust_remote_code": true,
+      "sample_packing": true,
+      "evals_per_epoch": 2,
+      "eval_at_end": true
+    }
+  },
+  "datasets": {
+    "training_dataset_id": "5b27b3ac-eba8-47ec-bef9-13d491fe208b",
+    "eval_dataset_id": "fcef9681-7c9c-4519-81c6-2dc0a1fa9458",
+    "rubric_id": "84869062-18a3-479f-8300-6b05ea706f1b",
+    "holdout_excluded_from_training_and_eval_datasets": true,
+    "local_split_hashes": {
+      "train": "8b59b6180dd1a092aa3020cf78696d8f8bcb0b8d956b205fccf519a3cdd65cb2",
+      "validation": "157898a1fd5dcd68ad0056de7d599074321cd308cf5287c41455febab5e8fb6c",
+      "holdout": "3ba17a021862e69878e3f8f6282cff786d28aa7fcdad9d8b30dcf30de29134e8"
+    },
+    "overlap_check": "passed"
+  },
+  "dry_run_payload": {
+    "projectId": "b69a2722-d305-47e9-9931-b28b6dfcbd6d",
+    "name": "btc-diligence-small-ft-dryrun2",
+    "trainingDatasetId": "5b27b3ac-eba8-47ec-bef9-13d491fe208b",
+    "evalDatasetId": "fcef9681-7c9c-4519-81c6-2dc0a1fa9458",
+    "rubricId": "84869062-18a3-479f-8300-6b05ea706f1b",
+    "rubricVersionId": "b78e4118-bcbe-4fae-a744-e4e7b18d84a6",
+    "recipeId": "inf-public-training-recipe:qwen-3.5-0.8b-fft"
+  },
+  "seed": null,
+  "expected_artifacts": [
+    "training job record",
+    "checkpoints",
+    "final model artifact.tar.zst (if completed)"
+  ],
+  "deployment": "forbidden_by_work_order"
+}

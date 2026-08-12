@@ -1,0 +1,20 @@
+{
+  "span_count": 58,
+  "trace_count": 11,
+  "trace_ids": [
+    "1c305549d38c787f9f12c87b61a2fb19",
+    "337b5a7dbc9f613dbdc0ca778c324454",
+    "3f54a11b0cd0768c1c1aab4ca539d3e7",
+    "5cdad521dc8c157fa2ec1d637b042a45",
+    "6b1af0f981ef44d40478dd495b903dd0",
+    "798b053b04602517f40c679a218fc18e",
+    "a67d1d7951ed0977f2c4ae8d61988a78",
+    "b126aef9af44eb15a2b02eb4529c246b",
+    "b155ff547036a226f5da9345225320d8",
+    "e4e8eaee470e479bfab1dce3f5ab2104",
+    "f60e68d4dc37a075cb0715546afdc016"
+  ],
+  "sha256": "f6ad508f9856c70f4180e2893bd87a953112a746d84adf5ba7910b66d7c64adc",
+  "held_out_included": false,
+  "source": "baseline-dev catalyst export"
+}

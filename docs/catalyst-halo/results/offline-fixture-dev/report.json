@@ -1,0 +1,68 @@
+{
+  "arm": "offline-fixture",
+  "split": "dev",
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "run_id": "20260812T042002Z-824f9295",
+  "task_success": {
+    "status": "observed",
+    "value": {
+      "passed": 0,
+      "total": 6,
+      "rate": 0.0,
+      "passed_task_ids": [],
+      "failed_task_ids": [
+        "btc-dev-001",
+        "btc-dev-002",
+        "btc-dev-003",
+        "btc-dev-004",
+        "btc-dev-005",
+        "btc-dev-006"
+      ]
+    }
+  },
+  "duration_ms": {
+    "status": "observed",
+    "value": {
+      "count": 6,
+      "sum": 19,
+      "mean": 3.1666666666666665
+    }
+  },
+  "input_tokens": {
+    "status": "unavailable",
+    "value": null
+  },
+  "output_tokens": {
+    "status": "unavailable",
+    "value": null
+  },
+  "cost_usd": {
+    "status": "unavailable",
+    "value": null
+  },
+  "retries": {
+    "status": "unavailable",
+    "value": null
+  },
+  "tool_errors": {
+    "status": "unavailable",
+    "value": null
+  },
+  "trace_completeness": {
+    "status": "unavailable",
+    "value": null
+  },
+  "privacy_checks": {
+    "status": "observed",
+    "value": {
+      "all_passed": true,
+      "record_count": 6
+    }
+  },
+  "notes": [
+    "Report consumes verified scrubbed records only.",
+    "Raw prompts, outputs, tool results, trace bodies, and provider responses are excluded.",
+    "Metrics with status 'unavailable' were not collected; zeros are not invented."
+  ],
+  "evidence_class": "observed"
+}

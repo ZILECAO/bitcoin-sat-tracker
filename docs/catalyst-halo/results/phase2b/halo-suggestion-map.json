@@ -1,0 +1,19 @@
+{
+  "status": "fail_closed_incomplete_final_answer",
+  "halo_exit": 0,
+  "attempts": [
+    {
+      "model": "gemini-2.5-flash-lite",
+      "result": "TypeError in openai_event_mapper (NoneType text part)"
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "result": "exit 0 but final_answer JSON invalid/truncated twice"
+    }
+  ],
+  "raw_stdout_sha256": "67b7e9d413bc9754e268de84fecf69bc7f8c9e34981fc906031a46811bb1dd40",
+  "raw_stdout_bytes": 427844,
+  "accepted_changes": [],
+  "suggestions_observed_not_applied": [],
+  "note": "Per Phase 2B work order: do not reconstruct recommendations from a fragment. Arms frozen without HALO diffs."
+}

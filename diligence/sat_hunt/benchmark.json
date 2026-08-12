@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "benchmark_version": "sat-hunt-v2",
+  "name": "earliest-active-sat-hunt",
+  "purpose": "Measure whether an instrumented coding agent can learn a Bitcoin and ordinal research workflow, write reliable scripts, and prove a minimum result.",
+  "definitions": {
+    "earliest": "The lowest ordinal sat number, not the oldest inscription number or earliest timestamp.",
+    "snapshot": {
+      "selection": "Freeze the Bitcoin mainnet block at tip minus six confirmations before any final-exam arm starts.",
+      "same_for_all_arms": true
+    },
+    "circulating": {
+      "utxo_exists_at_snapshot": true,
+      "exclude_genesis_coinbase": true,
+      "exclude_provably_unspendable_outputs": true,
+      "include_mempool": false
+    },
+    "activity_proxy": {
+      "lookback_blocks": 4320,
+      "minimum_confirmed_non_coinbase_transfers": 3,
+      "current_output_must_be_created_in_window": true,
+      "claim_limit": "Recent movement is an observable proxy. It does not prove that an output belongs to a hot wallet."
+    },
+    "public_satoshi_attribution_filter": {
+      "policy_id": "public-satoshi-attribution-v1",
+      "source_manifest": "diligence/sat_hunt/attribution-sources.json",
+      "rule": "At the frozen snapshot, exclude a candidate when its current output exactly matches a normalized identifier in the frozen public Satoshi-attribution set.",
+      "match_targets": [
+        "current outpoint",
+        "current scriptPubKey hex",
+        "current output address when the script has a standard address",
+        "current output public key when the script reveals one"
+      ],
+      "origin_rule": "Do not exclude a sat only because its coinbase origin is in the Patoshi block set. If it later moved and its current output has no exact match in the frozen attribution set, it may qualify.",
+      "accepted_claim": "No exact match in the frozen public Satoshi-attribution set.",
+      "claim_limit": "This is a sourced public heuristic, not cryptographic proof that Satoshi does or does not control the current output."
+    },
+    "wallet_attribution": {
+      "rule": "Use the frozen public attribution filter for the benchmark, while treating real-world ownership as uncertain.",
+      "practical_interpretation": "The candidate must pass both the recent-activity rule and the public-attribution exclusion rule.",
+      "prohibited_claim": "Do not say that an address is definitely owned or not owned by Satoshi. Report exact source matches, source versions, and uncertainty."
+    },
+    "inscribed": "At least one inscription is attached to the sat by the frozen snapshot according to an ord sat index.",
+    "mainnet_proof": "A global minimum requires a Bitcoin Core mainnet node with transaction data plus an ord index created with --index-sats, or an independently verified equivalent. A public explorer candidate without complete minimum coverage is not proof."
+  },
+  "tracks": {
+    "deterministic_fixture": {
+      "required": true,
+      "network": "disabled inside task workspace",
+      "truth": "hidden oracle",
+      "purpose": "Fast exact development and held-out scoring"
+    },
+    "mainnet_replay": {
+      "required": true,
+      "network": "fixture created from pinned public Bitcoin and ord responses",
+      "truth": "independently replayed evidence",
+      "purpose": "Real transaction shapes without a live-chain race"
+    },
+    "live_mainnet": {
+      "required": false,
+      "network": "approved Bitcoin Core and ord endpoints only",
+      "truth": "requires complete minimum certificate",
+      "purpose": "Research-grade answer to the live question",
+      "blocked_without_full_index": true
+    }
+  },
+  "arms": [
+    "baseline-harness",
+    "halo-harness-only",
+    "halo-repo-toolkit-only",
+    "halo-combined"
+  ],
+  "primary_ranking": [
+    "all correctness and proof gates pass",
+    "lower total model cost",
+    "lower wall-clock duration",
+    "fewer tool calls"
+  ],
+  "minimum_repetitions": 3,
+  "incremental_cost_cap_usd": 5.0,
+  "training": "out_of_scope"
+}

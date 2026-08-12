@@ -1,0 +1,56 @@
+{
+  "trace_id": "8af7ffa20f5d60e073b01d6c827014e4",
+  "marker": "diligence-otlp-probe-eb05beec9bf3",
+  "service_name": "bitcoin-sat-tracker-diligence",
+  "sdk": "catalyst-tracing==0.1.8",
+  "received": true,
+  "dashboard_filter": "inf --project <project> traces list --service bitcoin-sat-tracker-diligence --range 1d",
+  "fields_confirmed_present": [
+    "traceId",
+    "serviceName",
+    "serviceVersion",
+    "agentName",
+    "agentId",
+    "rootSpanName",
+    "rootObservationKind",
+    "spanCount",
+    "llmSpanCount",
+    "totalTokens",
+    "startTime",
+    "endTime",
+    "durationNs",
+    "inputPreview",
+    "outputPreview",
+    "parentSpanId nesting",
+    "observationKind AGENT/LLM/TOOL"
+  ],
+  "parent_child": [
+    {
+      "span": "synthetic.otlp.probe.root",
+      "spanId": "30fc5fd4c08c2b81",
+      "parentSpanId": "",
+      "observationKind": "AGENT"
+    },
+    {
+      "span": "chat.completions.create",
+      "spanId": "faeecd731c2a546c",
+      "parentSpanId": "30fc5fd4c08c2b81",
+      "observationKind": "LLM"
+    },
+    {
+      "span": "fake_canary_tool_91ab22",
+      "spanId": "3b1bbcab01ab0fcf",
+      "parentSpanId": "30fc5fd4c08c2b81",
+      "observationKind": "TOOL"
+    }
+  ],
+  "unexpected_or_notable": [
+    "source=file for SDK OTLP export",
+    "apiKeyId present on span records (id, not secret value) \u2014 scrubbed from committed summary",
+    "outputPreview aggregation prefers tool/output leaf over agent output"
+  ],
+  "span_count": 3,
+  "llm_span_count": 1,
+  "total_tokens": 40,
+  "output_preview_note": "Catalyst list/summary outputPreview showed nested TOOL output rather than root AGENT output.value"
+}

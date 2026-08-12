@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "benchmark_version": "sat-hunt-v2",
+  "policy_id": "public-satoshi-attribution-v1",
+  "frozen_on": "2026-08-12",
+  "normalization": {
+    "comparison": "exact match only",
+    "candidate_fields": [
+      "current outpoint",
+      "current scriptPubKey hex",
+      "current standard address",
+      "current revealed public key"
+    ],
+    "derived_identifiers": "Derive a mainnet P2PKH address from a listed public key only as an additional identifier for that same key; retain the original record and derivation rule.",
+    "no_graph_clustering": true,
+    "no_origin_only_exclusion": true
+  },
+  "sources": [
+    {
+      "id": "patoshi-addresses-2025-07-15",
+      "role": "required machine-readable membership source",
+      "repository": "https://github.com/bensig/patoshi-addresses",
+      "commit": "414637ce52aa4819926bf1934b2235ed182a0280",
+      "path": "patoshi_pubkeys_COMPLETE.csv",
+      "sha256": "f649579e286085325a881bec1168e88bbb6f5d67e10b7ef8cb5c65e916a34a2e",
+      "records": 21953,
+      "coverage": "Patoshi-attributed coinbase outputs for blocks 3 through 49,973; the file contains P2PK public keys, not a complete list of every later output the same person may control.",
+      "attribution_label": "suspected Satoshi-mined Patoshi set",
+      "license_status": "No repository license was declared when frozen. Download to the private raw-data directory for diligence, record its hash, and do not republish the CSV in this repository unless reuse rights are clarified."
+    },
+    {
+      "id": "lerner-patoshi-method-2019",
+      "role": "required attribution-method context",
+      "url": "https://bitslog.com/2019/04/16/the-return-of-the-deniers-and-the-revenge-of-patoshi/",
+      "coverage": "Explains the ExtraNonce and nonce evidence for a single early miner and explicitly describes the Satoshi link as evidence rather than mathematical proof.",
+      "machine_readable_membership": false
+    },
+    {
+      "id": "arkham-satoshi-entity-2025-02-04",
+      "role": "required independent count and entity cross-check; optional membership supplement only if a reproducible export is available",
+      "url": "https://info.arkm.com/announcements/update-100-billion-in-satoshi-nakamotos-holdings-now-on-arkham",
+      "entity_url": "https://arkm.com/explorer/entity/satoshi-nakamoto",
+      "published": "2025-02-04",
+      "reported_scope": "approximately 22,000 Patoshi-pattern addresses with a reported balance of 1,096,354 BTC",
+      "membership_rule": "Do not scrape labels into the frozen membership set unless the exact response, retrieval time, terms, and SHA-256 are recorded. A count-only cross-check must not be presented as address-level coverage.",
+      "machine_readable_membership": false
+    }
+  ],
+  "required_answer_language": "No exact match in the frozen public Satoshi-attribution set; this does not prove who controls the output."
+}

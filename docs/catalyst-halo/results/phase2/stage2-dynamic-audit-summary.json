@@ -1,0 +1,21 @@
+{
+  "stage": 2,
+  "packages_verified": true,
+  "package_hash_verify": "package-hash-verify.json",
+  "python_imports_no_key": "ok for catalyst_tracing and inference_catalyst_tracing; halo package exposes CLI `halo`",
+  "inf_cli_version": "0.0.180",
+  "inf_auth_login": "browser device authorization required; recorded limitation",
+  "inf_auth_status": "API key method accepted via ~/.inf/config.json written from env (not argv); CLI prints truncated apiKey in status output (scrubbed)",
+  "inf_models_list": "failed: connection reset to observability-api.inference.net",
+  "inf_instrument": "interactive prompt required session login; --print-prompt hung/blocked without browser session; disposable workspace unchanged (empty diff)",
+  "network_destinations_observed": [
+    "registry.npmjs.org (download)",
+    "pypi.org / files.pythonhosted.org (download)",
+    "observability-api.inference.net (auth/models; reset)",
+    "api.inference.net (models/halo; reset)",
+    "telemetry.inference.net (otlp; reset)",
+    "cdn.jsdelivr.net (halo pyodide; reset)"
+  ],
+  "stop_condition": "Hosted Inference.net calls blocked by VM egress allowlist missing inference.net domains",
+  "cost_usd_estimated": 0.0
+}

@@ -1,0 +1,20 @@
+# Diligence local state and raw outputs must never be committed.
+.diligence-state/
+.env
+.env.*
+!.env.example
+
+# Vendor archives from static supply-chain inspection (kept outside git).
+vendor-archives/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store

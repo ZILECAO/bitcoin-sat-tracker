@@ -1,0 +1,113 @@
+{
+  "model": "deepseek-v4-flash",
+  "pricing_assumed_usd_per_m": {
+    "input": 0.14,
+    "output": 0.28
+  },
+  "spent_usd_estimated_suite": 0.00027734,
+  "results": [
+    {
+      "task_id": "btc-dev-001",
+      "arm": "gateway-base",
+      "model": "deepseek-v4-flash",
+      "stream": false,
+      "http_code": 200,
+      "latency_s": 1.52002,
+      "ttfb_s": 1.519952,
+      "prompt_tokens": 160,
+      "completion_tokens": 69,
+      "cost_usd_est": 4.172e-05,
+      "inference_id": "42d1532caf9348b882e506f569048650",
+      "output_excerpt": "(1) Replace hardcoded RPC credentials with environment variable loading using `os.getenv` for URL, username, and password, with fallback defaults for local testing.  \n(2) `block_reward`  \n(3) `{\"height\": 210000, \"reward_sats\": 2500000000}`",
+      "ok": true
+    },
+    {
+      "task_id": "btc-dev-002",
+      "arm": "gateway-base",
+      "model": "deepseek-v4-flash",
+      "stream": false,
+      "http_code": 200,
+      "latency_s": 1.63096,
+      "ttfb_s": 1.630871,
+      "prompt_tokens": 158,
+      "completion_tokens": 75,
+      "cost_usd_est": 4.312e-05,
+      "inference_id": "67220a17abf44f7c8ed26b98bbe947d0",
+      "output_excerpt": "(1) Check if Bitcoin RPC configuration (host, port, user, pass) is set in environment variables; if any are missing, fail with error \"Missing required Bitcoin RPC configuration\".  \n(2) block_reward  \n(3) Expected result shape: `{\"height\": 210000, \"reward_sats\": 2500000000}`",
+      "ok": true
+    },
+    {
+      "task_id": "btc-dev-003",
+      "arm": "gateway-base",
+      "model": "deepseek-v4-flash",
+      "stream": false,
+      "http_code": 200,
+      "latency_s": 1.36838,
+      "ttfb_s": 1.368309,
+      "prompt_tokens": 153,
+      "completion_tokens": 67,
+      "cost_usd_est": 4.018e-05,
+      "inference_id": "10a388fbc31546cbae7a3dbdf4cdac9f",
+      "output_excerpt": "(1) Add `timeout=10` to all `requests.get/post` calls and check `response.raise_for_status()` before parsing JSON in both scripts.  \n(2) `block_reward`  \n(3) `{\"height\": 210000, \"reward_sats\": 2500000000}`",
+      "ok": true
+    },
+    {
+      "task_id": "btc-dev-004",
+      "arm": "gateway-base",
+      "model": "deepseek-v4-flash",
+      "stream": false,
+      "http_code": 200,
+      "latency_s": 7.634114,
+      "ttfb_s": 7.634038,
+      "prompt_tokens": 159,
+      "completion_tokens": 93,
+      "cost_usd_est": 4.83e-05,
+      "inference_id": "90a6a0b8667f4fdfa9492140fb26ab34",
+      "output_excerpt": "(1) Wrap each RPC and HTTP call in try/except blocks, validate response status and JSON structure before accessing keys, and return a standardized error dict on failure.  \n(2) `block_reward`  \n(3) `{\"ok\": true, \"height\": 210000, \"reward_sats\": 2500000000}` or `{\"ok\": false, \"error\": \"HTTP 500: Internal Server Error\"}`",
+      "ok": true
+    },
+    {
+      "task_id": "btc-dev-005",
+      "arm": "gateway-base",
+      "model": "deepseek-v4-flash",
+      "stream": false,
+      "http_code": 200,
+      "latency_s": 5.377474,
+      "ttfb_s": 5.377389,
+      "prompt_tokens": 149,
+      "completion_tokens": 71,
+      "cost_usd_est": 4.074e-05,
+      "inference_id": "fa9cb99384bd480fa5fcba1396eb5d64",
+      "output_excerpt": "(1) Define an interface for Bitcoin RPC and mempool HTTP calls, then implement a fake that returns the deterministic block reward of 2500000000 sats at height 210000.  \n(2) block_reward  \n(3) `{\"height\": 210000, \"reward_sats\": 2500000000}`",
+      "ok": true
+    },
+    {
+      "task_id": "btc-dev-006",
+      "arm": "gateway-base",
+      "model": "deepseek-v4-flash",
+      "stream": false,
+      "http_code": 200,
+      "latency_s": 1.8785,
+      "ttfb_s": 1.87843,
+      "prompt_tokens": 164,
+      "completion_tokens": 144,
+      "cost_usd_est": 6.328e-05,
+      "inference_id": "d57446c4f8724a5493feb78090e31580",
+      "output_excerpt": "(1) I will add deterministic unit tests for `block_reward` that verify the reward at heights 1 (pre-halving), 210000 (halving boundary), and 210001 (post-halving) using the synthetic fixture data.  \n(2) `block_reward`  \n(3) Expected result shape: a dictionary with key `\"reward_sats\"` mapping to an integer, e.g., `{\"reward_sats\": 5000000000}` for height 1, `{\"reward_sats\": 2500000000}` for height 210000, and `{\"reward_sats\": 2500000000}` for height 210001.",
+      "ok": true
+    }
+  ],
+  "stream_probe": {
+    "task_id": "btc-dev-001",
+    "stream": true,
+    "http_code": 200,
+    "latency_s": 0.951351,
+    "ttfb_s": 0.509345,
+    "looks_like_sse": true,
+    "excerpt": "data: {\"id\":\"18a7d9c8a56d4dca8f30821e36bc332a\",\"object\":\"chat.completion.chunk\",\"created\":1786563584,\"model\":\"DeepSeek-V4-Flash\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\"}}]}\n\ndata: {\"id\":\"18a7d9c8a56d4dca8f30821e36bc332a\",\"object\":\"chat.completion.chunk\",\"created\":1786563584,\"model\":\"DeepSeek-V4-Flash\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"sat\"}}]}\n\ndata: {\"id\":\"18a7d9c8a56d4dca8f30821e36bc332a\",\"object\":\"chat.completion.chunk\",\"created\":1786563584,\"model\":\"DeepSeek-V4-Flash\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" tracker ok\"}}]}\n\ndata: {\"id\":\"18a7d9c8a56d4dca8f30821e36bc332a\",\"object\":\"chat.completion.chunk\",\"created\":1786563584,\"model\":\"DeepSeek-V4-Flash\",\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"stop\"}]}\n\ndata: {\"id\":\"18a7d9c8a56d4dca8f30821e36bc332",
+    "ok": true
+  },
+  "provider_proxy_path": "not_tested_no_third_party_provider_key",
+  "serverless_gateway_path": "tested_via_api.inference.net_project_key",
+  "held_out_included": false
+}

@@ -1,0 +1,14 @@
+{
+  "status": "completed_reduced_demo",
+  "model": "deepseek-v4-flash",
+  "development_traces_only": true,
+  "held_out_excluded": true,
+  "final_answer": "truncated_json_due_to_max_output_tokens",
+  "suggestions_extracted": 3,
+  "applied": [
+    "halo-s1",
+    "halo-s2"
+  ],
+  "holdout_compare": "0/8 to 0/8",
+  "evaluation_label": "reduced_demonstration_workflow_only_not_efficacy_evidence"
+}

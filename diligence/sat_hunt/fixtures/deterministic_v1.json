@@ -1,0 +1,748 @@
+{
+  "benchmark_version": "sat-hunt-v2",
+  "fixture_id": "sat-hunt-deterministic-v1",
+  "snapshot": {
+    "height": 10000,
+    "block_hash": "06f6fd0959f5e9052fce897166e17367f3d7a87bbc1fade4daac42352f34df7b",
+    "confirmations": 6
+  },
+  "activity_window": {
+    "lookback_blocks": 4320,
+    "window_start_height": 5680,
+    "minimum_confirmed_non_coinbase_transfers": 3
+  },
+  "transactions": {
+    "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a": {
+      "txid": "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a",
+      "height": 100,
+      "coinbase": true,
+      "vin": [],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "op_return",
+          "script_pubkey": "6a0100",
+          "ranges": [
+            [
+              600,
+              700
+            ]
+          ],
+          "provably_unspendable": true
+        },
+        {
+          "value": 50,
+          "script_type": "p2wpkh",
+          "script_pubkey": "0014aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "ranges": [
+            [
+              50,
+              100
+            ]
+          ],
+          "address": "bcrt1qinactive0000000000000000000000000"
+        }
+      ],
+      "block_hash": "041d40606cfc9a4f58f6a54e4eb7d6eafb02462f8d8d6902aa77ebcdfe2ef8d8"
+    },
+    "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424": {
+      "txid": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424",
+      "height": 200,
+      "coinbase": true,
+      "vin": [],
+      "vout": [
+        {
+          "value": 200,
+          "script_type": "p2wpkh",
+          "script_pubkey": "0014bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "ranges": [
+            [
+              100,
+              200
+            ]
+          ],
+          "address": "bcrt1qactivebase000000000000000000000"
+        },
+        {
+          "value": 100,
+          "script_type": "p2wpkh",
+          "script_pubkey": "0014cccccccccccccccccccccccccccccccccccccccc",
+          "ranges": [
+            [
+              250,
+              350
+            ]
+          ],
+          "address": "bcrt1qinscribebase0000000000000000000"
+        },
+        {
+          "value": 50,
+          "script_type": "p2pk",
+          "script_pubkey": "410494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aaac",
+          "ranges": [
+            [
+              400,
+              450
+            ]
+          ],
+          "address": "1FvzCLoTPGANNjWoUo6jUGuAG3wg1w4YjR",
+          "public_key": "0494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aa"
+        },
+        {
+          "value": 50,
+          "script_type": "p2pk",
+          "script_pubkey": "410494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aaac",
+          "ranges": [
+            [
+              500,
+              550
+            ]
+          ],
+          "address": "1FvzCLoTPGANNjWoUo6jUGuAG3wg1w4YjR",
+          "public_key": "0494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aa"
+        },
+        {
+          "value": 20,
+          "script_type": "p2wpkh",
+          "script_pubkey": "0014dddddddddddddddddddddddddddddddddddddddd",
+          "ranges": [
+            [
+              10,
+              30
+            ]
+          ],
+          "address": "bcrt1qmisleadinginactive000000000000"
+        },
+        {
+          "value": 20,
+          "script_type": "p2pk",
+          "script_pubkey": "410494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aaac",
+          "ranges": [
+            [
+              20,
+              40
+            ]
+          ],
+          "address": "1FvzCLoTPGANNjWoUo6jUGuAG3wg1w4YjR",
+          "public_key": "0494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aa"
+        }
+      ],
+      "block_hash": "f0a280832008efb4669c804cb6157a3450b9a915f039c7ace2240427b1d331e4"
+    },
+    "d9e6269a6935916b6d1754e16561ac29a258743cf5efbaf23e62190f9dcf407c": {
+      "txid": "d9e6269a6935916b6d1754e16561ac29a258743cf5efbaf23e62190f9dcf407c",
+      "height": 5690,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "p2wpkh",
+          "script_pubkey": "00140101010101010101010101010101010101010101",
+          "ranges": [
+            [
+              100,
+              200
+            ]
+          ],
+          "address": "bcrt1qactive0"
+        }
+      ],
+      "block_hash": "9c854532da725c1c591d65e4102c9772f209570e9195d574917e44fe862957fa"
+    },
+    "26b5b1246f3589290abd6be11d18ace44647a763bb9da0a0f0b903f45c5e6192": {
+      "txid": "26b5b1246f3589290abd6be11d18ace44647a763bb9da0a0f0b903f45c5e6192",
+      "height": 5700,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "d9e6269a6935916b6d1754e16561ac29a258743cf5efbaf23e62190f9dcf407c",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "p2wpkh",
+          "script_pubkey": "00140202020202020202020202020202020202020202",
+          "ranges": [
+            [
+              100,
+              200
+            ]
+          ],
+          "address": "bcrt1qactive1"
+        }
+      ],
+      "block_hash": "6a607b047cf9a2572ad8cf2bdf3adf08b78c9bf02aa4efe673d11cd31eafdb39"
+    },
+    "a33c874dd35bd306ec9dc6010c910a282d923916bfbc6a39098e422faaab608c": {
+      "txid": "a33c874dd35bd306ec9dc6010c910a282d923916bfbc6a39098e422faaab608c",
+      "height": 5710,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "26b5b1246f3589290abd6be11d18ace44647a763bb9da0a0f0b903f45c5e6192",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "p2wpkh",
+          "script_pubkey": "00140303030303030303030303030303030303030303",
+          "ranges": [
+            [
+              100,
+              200
+            ]
+          ],
+          "address": "bcrt1qactive2"
+        }
+      ],
+      "block_hash": "6747967296732f2eb3fb976d74bdff8310fd1354a0c7a9b630e83b5e9ca2699b"
+    },
+    "e3120a578471a2bc0f669bd2cdc3e9e7282feb197e67d1109015214cc22bccd2": {
+      "txid": "e3120a578471a2bc0f669bd2cdc3e9e7282feb197e67d1109015214cc22bccd2",
+      "height": 5720,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "a33c874dd35bd306ec9dc6010c910a282d923916bfbc6a39098e422faaab608c",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "p2wpkh",
+          "script_pubkey": "00140404040404040404040404040404040404040404",
+          "ranges": [
+            [
+              100,
+              200
+            ]
+          ],
+          "address": "bcrt1qactive3"
+        }
+      ],
+      "block_hash": "a241c5e7872af3c3f0ff373cfe916245571c92ff3d6f7b863a8a45ce864551a0"
+    },
+    "beb36687f5630dbb603e7abd6bdc4fa17cd7cb2506a7d3e77853351a09d0e517": {
+      "txid": "beb36687f5630dbb603e7abd6bdc4fa17cd7cb2506a7d3e77853351a09d0e517",
+      "height": 5691,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424",
+          "vout": 1
+        }
+      ],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "p2tr",
+          "script_pubkey": "51200101010101010101010101010101010101010101010101010101010101010101",
+          "ranges": [
+            [
+              250,
+              350
+            ]
+          ],
+          "address": "bcrt1pinscribed0"
+        }
+      ],
+      "block_hash": "79d0c22e988dc2e9aada8812f96f46cb105b3bfa20393e4dcf57eeb24a0320b4"
+    },
+    "45f4bbeb558de3124cdfc4f7d92c369508b24876e7966e8e0404bfda23701730": {
+      "txid": "45f4bbeb558de3124cdfc4f7d92c369508b24876e7966e8e0404bfda23701730",
+      "height": 5701,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "beb36687f5630dbb603e7abd6bdc4fa17cd7cb2506a7d3e77853351a09d0e517",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "p2tr",
+          "script_pubkey": "51200202020202020202020202020202020202020202020202020202020202020202",
+          "ranges": [
+            [
+              250,
+              350
+            ]
+          ],
+          "address": "bcrt1pinscribed1"
+        }
+      ],
+      "block_hash": "8a41ce0afa10dcb979faf6579f6a29842dfd0f0a7c56a272c2d150076331f0f4"
+    },
+    "7b594dea7ec473b6b27da73c373ef811c14907d3663b0bffcf8a1cc4894adabf": {
+      "txid": "7b594dea7ec473b6b27da73c373ef811c14907d3663b0bffcf8a1cc4894adabf",
+      "height": 5711,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "45f4bbeb558de3124cdfc4f7d92c369508b24876e7966e8e0404bfda23701730",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "p2tr",
+          "script_pubkey": "51200303030303030303030303030303030303030303030303030303030303030303",
+          "ranges": [
+            [
+              250,
+              350
+            ]
+          ],
+          "address": "bcrt1pinscribed2"
+        }
+      ],
+      "block_hash": "9fabb70854de15fb96121cbe86f9f6f2c4152ca5e88c0a10619c8131edef24ce"
+    },
+    "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8": {
+      "txid": "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8",
+      "height": 5721,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "7b594dea7ec473b6b27da73c373ef811c14907d3663b0bffcf8a1cc4894adabf",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 100,
+          "script_type": "p2tr",
+          "script_pubkey": "51200404040404040404040404040404040404040404040404040404040404040404",
+          "ranges": [
+            [
+              250,
+              350
+            ]
+          ],
+          "address": "bcrt1pinscribed3"
+        }
+      ],
+      "block_hash": "1966af1771a41ec04f1e2eb70af1471ad5b9671bd83c2b980ec8cbebae11dcd9"
+    },
+    "6a43f7c16d4be969509d426347c34ac286a71d8e07aeb341c7e1a347fa54af79": {
+      "txid": "6a43f7c16d4be969509d426347c34ac286a71d8e07aeb341c7e1a347fa54af79",
+      "height": 5692,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424",
+          "vout": 3
+        }
+      ],
+      "vout": [
+        {
+          "value": 50,
+          "script_type": "p2wpkh",
+          "script_pubkey": "0014eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "ranges": [
+            [
+              500,
+              550
+            ]
+          ],
+          "address": "bcrt1qmovednonmatch000000000000000000"
+        }
+      ],
+      "block_hash": "266629b17c12bcd23eac2c05b6a3891be2c50a2dfad3e64510fda3c3c9b4b815"
+    },
+    "358129c75cd13b5c77395de70d0717f024b62f41d9041a697150ca807361b42f": {
+      "txid": "358129c75cd13b5c77395de70d0717f024b62f41d9041a697150ca807361b42f",
+      "height": 5702,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "6a43f7c16d4be969509d426347c34ac286a71d8e07aeb341c7e1a347fa54af79",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 50,
+          "script_type": "p2wpkh",
+          "script_pubkey": "0014eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "ranges": [
+            [
+              500,
+              550
+            ]
+          ],
+          "address": "bcrt1qmovednonmatch000000000000000000"
+        }
+      ],
+      "block_hash": "636f75b3fc0f9d6a9fafbfdd6cb78f7c125232ce4df59463c3599dda3b220155"
+    },
+    "ada1519ba6386b03b0741ee7eae12192c3c1c7031795ebf4fa343d0bad4f107e": {
+      "txid": "ada1519ba6386b03b0741ee7eae12192c3c1c7031795ebf4fa343d0bad4f107e",
+      "height": 5712,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "358129c75cd13b5c77395de70d0717f024b62f41d9041a697150ca807361b42f",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 50,
+          "script_type": "p2wpkh",
+          "script_pubkey": "0014eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "ranges": [
+            [
+              500,
+              550
+            ]
+          ],
+          "address": "bcrt1qmovednonmatch000000000000000000"
+        }
+      ],
+      "block_hash": "2c1b32ec030666ddc0ac16ffe93b3565d6030ecb76678c056fd7ba7cfc7bd074"
+    },
+    "935a77ef2615b5c3746243c9f2126c6502ef43359cc0345765c3ebd7c81213f2": {
+      "txid": "935a77ef2615b5c3746243c9f2126c6502ef43359cc0345765c3ebd7c81213f2",
+      "height": 5722,
+      "coinbase": false,
+      "vin": [
+        {
+          "txid": "ada1519ba6386b03b0741ee7eae12192c3c1c7031795ebf4fa343d0bad4f107e",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "value": 50,
+          "script_type": "p2wpkh",
+          "script_pubkey": "0014eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "ranges": [
+            [
+              500,
+              550
+            ]
+          ],
+          "address": "bcrt1qmovednonmatch000000000000000000"
+        }
+      ],
+      "block_hash": "38a6bafe48c451bfa05e0ed0f765eca4bd61829cff65e65ea9441f8a3fa54cc8"
+    }
+  },
+  "utxos": {
+    "e3120a578471a2bc0f669bd2cdc3e9e7282feb197e67d1109015214cc22bccd2:0": {
+      "outpoint": "e3120a578471a2bc0f669bd2cdc3e9e7282feb197e67d1109015214cc22bccd2:0",
+      "txid": "e3120a578471a2bc0f669bd2cdc3e9e7282feb197e67d1109015214cc22bccd2",
+      "vout": 0,
+      "height": 5720,
+      "script_type": "p2wpkh",
+      "script_pubkey": "00140404040404040404040404040404040404040404",
+      "address": "bcrt1qactive3",
+      "public_key": null,
+      "spendable": true,
+      "provably_unspendable": false,
+      "value": 100,
+      "ranges": [
+        [
+          100,
+          200
+        ]
+      ],
+      "transfers_in_activity_window": 4
+    },
+    "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8:0": {
+      "outpoint": "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8:0",
+      "txid": "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8",
+      "vout": 0,
+      "height": 5721,
+      "script_type": "p2tr",
+      "script_pubkey": "51200404040404040404040404040404040404040404040404040404040404040404",
+      "address": "bcrt1pinscribed3",
+      "public_key": null,
+      "spendable": true,
+      "provably_unspendable": false,
+      "value": 100,
+      "ranges": [
+        [
+          250,
+          350
+        ]
+      ],
+      "transfers_in_activity_window": 4
+    },
+    "935a77ef2615b5c3746243c9f2126c6502ef43359cc0345765c3ebd7c81213f2:0": {
+      "outpoint": "935a77ef2615b5c3746243c9f2126c6502ef43359cc0345765c3ebd7c81213f2:0",
+      "txid": "935a77ef2615b5c3746243c9f2126c6502ef43359cc0345765c3ebd7c81213f2",
+      "vout": 0,
+      "height": 5722,
+      "script_type": "p2wpkh",
+      "script_pubkey": "0014eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "address": "bcrt1qmovednonmatch000000000000000000",
+      "public_key": null,
+      "spendable": true,
+      "provably_unspendable": false,
+      "value": 50,
+      "ranges": [
+        [
+          500,
+          550
+        ]
+      ],
+      "transfers_in_activity_window": 4
+    },
+    "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:2": {
+      "outpoint": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:2",
+      "txid": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424",
+      "vout": 2,
+      "height": 200,
+      "script_type": "p2pk",
+      "script_pubkey": "410494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aaac",
+      "address": "1FvzCLoTPGANNjWoUo6jUGuAG3wg1w4YjR",
+      "public_key": "0494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aa",
+      "spendable": true,
+      "provably_unspendable": false,
+      "value": 50,
+      "ranges": [
+        [
+          400,
+          450
+        ]
+      ],
+      "transfers_in_activity_window": 0
+    },
+    "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a:1": {
+      "outpoint": "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a:1",
+      "txid": "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a",
+      "vout": 1,
+      "height": 100,
+      "script_type": "p2wpkh",
+      "script_pubkey": "0014aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "address": "bcrt1qinactive0000000000000000000000000",
+      "public_key": null,
+      "spendable": true,
+      "provably_unspendable": false,
+      "value": 50,
+      "ranges": [
+        [
+          50,
+          100
+        ]
+      ],
+      "transfers_in_activity_window": 0
+    },
+    "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a:0": {
+      "outpoint": "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a:0",
+      "txid": "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a",
+      "vout": 0,
+      "height": 100,
+      "script_type": "op_return",
+      "script_pubkey": "6a0100",
+      "address": null,
+      "public_key": null,
+      "spendable": false,
+      "provably_unspendable": true,
+      "value": 100,
+      "ranges": [
+        [
+          600,
+          700
+        ]
+      ],
+      "transfers_in_activity_window": 0
+    },
+    "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:4": {
+      "outpoint": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:4",
+      "txid": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424",
+      "vout": 4,
+      "height": 200,
+      "script_type": "p2wpkh",
+      "script_pubkey": "0014dddddddddddddddddddddddddddddddddddddddd",
+      "address": "bcrt1qmisleadinginactive000000000000",
+      "public_key": null,
+      "spendable": true,
+      "provably_unspendable": false,
+      "value": 20,
+      "ranges": [
+        [
+          10,
+          30
+        ]
+      ],
+      "transfers_in_activity_window": 0
+    },
+    "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:5": {
+      "outpoint": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:5",
+      "txid": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424",
+      "vout": 5,
+      "height": 200,
+      "script_type": "p2pk",
+      "script_pubkey": "410494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aaac",
+      "address": "1FvzCLoTPGANNjWoUo6jUGuAG3wg1w4YjR",
+      "public_key": "0494b9d3e76c5b1629ecf97fff95d7a4bbdac87cc26099ada28066c6ff1eb9191223cd897194a08d0c2726c5747f1db49e8cf90e75dc3e3550ae9b30086f3cd5aa",
+      "spendable": true,
+      "provably_unspendable": false,
+      "value": 20,
+      "ranges": [
+        [
+          20,
+          40
+        ]
+      ],
+      "transfers_in_activity_window": 0
+    }
+  },
+  "sat_index": {
+    "100": {
+      "sat": 100,
+      "outpoint": "e3120a578471a2bc0f669bd2cdc3e9e7282feb197e67d1109015214cc22bccd2:0",
+      "offset": 0,
+      "inscription_ids": []
+    },
+    "250": {
+      "sat": 250,
+      "outpoint": "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8:0",
+      "offset": 0,
+      "inscription_ids": [
+        "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8i0",
+        "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8i1"
+      ]
+    },
+    "500": {
+      "sat": 500,
+      "outpoint": "935a77ef2615b5c3746243c9f2126c6502ef43359cc0345765c3ebd7c81213f2:0",
+      "offset": 0,
+      "inscription_ids": []
+    },
+    "400": {
+      "sat": 400,
+      "outpoint": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:2",
+      "offset": 0,
+      "inscription_ids": []
+    },
+    "50": {
+      "sat": 50,
+      "outpoint": "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a:1",
+      "offset": 0,
+      "inscription_ids": []
+    },
+    "600": {
+      "sat": 600,
+      "outpoint": "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a:0",
+      "offset": 0,
+      "inscription_ids": []
+    },
+    "10": {
+      "sat": 10,
+      "outpoint": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:4",
+      "offset": 0,
+      "inscription_ids": []
+    },
+    "20": {
+      "sat": 20,
+      "outpoint": "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:5",
+      "offset": 0,
+      "inscription_ids": []
+    }
+  },
+  "inscriptions": {
+    "250": [
+      "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8i0",
+      "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8i1"
+    ]
+  },
+  "fee_demo": {
+    "input_ranges": [
+      [
+        0,
+        10
+      ],
+      [
+        20,
+        30
+      ]
+    ],
+    "output_values": [
+      5,
+      8
+    ],
+    "output_ranges": [
+      [
+        [
+          0,
+          5
+        ]
+      ],
+      [
+        [
+          5,
+          10
+        ],
+        [
+          20,
+          23
+        ]
+      ]
+    ],
+    "fee_ranges": [
+      [
+        23,
+        30
+      ]
+    ],
+    "coinbase_fee_reassignment": {
+      "coinbase_height": 10000,
+      "assigned_ranges": [
+        [
+          23,
+          30
+        ]
+      ],
+      "note": "Fees are reassigned through the block coinbase in order."
+    }
+  },
+  "tracked_sats": {
+    "earliest_active_uninscribed": 100,
+    "earliest_active_inscribed": 250,
+    "inactive": 50,
+    "attributed_current": 400,
+    "patoshi_origin_moved": 500,
+    "unspendable": 600,
+    "misleading_inactive": 10,
+    "misleading_attributed": 20
+  },
+  "public_views": {
+    "list_utxos": [
+      "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:2",
+      "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:4",
+      "187339e916c8b45614a3db8f64685e5b445ad3d8dd19d66e8c82dafa77101424:5",
+      "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a:0",
+      "3efdbc0bb28f3c838007e8f0987adc244fd62cdd7fafa715dcc1421089780b7a:1",
+      "935a77ef2615b5c3746243c9f2126c6502ef43359cc0345765c3ebd7c81213f2:0",
+      "bfff2ba39d7059f3dc0e091aad118016da827cc3db01c441f14ada6e01ffbcd8:0",
+      "e3120a578471a2bc0f669bd2cdc3e9e7282feb197e67d1109015214cc22bccd2:0"
+    ],
+    "list_sats": [
+      10,
+      20,
+      50,
+      100,
+      250,
+      400,
+      500,
+      600
+    ]
+  }
+}

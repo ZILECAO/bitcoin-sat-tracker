@@ -1,0 +1,57 @@
+[
+  {
+    "id": "sat-dev-001",
+    "family": "ordinal_fifo",
+    "goal": "Implement and test first-in-first-out sat-range assignment across ordered transaction inputs and outputs."
+  },
+  {
+    "id": "sat-dev-002",
+    "family": "fees_and_coinbase",
+    "goal": "Track fee sat ranges into a later block coinbase without losing provenance."
+  },
+  {
+    "id": "sat-dev-003",
+    "family": "satpoint_history",
+    "goal": "Trace one sat through a multi-transaction graph and emit every outpoint and offset."
+  },
+  {
+    "id": "sat-dev-004",
+    "family": "snapshot_utxo",
+    "goal": "Prove that a candidate is in a spendable UTXO at an exact block snapshot without using mempool state."
+  },
+  {
+    "id": "sat-dev-005",
+    "family": "activity_proxy",
+    "goal": "Count confirmed non-coinbase movements within the frozen activity window without claiming wallet ownership."
+  },
+  {
+    "id": "sat-dev-006",
+    "family": "inscription_attachment",
+    "goal": "Determine inscriptions attached to a sat at the snapshot, including pointer and reinscription cases."
+  },
+  {
+    "id": "sat-dev-007",
+    "family": "minimum_certificate",
+    "goal": "Produce continuous interval evidence explaining why every lower sat fails the final predicate."
+  },
+  {
+    "id": "sat-dev-008",
+    "family": "checkpoint_resume",
+    "goal": "Resume a bounded search from a content-addressed cache without repeating successful Bitcoin or ord queries."
+  },
+  {
+    "id": "sat-dev-009",
+    "family": "evidence_provenance",
+    "goal": "Record snapshot, endpoint, request, response hash, and source for every fact used in an answer."
+  },
+  {
+    "id": "sat-dev-010",
+    "family": "new_script",
+    "goal": "Write and test a new command-line research script that combines Bitcoin RPC and ord data-source interfaces."
+  },
+  {
+    "id": "sat-dev-011",
+    "family": "public_satoshi_attribution",
+    "goal": "Pin, hash, normalize, and test the public Patoshi attribution set; reject exact matches on a candidate's current output without treating Patoshi coinbase origin alone as current ownership."
+  }
+]

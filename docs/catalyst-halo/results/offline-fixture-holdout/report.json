@@ -1,0 +1,70 @@
+{
+  "arm": "offline-fixture",
+  "split": "holdout",
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "run_id": "20260812T042001Z-4b5156c2",
+  "task_success": {
+    "status": "observed",
+    "value": {
+      "passed": 0,
+      "total": 8,
+      "rate": 0.0,
+      "passed_task_ids": [],
+      "failed_task_ids": [
+        "btc-hold-001",
+        "btc-hold-002",
+        "btc-hold-003",
+        "btc-hold-004",
+        "btc-hold-005",
+        "btc-hold-006",
+        "btc-hold-007",
+        "btc-hold-008"
+      ]
+    }
+  },
+  "duration_ms": {
+    "status": "observed",
+    "value": {
+      "count": 8,
+      "sum": 26,
+      "mean": 3.25
+    }
+  },
+  "input_tokens": {
+    "status": "unavailable",
+    "value": null
+  },
+  "output_tokens": {
+    "status": "unavailable",
+    "value": null
+  },
+  "cost_usd": {
+    "status": "unavailable",
+    "value": null
+  },
+  "retries": {
+    "status": "unavailable",
+    "value": null
+  },
+  "tool_errors": {
+    "status": "unavailable",
+    "value": null
+  },
+  "trace_completeness": {
+    "status": "unavailable",
+    "value": null
+  },
+  "privacy_checks": {
+    "status": "observed",
+    "value": {
+      "all_passed": true,
+      "record_count": 8
+    }
+  },
+  "notes": [
+    "Report consumes verified scrubbed records only.",
+    "Raw prompts, outputs, tool results, trace bodies, and provider responses are excluded.",
+    "Metrics with status 'unavailable' were not collected; zeros are not invented."
+  ],
+  "evidence_class": "observed"
+}

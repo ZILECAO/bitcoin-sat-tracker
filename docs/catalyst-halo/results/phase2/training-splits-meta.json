@@ -1,0 +1,40 @@
+{
+  "splits": {
+    "train": {
+      "path": "/home/ubuntu/diligence-raw-phase2/phase2-artifacts/training-splits/train.jsonl",
+      "count": 4,
+      "task_ids": [
+        "btc-dev-001",
+        "btc-dev-002",
+        "btc-dev-003",
+        "btc-dev-004"
+      ],
+      "sha256": "8b59b6180dd1a092aa3020cf78696d8f8bcb0b8d956b205fccf519a3cdd65cb2"
+    },
+    "validation": {
+      "path": "/home/ubuntu/diligence-raw-phase2/phase2-artifacts/training-splits/validation.jsonl",
+      "count": 2,
+      "task_ids": [
+        "btc-dev-005",
+        "btc-dev-006"
+      ],
+      "sha256": "157898a1fd5dcd68ad0056de7d599074321cd308cf5287c41455febab5e8fb6c"
+    },
+    "holdout": {
+      "path": "/home/ubuntu/diligence-raw-phase2/phase2-artifacts/training-splits/holdout.jsonl",
+      "count": 8,
+      "task_ids": [
+        "btc-hold-001",
+        "btc-hold-002",
+        "btc-hold-003",
+        "btc-hold-004",
+        "btc-hold-005",
+        "btc-hold-006",
+        "btc-hold-007",
+        "btc-hold-008"
+      ],
+      "sha256": "3ba17a021862e69878e3f8f6282cff786d28aa7fcdad9d8b30dcf30de29134e8"
+    }
+  },
+  "overlap_check": "passed"
+}

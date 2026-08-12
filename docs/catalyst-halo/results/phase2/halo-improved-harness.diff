@@ -1,0 +1,28 @@
+--- /workspace/track-forwards.py	1970-01-01 00:00:00.000000000 +0000
++++ /home/ubuntu/diligence-raw-phase2/phase2-artifacts/halo-sample-a43bdacc/track-forwards.py	2026-08-12 19:46:30.332839859 +0000
+@@ -1,13 +1,24 @@
+ #!/usr/bin/python3
+ 
+ import json, os.path, requests, string, sys, time
++import random as _diligence_random
++def http_with_retries(do_request, retries=3, backoff=1.0):
++    """Generic bounded retry wrapper (HALO suggestion)."""
++    for attempt in range(retries):
++        try:
++            return do_request()
++        except requests.exceptions.RequestException:
++            if attempt == retries - 1:
++                raise
++            time.sleep(backoff * (2 ** attempt) + _diligence_random.uniform(0, 0.5))
++
+ 
+ BITCOIN_URL = "http://127.0.0.1:8332"
+ BITCOIN_USER = "TODO_REPLACE"  # RPC username from bitcoin.conf
+ BITCOIN_PASS = "TODO_REPLACE"  # RPC password from bitcoin.conf
+ 
+ def spending_txid(txid, vout):
+-    response = requests.get(f"https://mempool.space/api/tx/{txid}/outspend/{vout}").json()
++    response = requests.get(f"https://mempool.space/api/tx/{txid}/outspend/{vout}", timeout=30).json()
+     if response['spent']: return response["txid"]
+     return None
+ 

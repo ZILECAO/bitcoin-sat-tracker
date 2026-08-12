@@ -1,0 +1,55 @@
+{
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "diligence_version": "0.1.0",
+  "tasks": {
+    "development_count": 6,
+    "holdout_count": 8,
+    "families": [
+      "block_reward_tests",
+      "bounded_wallet_polling",
+      "fee_flow_edge_cases",
+      "injectable_dependencies",
+      "mempool_url_config",
+      "missing_config_safe",
+      "no_sys_exit_in_library",
+      "rpc_config_externalized",
+      "safe_cli_layer",
+      "satpoint_validation",
+      "sats_btc_conversion",
+      "structured_errors",
+      "timeouts_and_status",
+      "tx_output_edge_cases"
+    ],
+    "development_ids": [
+      "btc-dev-001",
+      "btc-dev-002",
+      "btc-dev-003",
+      "btc-dev-004",
+      "btc-dev-005",
+      "btc-dev-006"
+    ],
+    "holdout_ids": [
+      "btc-hold-001",
+      "btc-hold-002",
+      "btc-hold-003",
+      "btc-hold-004",
+      "btc-hold-005",
+      "btc-hold-006",
+      "btc-hold-007",
+      "btc-hold-008"
+    ]
+  },
+  "phase": 2,
+  "phase2_configured": false,
+  "evaluator_commands": [
+    "python -m diligence prepare",
+    "python -m diligence run --arm <arm> --split <dev|holdout> --repeats <n>",
+    "python -m diligence verify --run-dir <path>",
+    "python -m diligence report --run-dir <path>"
+  ],
+  "raw_results_mode": "0700",
+  "network": "disabled",
+  "created_at": "2026-08-12T04:20:01Z",
+  "freeze_aggregate_sha256": "b1f81dae37333f1f8f6cd1d48b4a06d702c613cf50fa70a3034f76a09aad8202",
+  "freeze_path": "docs/catalyst-halo/freeze-hashes.json"
+}

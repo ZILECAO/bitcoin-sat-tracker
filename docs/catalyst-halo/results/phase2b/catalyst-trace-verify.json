@@ -1,0 +1,38 @@
+{
+  "traceId": "798b053b04602517f40c679a218fc18e",
+  "serviceName": "bitcoin-sat-tracker-sat-hunt",
+  "serviceVersion": "0.2.0",
+  "spanCount": 5,
+  "llmSpanCount": 2,
+  "rootSpanName": "sat-hunt.sat-dev-008:baseline-dev:r1",
+  "rootObservationKind": "AGENT",
+  "hasError": false,
+  "spans_sample": [
+    {
+      "name": "sat-hunt.sat-dev-008:baseline-dev:r1",
+      "kind": "AGENT",
+      "has_parent": false
+    },
+    {
+      "name": "llm.gemini-2.5-flash-lite",
+      "kind": "LLM",
+      "has_parent": true
+    },
+    {
+      "name": "tool.cache_put",
+      "kind": "TOOL",
+      "has_parent": true
+    },
+    {
+      "name": "tool.checkpoint_save",
+      "kind": "TOOL",
+      "has_parent": true
+    },
+    {
+      "name": "llm.gemini-2.5-flash-lite",
+      "kind": "LLM",
+      "has_parent": true
+    }
+  ],
+  "dashboard_hint": "https://inference.net (project b69a2722-d305-47e9-9931-b28b6dfcbd6d) traces get 798b053b04602517f40c679a218fc18e"
+}

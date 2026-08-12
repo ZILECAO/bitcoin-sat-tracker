@@ -1,0 +1,1248 @@
+{
+  "candidates": [
+    "deepseek-v4-flash",
+    "gpt-4.1-nano",
+    "gemini-2.5-flash-lite"
+  ],
+  "smoke_results": [
+    {
+      "task_id": "sat-dev-001:model-select:r1",
+      "arm": "model-select",
+      "model": "deepseek-v4-flash",
+      "repeat": 1,
+      "trace_id": "a74f1b965894fe63e5769f4a8f2d72b0",
+      "duration_ms": 46981,
+      "cost_usd_est": 0.00766304,
+      "input_tokens": 49234,
+      "output_tokens": 2751,
+      "gateway_calls": 8,
+      "tool_calls": 11,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-002:model-select:r1",
+      "arm": "model-select",
+      "model": "deepseek-v4-flash",
+      "repeat": 1,
+      "trace_id": "7a12b47279ea004617647474c1720072",
+      "duration_ms": 16187,
+      "cost_usd_est": 0.0023702,
+      "input_tokens": 16216,
+      "output_tokens": 357,
+      "gateway_calls": 8,
+      "tool_calls": 9,
+      "retries": 5,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "fees_and_coinbase",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-001:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "b68a89dc89c5537e8ebc76163f14afac",
+      "duration_ms": 12987,
+      "cost_usd_est": 0.00070504,
+      "input_tokens": 3780,
+      "output_tokens": 628,
+      "gateway_calls": 4,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "output_ranges",
+          "passed": true
+        },
+        {
+          "name": "fee_ranges",
+          "passed": true
+        },
+        {
+          "name": "has_tests",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-002:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "46e7ef90f61effdcb123cc6dfa639b45",
+      "duration_ms": 9364,
+      "cost_usd_est": 0.00039326,
+      "input_tokens": 2579,
+      "output_tokens": 115,
+      "gateway_calls": 4,
+      "tool_calls": 3,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": true,
+      "efficiency_eligible": true,
+      "scorer_id": "fees_and_coinbase",
+      "include_toolkit": false,
+      "score_passed": true,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "coinbase_ranges",
+          "passed": true
+        },
+        {
+          "name": "mentions_coinbase",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-001:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "f46c1c543966b1e420720a87e47f821e",
+      "duration_ms": 3361,
+      "cost_usd_est": 0.00021924,
+      "input_tokens": 1542,
+      "output_tokens": 12,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-002:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "8608ab9f69fef9734f6db6c2ec5f32f0",
+      "duration_ms": 3017,
+      "cost_usd_est": 0.00021588,
+      "input_tokens": 1518,
+      "output_tokens": 12,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "fees_and_coinbase",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    }
+  ],
+  "full_dev_results": [
+    {
+      "task_id": "sat-dev-001:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "449cff7ea71656c0c20b71f8c0e8c871",
+      "duration_ms": 19896,
+      "cost_usd_est": 0.00143934,
+      "input_tokens": 8835,
+      "output_tokens": 723,
+      "gateway_calls": 7,
+      "tool_calls": 7,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "output_ranges",
+          "passed": false
+        },
+        {
+          "name": "fee_ranges",
+          "passed": true
+        },
+        {
+          "name": "has_tests",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-002:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "63ace1713e479b2ac54507d8fc66380d",
+      "duration_ms": 15653,
+      "cost_usd_est": 0.00039326,
+      "input_tokens": 2579,
+      "output_tokens": 115,
+      "gateway_calls": 4,
+      "tool_calls": 3,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": true,
+      "efficiency_eligible": true,
+      "scorer_id": "fees_and_coinbase",
+      "include_toolkit": false,
+      "score_passed": true,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "coinbase_ranges",
+          "passed": true
+        },
+        {
+          "name": "mentions_coinbase",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-003:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "d65ce4647885e855bc15d482801d82aa",
+      "duration_ms": 20665,
+      "cost_usd_est": 0.00243796,
+      "input_tokens": 16708,
+      "output_tokens": 353,
+      "gateway_calls": 8,
+      "tool_calls": 8,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "satpoint_history",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-004:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "0469bae4c0bf12bcc668b32f278a10b6",
+      "duration_ms": 26592,
+      "cost_usd_est": 0.00214676,
+      "input_tokens": 13272,
+      "output_tokens": 1031,
+      "gateway_calls": 8,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "snapshot_utxo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-005:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "0d7baab28e2facdd88114b48fde416d2",
+      "duration_ms": 23914,
+      "cost_usd_est": 0.00192794,
+      "input_tokens": 13167,
+      "output_tokens": 302,
+      "gateway_calls": 8,
+      "tool_calls": 8,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-006:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "dc444f37fa9ed2002ec7b40b82c4ab99",
+      "duration_ms": 21741,
+      "cost_usd_est": 0.00118734,
+      "input_tokens": 7879,
+      "output_tokens": 301,
+      "gateway_calls": 8,
+      "tool_calls": 8,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-007:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "157e0877514cf134091dd1a91297196a",
+      "duration_ms": 37441,
+      "cost_usd_est": 0.00182938,
+      "input_tokens": 12353,
+      "output_tokens": 357,
+      "gateway_calls": 8,
+      "tool_calls": 8,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "minimum_certificate",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-008:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "6664ae69872bc1841e86891c7c1a8ac3",
+      "duration_ms": 14260,
+      "cost_usd_est": 0.00066094,
+      "input_tokens": 4425,
+      "output_tokens": 148,
+      "gateway_calls": 6,
+      "tool_calls": 6,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "checkpoint_resume",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "cache_dir",
+          "passed": true
+        },
+        {
+          "name": "checkpoint",
+          "passed": true
+        },
+        {
+          "name": "has_entries",
+          "passed": true
+        },
+        {
+          "name": "content_addressed",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-009:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "08d8eec73d283cd50619bc850f65cdb4",
+      "duration_ms": 38694,
+      "cost_usd_est": 0.00415254,
+      "input_tokens": 19881,
+      "output_tokens": 4890,
+      "gateway_calls": 8,
+      "tool_calls": 8,
+      "retries": 4,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "evidence_provenance",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-010:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "ee93a5a391868e1828dc2919774af7ce",
+      "duration_ms": 13243,
+      "cost_usd_est": 0.00068446,
+      "input_tokens": 3989,
+      "output_tokens": 450,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "new_script",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "has_script",
+          "passed": true
+        },
+        {
+          "name": "has_tests",
+          "passed": false
+        },
+        {
+          "name": "mentions_rpc_or_ord",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-011:model-select:r1",
+      "arm": "model-select",
+      "model": "gpt-4.1-nano",
+      "repeat": 1,
+      "trace_id": "cb26ec785aabf2aeaf9a575fc8c20ac9",
+      "duration_ms": 28605,
+      "cost_usd_est": 0.00243432,
+      "input_tokens": 15942,
+      "output_tokens": 723,
+      "gateway_calls": 8,
+      "tool_calls": 17,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-001:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "136233a28575159f4e54131644a31d7f",
+      "duration_ms": 3182,
+      "cost_usd_est": 0.00021924,
+      "input_tokens": 1542,
+      "output_tokens": 12,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-002:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "d0f1584574fb488249ff9f78687026d4",
+      "duration_ms": 3088,
+      "cost_usd_est": 0.00021588,
+      "input_tokens": 1518,
+      "output_tokens": 12,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "fees_and_coinbase",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-003:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "78529887fe46c6a23a121413c7fb2432",
+      "duration_ms": 5251,
+      "cost_usd_est": 0.00052262,
+      "input_tokens": 2173,
+      "output_tokens": 780,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "satpoint_history",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-004:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "374ec001a04166d50f6903ba4ece4c53",
+      "duration_ms": 6473,
+      "cost_usd_est": 0.00066514,
+      "input_tokens": 4553,
+      "output_tokens": 99,
+      "gateway_calls": 4,
+      "tool_calls": 3,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "snapshot_utxo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-005:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "d7a5c4cfad7c6aa323256c5afe8b6de1",
+      "duration_ms": 4986,
+      "cost_usd_est": 0.00042994,
+      "input_tokens": 2875,
+      "output_tokens": 98,
+      "gateway_calls": 3,
+      "tool_calls": 2,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-006:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "83e3d33ef55368cfb99d914f3e796873",
+      "duration_ms": 7771,
+      "cost_usd_est": 0.00070042,
+      "input_tokens": 3195,
+      "output_tokens": 904,
+      "gateway_calls": 3,
+      "tool_calls": 2,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-007:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "ef2cff5886b823ba6414fda852568715",
+      "duration_ms": 5866,
+      "cost_usd_est": 0.00020986,
+      "input_tokens": 1475,
+      "output_tokens": 12,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "minimum_certificate",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-008:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "0629c6eef1b28b1e20e6146553bf09ea",
+      "duration_ms": 3532,
+      "cost_usd_est": 0.0002338,
+      "input_tokens": 1544,
+      "output_tokens": 63,
+      "gateway_calls": 2,
+      "tool_calls": 2,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": true,
+      "efficiency_eligible": true,
+      "scorer_id": "checkpoint_resume",
+      "include_toolkit": false,
+      "score_passed": true,
+      "score_checks": [
+        {
+          "name": "cache_dir",
+          "passed": true
+        },
+        {
+          "name": "checkpoint",
+          "passed": true
+        },
+        {
+          "name": "has_entries",
+          "passed": true
+        },
+        {
+          "name": "content_addressed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-009:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "758aac3e7f1a8b39bf4be8b60a9dffe6",
+      "duration_ms": 5343,
+      "cost_usd_est": 0.0004137,
+      "input_tokens": 2515,
+      "output_tokens": 220,
+      "gateway_calls": 2,
+      "tool_calls": 6,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "evidence_provenance",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-010:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "2fda71f1940501a04b0a1e82ec149f2d",
+      "duration_ms": 3160,
+      "cost_usd_est": 0.00023338,
+      "input_tokens": 1479,
+      "output_tokens": 94,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "new_script",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "has_script",
+          "passed": true
+        },
+        {
+          "name": "has_tests",
+          "passed": false
+        },
+        {
+          "name": "mentions_rpc_or_ord",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-011:model-select:r1",
+      "arm": "model-select",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "414baef2182b58ed842366f070fe7408",
+      "duration_ms": 4245,
+      "cost_usd_est": 0.00040264,
+      "input_tokens": 1950,
+      "output_tokens": 463,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    }
+  ],
+  "selected_model": "gemini-2.5-flash-lite",
+  "smoke_ranking": [
+    "gpt-4.1-nano",
+    "gemini-2.5-flash-lite",
+    "deepseek-v4-flash"
+  ],
+  "full_dev_ranking": [
+    "gemini-2.5-flash-lite",
+    "gpt-4.1-nano"
+  ],
+  "candidate_notes": {
+    "deepseek-v4-flash": {
+      "provider": "system/inference.net",
+      "context_length": 163840,
+      "gateway_compat_prior": true,
+      "local_cost_est_per_mtok": {
+        "input": 0.14,
+        "output": 0.28
+      }
+    },
+    "gpt-4.1-nano": {
+      "provider": "system/inference.net",
+      "context_length": 1047576,
+      "gateway_compat_prior": "partial (phase2 eval failed)"
+    },
+    "gemini-2.5-flash-lite": {
+      "provider": "system/inference.net",
+      "context_length": 1048576,
+      "gateway_compat_prior": "unknown before this run"
+    }
+  },
+  "spend_ledger": {
+    "phase2b_incremental_cap_usd": 5.0,
+    "phase2b_incremental_spent_usd": 0.03510752,
+    "events": [
+      {
+        "ts": 1786568685.0209892,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00766304,
+        "spent_after": 0.00766304,
+        "meta": {
+          "trace_id": "a74f1b965894fe63e5769f4a8f2d72b0",
+          "passed": false,
+          "model": "deepseek-v4-flash"
+        }
+      },
+      {
+        "ts": 1786568701.212684,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.0023702,
+        "spent_after": 0.01003324,
+        "meta": {
+          "trace_id": "7a12b47279ea004617647474c1720072",
+          "passed": false,
+          "model": "deepseek-v4-flash"
+        }
+      },
+      {
+        "ts": 1786568714.204713,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00070504,
+        "spent_after": 0.01073828,
+        "meta": {
+          "trace_id": "b68a89dc89c5537e8ebc76163f14afac",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568723.573838,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.00039326,
+        "spent_after": 0.01113154,
+        "meta": {
+          "trace_id": "46e7ef90f61effdcb123cc6dfa639b45",
+          "passed": true,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568726.9395187,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00021924,
+        "spent_after": 0.01135078,
+        "meta": {
+          "trace_id": "f46c1c543966b1e420720a87e47f821e",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786568729.961156,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.00021588,
+        "spent_after": 0.01156666,
+        "meta": {
+          "trace_id": "8608ab9f69fef9734f6db6c2ec5f32f0",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786568749.8626854,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00143934,
+        "spent_after": 0.013006,
+        "meta": {
+          "trace_id": "449cff7ea71656c0c20b71f8c0e8c871",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568765.521302,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.00039326,
+        "spent_after": 0.01339926,
+        "meta": {
+          "trace_id": "63ace1713e479b2ac54507d8fc66380d",
+          "passed": true,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568786.1911507,
+        "event": "run:sat-dev-003:model-select:r1",
+        "cost_usd": 0.00243796,
+        "spent_after": 0.01583722,
+        "meta": {
+          "trace_id": "d65ce4647885e855bc15d482801d82aa",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568812.7888877,
+        "event": "run:sat-dev-004:model-select:r1",
+        "cost_usd": 0.00214676,
+        "spent_after": 0.01798398,
+        "meta": {
+          "trace_id": "0469bae4c0bf12bcc668b32f278a10b6",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568836.7084575,
+        "event": "run:sat-dev-005:model-select:r1",
+        "cost_usd": 0.00192794,
+        "spent_after": 0.01991192,
+        "meta": {
+          "trace_id": "0d7baab28e2facdd88114b48fde416d2",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568858.454902,
+        "event": "run:sat-dev-006:model-select:r1",
+        "cost_usd": 0.00118734,
+        "spent_after": 0.02109926,
+        "meta": {
+          "trace_id": "dc444f37fa9ed2002ec7b40b82c4ab99",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568895.901358,
+        "event": "run:sat-dev-007:model-select:r1",
+        "cost_usd": 0.00182938,
+        "spent_after": 0.02292864,
+        "meta": {
+          "trace_id": "157e0877514cf134091dd1a91297196a",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568910.1665,
+        "event": "run:sat-dev-008:model-select:r1",
+        "cost_usd": 0.00066094,
+        "spent_after": 0.02358958,
+        "meta": {
+          "trace_id": "6664ae69872bc1841e86891c7c1a8ac3",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568948.8659708,
+        "event": "run:sat-dev-009:model-select:r1",
+        "cost_usd": 0.00415254,
+        "spent_after": 0.02774212,
+        "meta": {
+          "trace_id": "08d8eec73d283cd50619bc850f65cdb4",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568962.114358,
+        "event": "run:sat-dev-010:model-select:r1",
+        "cost_usd": 0.00068446,
+        "spent_after": 0.02842658,
+        "meta": {
+          "trace_id": "ee93a5a391868e1828dc2919774af7ce",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568990.724861,
+        "event": "run:sat-dev-011:model-select:r1",
+        "cost_usd": 0.00243432,
+        "spent_after": 0.0308609,
+        "meta": {
+          "trace_id": "cb26ec785aabf2aeaf9a575fc8c20ac9",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568993.9120224,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00021924,
+        "spent_after": 0.03108014,
+        "meta": {
+          "trace_id": "136233a28575159f4e54131644a31d7f",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786568997.0046039,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.00021588,
+        "spent_after": 0.03129602,
+        "meta": {
+          "trace_id": "d0f1584574fb488249ff9f78687026d4",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569002.259839,
+        "event": "run:sat-dev-003:model-select:r1",
+        "cost_usd": 0.00052262,
+        "spent_after": 0.03181864,
+        "meta": {
+          "trace_id": "78529887fe46c6a23a121413c7fb2432",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569008.7372746,
+        "event": "run:sat-dev-004:model-select:r1",
+        "cost_usd": 0.00066514,
+        "spent_after": 0.03248378,
+        "meta": {
+          "trace_id": "374ec001a04166d50f6903ba4ece4c53",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569013.7272177,
+        "event": "run:sat-dev-005:model-select:r1",
+        "cost_usd": 0.00042994,
+        "spent_after": 0.03291372,
+        "meta": {
+          "trace_id": "d7a5c4cfad7c6aa323256c5afe8b6de1",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569021.5027943,
+        "event": "run:sat-dev-006:model-select:r1",
+        "cost_usd": 0.00070042,
+        "spent_after": 0.03361414,
+        "meta": {
+          "trace_id": "83e3d33ef55368cfb99d914f3e796873",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569027.3741674,
+        "event": "run:sat-dev-007:model-select:r1",
+        "cost_usd": 0.00020986,
+        "spent_after": 0.033824,
+        "meta": {
+          "trace_id": "ef2cff5886b823ba6414fda852568715",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569030.911151,
+        "event": "run:sat-dev-008:model-select:r1",
+        "cost_usd": 0.0002338,
+        "spent_after": 0.0340578,
+        "meta": {
+          "trace_id": "0629c6eef1b28b1e20e6146553bf09ea",
+          "passed": true,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569036.2589626,
+        "event": "run:sat-dev-009:model-select:r1",
+        "cost_usd": 0.0004137,
+        "spent_after": 0.0344715,
+        "meta": {
+          "trace_id": "758aac3e7f1a8b39bf4be8b60a9dffe6",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569039.4233856,
+        "event": "run:sat-dev-010:model-select:r1",
+        "cost_usd": 0.00023338,
+        "spent_after": 0.03470488,
+        "meta": {
+          "trace_id": "2fda71f1940501a04b0a1e82ec149f2d",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569043.6733763,
+        "event": "run:sat-dev-011:model-select:r1",
+        "cost_usd": 0.00040264,
+        "spent_after": 0.03510752,
+        "meta": {
+          "trace_id": "414baef2182b58ed842366f070fe7408",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    ]
+  }
+}

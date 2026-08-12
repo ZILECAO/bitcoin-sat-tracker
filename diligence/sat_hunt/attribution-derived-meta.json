@@ -1,0 +1,10 @@
+{
+  "policy_id": "public-satoshi-attribution-v1",
+  "source_id": "patoshi-addresses-2025-07-15",
+  "csv_sha256": "f649579e286085325a881bec1168e88bbb6f5d67e10b7ef8cb5c65e916a34a2e",
+  "record_count": 21953,
+  "derived_set_sha256": "c9641d86ba93c71fc550c63fd97b6da8246f46a9410125a6c2d4326fc461c71d",
+  "match_key_count": 65859,
+  "required_answer_language": "No exact match in the frozen public Satoshi-attribution set; this does not prove who controls the output.",
+  "note": "Full derived records remain outside Git under the private raw directory."
+}
