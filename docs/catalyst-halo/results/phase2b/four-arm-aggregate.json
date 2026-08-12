@@ -1,0 +1,134 @@
+{
+  "selected_model": "gemini-2.5-flash-lite",
+  "halo_status": "fail_closed_incomplete_final_answer",
+  "halo_improved_correctness": false,
+  "halo_improved_cost": null,
+  "halo_improved_speed": null,
+  "track_c": {
+    "status": "Live global result not run \u2014 complete sat index unavailable.",
+    "ran": false
+  },
+  "arms": [
+    {
+      "arm": "halo-harness-only",
+      "heldout": {
+        "tasks_attempted": 12,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.0091959,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 12,
+        "efficiency_eligible": 0
+      },
+      "final_a": {
+        "tasks_attempted": 3,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.00305466,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 3,
+        "efficiency_eligible": 0
+      },
+      "final_exam_correctness": "0/3"
+    },
+    {
+      "arm": "halo-combined",
+      "heldout": {
+        "tasks_attempted": 12,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.0091959,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 12,
+        "efficiency_eligible": 0
+      },
+      "final_a": {
+        "tasks_attempted": 3,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.00305466,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 3,
+        "efficiency_eligible": 0
+      },
+      "final_exam_correctness": "0/3"
+    },
+    {
+      "arm": "baseline-harness",
+      "heldout": {
+        "tasks_attempted": 12,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.0091959,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 12,
+        "efficiency_eligible": 0
+      },
+      "final_a": {
+        "tasks_attempted": 3,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.00305466,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 3,
+        "efficiency_eligible": 0
+      },
+      "final_exam_correctness": "0/3"
+    },
+    {
+      "arm": "halo-repo-toolkit-only",
+      "heldout": {
+        "tasks_attempted": 12,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.0091959,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 12,
+        "efficiency_eligible": 0
+      },
+      "final_a": {
+        "tasks_attempted": 3,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.00305466,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 3,
+        "efficiency_eligible": 0
+      },
+      "final_exam_correctness": "0/3"
+    }
+  ],
+  "spend_usd_est": 0.10077662
+}

@@ -1,0 +1,6 @@
+{
+  "status": "unavailable",
+  "reason": "TLS connection reset when fetching Arkham announcement/entity pages from this VM",
+  "membership_used": false,
+  "role": "aggregate_cross_check_only_if_retrievable"
+}

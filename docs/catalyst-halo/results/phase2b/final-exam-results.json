@@ -1,0 +1,2018 @@
+{
+  "model": "gemini-2.5-flash-lite",
+  "track_a": {
+    "by_arm": {
+      "halo-repo-toolkit-only": {
+        "tasks_attempted": 3,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.00305466,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 3,
+        "efficiency_eligible": 0
+      },
+      "halo-combined": {
+        "tasks_attempted": 3,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.00305466,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 3,
+        "efficiency_eligible": 0
+      },
+      "halo-harness-only": {
+        "tasks_attempted": 3,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.00305466,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 3,
+        "efficiency_eligible": 0
+      },
+      "baseline-harness": {
+        "tasks_attempted": 3,
+        "correct_runs": 0,
+        "success_rate": 0.0,
+        "median_cost_correct": null,
+        "total_cost": 0.00305466,
+        "median_duration_correct_ms": null,
+        "median_tokens_correct": null,
+        "median_tool_calls_correct": null,
+        "retry_count": 0,
+        "complete_traces": 3,
+        "efficiency_eligible": 0
+      }
+    },
+    "runs": [
+      {
+        "task_id": "sat-final:halo-repo-toolkit-only:r2",
+        "arm": "halo-repo-toolkit-only",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 2,
+        "trace_id": "49d1673e221d9129f63bcbdf52e7f063",
+        "duration_ms": 14341,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:halo-combined:r3",
+        "arm": "halo-combined",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 3,
+        "trace_id": "cabddfea6fbe259fa85bdd66c5dd55b1",
+        "duration_ms": 10707,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:halo-harness-only:r1",
+        "arm": "halo-harness-only",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 1,
+        "trace_id": "2fb8547158b06a7cf668d66f11852783",
+        "duration_ms": 10372,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:halo-combined:r2",
+        "arm": "halo-combined",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 2,
+        "trace_id": "14fbfe4a1786feb3240c1be0ed62bdbd",
+        "duration_ms": 10120,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:halo-repo-toolkit-only:r3",
+        "arm": "halo-repo-toolkit-only",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 3,
+        "trace_id": "be59a0ca91b23522743c45c09fe28104",
+        "duration_ms": 9732,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:halo-harness-only:r2",
+        "arm": "halo-harness-only",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 2,
+        "trace_id": "ea8866b6dd683d80c15d13c71ff317e2",
+        "duration_ms": 10772,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:halo-combined:r1",
+        "arm": "halo-combined",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 1,
+        "trace_id": "1c84ddb7f6df268404cd8ca723a97a3a",
+        "duration_ms": 10793,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:baseline-harness:r2",
+        "arm": "baseline-harness",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 2,
+        "trace_id": "aed795e2edc4d49f474b48123fcf85a5",
+        "duration_ms": 10118,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:baseline-harness:r1",
+        "arm": "baseline-harness",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 1,
+        "trace_id": "36c2331a350090da9fe801421e2d81cd",
+        "duration_ms": 10226,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:halo-repo-toolkit-only:r1",
+        "arm": "halo-repo-toolkit-only",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 1,
+        "trace_id": "2c2b6d0f54b1066008f21a727b8f061e",
+        "duration_ms": 9893,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:baseline-harness:r3",
+        "arm": "baseline-harness",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 3,
+        "trace_id": "e05b6c80515a7a741f7e89f7b0d81e79",
+        "duration_ms": 10317,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final:halo-harness-only:r3",
+        "arm": "halo-harness-only",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 3,
+        "trace_id": "1bd26a04af44a0f0eb07eca76c199255",
+        "duration_ms": 10174,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      }
+    ]
+  },
+  "track_b": {
+    "replay_bundle_sha256": "e809e3aadafe0d02fa390efa5273f34d3707c07e986bf1d58f5020b5b991d5c2",
+    "runs": [
+      {
+        "task_id": "sat-final-replay:halo-repo-toolkit-only+replay:r2",
+        "arm": "halo-repo-toolkit-only+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 2,
+        "trace_id": "842d6a97e564470449070a216c88beed",
+        "duration_ms": 11148,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:halo-combined+replay:r3",
+        "arm": "halo-combined+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 3,
+        "trace_id": "34ef60ff8bc0dbe3824181ef13a74bf2",
+        "duration_ms": 11063,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:halo-harness-only+replay:r1",
+        "arm": "halo-harness-only+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 1,
+        "trace_id": "22cda9241f1128ee0fe8d43c4376e8c7",
+        "duration_ms": 11312,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:halo-combined+replay:r2",
+        "arm": "halo-combined+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 2,
+        "trace_id": "ad5670d09baeceb9fbf4808a4ea484fd",
+        "duration_ms": 10656,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:halo-repo-toolkit-only+replay:r3",
+        "arm": "halo-repo-toolkit-only+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 3,
+        "trace_id": "538014251e816072ad8e77e76eb8d1ad",
+        "duration_ms": 10922,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:halo-harness-only+replay:r2",
+        "arm": "halo-harness-only+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 2,
+        "trace_id": "8176d686d4875ca50f446de67a1887aa",
+        "duration_ms": 11398,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:halo-combined+replay:r1",
+        "arm": "halo-combined+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 1,
+        "trace_id": "a5a55daea2e8e54dbfa2c9617c21209b",
+        "duration_ms": 10599,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:baseline-harness+replay:r2",
+        "arm": "baseline-harness+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 2,
+        "trace_id": "026e069c6c0976ea9c35ae5ebd622bdd",
+        "duration_ms": 9367,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:baseline-harness+replay:r1",
+        "arm": "baseline-harness+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 1,
+        "trace_id": "ad57b47929e31e5b14a963d03ac22cf9",
+        "duration_ms": 10673,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:halo-repo-toolkit-only+replay:r1",
+        "arm": "halo-repo-toolkit-only+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 1,
+        "trace_id": "ff8b20c81fa8362a1e10b92feeb6256e",
+        "duration_ms": 9860,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:baseline-harness+replay:r3",
+        "arm": "baseline-harness+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 3,
+        "trace_id": "002b747f3cac41f77a821974dd61cc14",
+        "duration_ms": 10206,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      },
+      {
+        "task_id": "sat-final-replay:halo-harness-only+replay:r3",
+        "arm": "halo-harness-only+replay",
+        "model": "gemini-2.5-flash-lite",
+        "repeat": 3,
+        "trace_id": "1d6c1edbbed65bf1ba9de4bb224a80a1",
+        "duration_ms": 10436,
+        "cost_usd_est": 0.00101822,
+        "input_tokens": 3227,
+        "output_tokens": 2023,
+        "gateway_calls": 2,
+        "tool_calls": 2,
+        "retries": 0,
+        "errors": [],
+        "catalyst_error": null,
+        "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+        "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+        "tests_passed": false,
+        "efficiency_eligible": false,
+        "scorer_id": "final_exam",
+        "include_toolkit": false,
+        "score_passed": false,
+        "score_checks": [
+          {
+            "name": "answer_exists",
+            "passed": false
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "tasks_attempted": 12,
+      "correct_runs": 0,
+      "success_rate": 0.0,
+      "median_cost_correct": null,
+      "total_cost": 0.01221864,
+      "median_duration_correct_ms": null,
+      "median_tokens_correct": null,
+      "median_tool_calls_correct": null,
+      "retry_count": 0,
+      "complete_traces": 12,
+      "efficiency_eligible": 0
+    }
+  },
+  "track_c": {
+    "status": "Live global result not run \u2014 complete sat index unavailable.",
+    "ran": false
+  },
+  "spend_ledger": {
+    "phase2b_incremental_cap_usd": 5.0,
+    "phase2b_incremental_spent_usd": 0.10077662,
+    "events": [
+      {
+        "ts": 1786568685.0209892,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00766304,
+        "spent_after": 0.00766304,
+        "meta": {
+          "trace_id": "a74f1b965894fe63e5769f4a8f2d72b0",
+          "passed": false,
+          "model": "deepseek-v4-flash"
+        }
+      },
+      {
+        "ts": 1786568701.212684,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.0023702,
+        "spent_after": 0.01003324,
+        "meta": {
+          "trace_id": "7a12b47279ea004617647474c1720072",
+          "passed": false,
+          "model": "deepseek-v4-flash"
+        }
+      },
+      {
+        "ts": 1786568714.204713,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00070504,
+        "spent_after": 0.01073828,
+        "meta": {
+          "trace_id": "b68a89dc89c5537e8ebc76163f14afac",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568723.573838,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.00039326,
+        "spent_after": 0.01113154,
+        "meta": {
+          "trace_id": "46e7ef90f61effdcb123cc6dfa639b45",
+          "passed": true,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568726.9395187,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00021924,
+        "spent_after": 0.01135078,
+        "meta": {
+          "trace_id": "f46c1c543966b1e420720a87e47f821e",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786568729.961156,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.00021588,
+        "spent_after": 0.01156666,
+        "meta": {
+          "trace_id": "8608ab9f69fef9734f6db6c2ec5f32f0",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786568749.8626854,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00143934,
+        "spent_after": 0.013006,
+        "meta": {
+          "trace_id": "449cff7ea71656c0c20b71f8c0e8c871",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568765.521302,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.00039326,
+        "spent_after": 0.01339926,
+        "meta": {
+          "trace_id": "63ace1713e479b2ac54507d8fc66380d",
+          "passed": true,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568786.1911507,
+        "event": "run:sat-dev-003:model-select:r1",
+        "cost_usd": 0.00243796,
+        "spent_after": 0.01583722,
+        "meta": {
+          "trace_id": "d65ce4647885e855bc15d482801d82aa",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568812.7888877,
+        "event": "run:sat-dev-004:model-select:r1",
+        "cost_usd": 0.00214676,
+        "spent_after": 0.01798398,
+        "meta": {
+          "trace_id": "0469bae4c0bf12bcc668b32f278a10b6",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568836.7084575,
+        "event": "run:sat-dev-005:model-select:r1",
+        "cost_usd": 0.00192794,
+        "spent_after": 0.01991192,
+        "meta": {
+          "trace_id": "0d7baab28e2facdd88114b48fde416d2",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568858.454902,
+        "event": "run:sat-dev-006:model-select:r1",
+        "cost_usd": 0.00118734,
+        "spent_after": 0.02109926,
+        "meta": {
+          "trace_id": "dc444f37fa9ed2002ec7b40b82c4ab99",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568895.901358,
+        "event": "run:sat-dev-007:model-select:r1",
+        "cost_usd": 0.00182938,
+        "spent_after": 0.02292864,
+        "meta": {
+          "trace_id": "157e0877514cf134091dd1a91297196a",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568910.1665,
+        "event": "run:sat-dev-008:model-select:r1",
+        "cost_usd": 0.00066094,
+        "spent_after": 0.02358958,
+        "meta": {
+          "trace_id": "6664ae69872bc1841e86891c7c1a8ac3",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568948.8659708,
+        "event": "run:sat-dev-009:model-select:r1",
+        "cost_usd": 0.00415254,
+        "spent_after": 0.02774212,
+        "meta": {
+          "trace_id": "08d8eec73d283cd50619bc850f65cdb4",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568962.114358,
+        "event": "run:sat-dev-010:model-select:r1",
+        "cost_usd": 0.00068446,
+        "spent_after": 0.02842658,
+        "meta": {
+          "trace_id": "ee93a5a391868e1828dc2919774af7ce",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568990.724861,
+        "event": "run:sat-dev-011:model-select:r1",
+        "cost_usd": 0.00243432,
+        "spent_after": 0.0308609,
+        "meta": {
+          "trace_id": "cb26ec785aabf2aeaf9a575fc8c20ac9",
+          "passed": false,
+          "model": "gpt-4.1-nano"
+        }
+      },
+      {
+        "ts": 1786568993.9120224,
+        "event": "run:sat-dev-001:model-select:r1",
+        "cost_usd": 0.00021924,
+        "spent_after": 0.03108014,
+        "meta": {
+          "trace_id": "136233a28575159f4e54131644a31d7f",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786568997.0046039,
+        "event": "run:sat-dev-002:model-select:r1",
+        "cost_usd": 0.00021588,
+        "spent_after": 0.03129602,
+        "meta": {
+          "trace_id": "d0f1584574fb488249ff9f78687026d4",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569002.259839,
+        "event": "run:sat-dev-003:model-select:r1",
+        "cost_usd": 0.00052262,
+        "spent_after": 0.03181864,
+        "meta": {
+          "trace_id": "78529887fe46c6a23a121413c7fb2432",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569008.7372746,
+        "event": "run:sat-dev-004:model-select:r1",
+        "cost_usd": 0.00066514,
+        "spent_after": 0.03248378,
+        "meta": {
+          "trace_id": "374ec001a04166d50f6903ba4ece4c53",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569013.7272177,
+        "event": "run:sat-dev-005:model-select:r1",
+        "cost_usd": 0.00042994,
+        "spent_after": 0.03291372,
+        "meta": {
+          "trace_id": "d7a5c4cfad7c6aa323256c5afe8b6de1",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569021.5027943,
+        "event": "run:sat-dev-006:model-select:r1",
+        "cost_usd": 0.00070042,
+        "spent_after": 0.03361414,
+        "meta": {
+          "trace_id": "83e3d33ef55368cfb99d914f3e796873",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569027.3741674,
+        "event": "run:sat-dev-007:model-select:r1",
+        "cost_usd": 0.00020986,
+        "spent_after": 0.033824,
+        "meta": {
+          "trace_id": "ef2cff5886b823ba6414fda852568715",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569030.911151,
+        "event": "run:sat-dev-008:model-select:r1",
+        "cost_usd": 0.0002338,
+        "spent_after": 0.0340578,
+        "meta": {
+          "trace_id": "0629c6eef1b28b1e20e6146553bf09ea",
+          "passed": true,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569036.2589626,
+        "event": "run:sat-dev-009:model-select:r1",
+        "cost_usd": 0.0004137,
+        "spent_after": 0.0344715,
+        "meta": {
+          "trace_id": "758aac3e7f1a8b39bf4be8b60a9dffe6",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569039.4233856,
+        "event": "run:sat-dev-010:model-select:r1",
+        "cost_usd": 0.00023338,
+        "spent_after": 0.03470488,
+        "meta": {
+          "trace_id": "2fda71f1940501a04b0a1e82ec149f2d",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569043.6733763,
+        "event": "run:sat-dev-011:model-select:r1",
+        "cost_usd": 0.00040264,
+        "spent_after": 0.03510752,
+        "meta": {
+          "trace_id": "414baef2182b58ed842366f070fe7408",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569143.4661963,
+        "event": "run:sat-dev-001:baseline-dev:r1",
+        "cost_usd": 0.00021924,
+        "spent_after": 0.03532676,
+        "meta": {
+          "trace_id": "3f54a11b0cd0768c1c1aab4ca539d3e7",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569146.6270108,
+        "event": "run:sat-dev-002:baseline-dev:r1",
+        "cost_usd": 0.00021588,
+        "spent_after": 0.03554264,
+        "meta": {
+          "trace_id": "337b5a7dbc9f613dbdc0ca778c324454",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569152.0955267,
+        "event": "run:sat-dev-003:baseline-dev:r1",
+        "cost_usd": 0.00052262,
+        "spent_after": 0.03606526,
+        "meta": {
+          "trace_id": "b155ff547036a226f5da9345225320d8",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569158.0916317,
+        "event": "run:sat-dev-004:baseline-dev:r1",
+        "cost_usd": 0.00066514,
+        "spent_after": 0.0367304,
+        "meta": {
+          "trace_id": "b126aef9af44eb15a2b02eb4529c246b",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569163.2380514,
+        "event": "run:sat-dev-005:baseline-dev:r1",
+        "cost_usd": 0.00042994,
+        "spent_after": 0.03716034,
+        "meta": {
+          "trace_id": "1c305549d38c787f9f12c87b61a2fb19",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569170.790126,
+        "event": "run:sat-dev-006:baseline-dev:r1",
+        "cost_usd": 0.00070042,
+        "spent_after": 0.03786076,
+        "meta": {
+          "trace_id": "5cdad521dc8c157fa2ec1d637b042a45",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569175.827947,
+        "event": "run:sat-dev-007:baseline-dev:r1",
+        "cost_usd": 0.00020986,
+        "spent_after": 0.03807062,
+        "meta": {
+          "trace_id": "e4e8eaee470e479bfab1dce3f5ab2104",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569179.2544363,
+        "event": "run:sat-dev-008:baseline-dev:r1",
+        "cost_usd": 0.0002338,
+        "spent_after": 0.03830442,
+        "meta": {
+          "trace_id": "798b053b04602517f40c679a218fc18e",
+          "passed": true,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569185.522097,
+        "event": "run:sat-dev-009:baseline-dev:r1",
+        "cost_usd": 0.0004137,
+        "spent_after": 0.03871812,
+        "meta": {
+          "trace_id": "f60e68d4dc37a075cb0715546afdc016",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569188.811566,
+        "event": "run:sat-dev-010:baseline-dev:r1",
+        "cost_usd": 0.00023338,
+        "spent_after": 0.0389515,
+        "meta": {
+          "trace_id": "6b1af0f981ef44d40478dd495b903dd0",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569193.0236073,
+        "event": "run:sat-dev-011:baseline-dev:r1",
+        "cost_usd": 0.00040264,
+        "spent_after": 0.03935414,
+        "meta": {
+          "trace_id": "a67d1d7951ed0977f2c4ae8d61988a78",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569841.593264,
+        "event": "run:sat-hold-003:halo-harness-only:r3",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.03955574,
+        "meta": {
+          "trace_id": "7e664e084035556d3886b4117013564f",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569929.2402153,
+        "event": "run:sat-hold-003:halo-harness-only:r3",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.03975734,
+        "meta": {
+          "trace_id": "d44e01876f6137c21bf45f3f6b5f39d4",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569937.3856428,
+        "event": "run:sat-hold-002:halo-combined:r3",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.04095882,
+        "meta": {
+          "trace_id": "cb7b3a241094656903f09bdb707580e7",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569940.3551826,
+        "event": "run:sat-hold-003:baseline-harness:r1",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.04116042,
+        "meta": {
+          "trace_id": "c4aa886b48fbfe754932996874af2e7a",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569941.9869819,
+        "event": "run:sat-hold-001:halo-combined:r2",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.04127354,
+        "meta": {
+          "trace_id": "c5261cc35d518ec94abd65263139bf9c",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569949.8278658,
+        "event": "run:sat-hold-002:halo-combined:r1",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.04247502,
+        "meta": {
+          "trace_id": "eca32b3a47047c56c4635ad863e6b1a3",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569951.6719427,
+        "event": "run:sat-hold-001:halo-combined:r1",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.04258814,
+        "meta": {
+          "trace_id": "b9e0179985187991ca50761b28a4b53d",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569954.5528202,
+        "event": "run:sat-hold-003:halo-repo-toolkit-only:r1",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.04278974,
+        "meta": {
+          "trace_id": "fd0b242e5eace48d490c6784b09db450",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569967.6623235,
+        "event": "run:sat-hold-004:halo-harness-only:r1",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.04433884,
+        "meta": {
+          "trace_id": "d02988bb003c689a46d9545b50062790",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569975.77643,
+        "event": "run:sat-hold-002:baseline-harness:r1",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.04554032,
+        "meta": {
+          "trace_id": "1af1d8eee79e6e04addbefddd77f0fd5",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569977.5103881,
+        "event": "run:sat-hold-001:halo-harness-only:r1",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.04565344,
+        "meta": {
+          "trace_id": "4edc88881ec366c7080d5d84ed59d83a",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569980.4797099,
+        "event": "run:sat-hold-003:halo-combined:r3",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.04585504,
+        "meta": {
+          "trace_id": "94b8abc3489f29e13eb13721c0cdb578",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569982.1162903,
+        "event": "run:sat-hold-001:halo-harness-only:r2",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.04596816,
+        "meta": {
+          "trace_id": "922ae60489ff32589d8a8d032b8fbe9e",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569995.8548565,
+        "event": "run:sat-hold-004:halo-repo-toolkit-only:r2",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.04751726,
+        "meta": {
+          "trace_id": "9076d7de943599734fdf524f4ea9c491",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786569998.7818193,
+        "event": "run:sat-hold-003:baseline-harness:r3",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.04771886,
+        "meta": {
+          "trace_id": "f656575565d966933a03b3c15ce23f97",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570000.5269613,
+        "event": "run:sat-hold-001:halo-combined:r3",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.04783198,
+        "meta": {
+          "trace_id": "3a14da932d3a4c716e161a781f3c167c",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570003.3456345,
+        "event": "run:sat-hold-003:halo-combined:r1",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.04803358,
+        "meta": {
+          "trace_id": "0d3793891a8a20bafb0751c864e0f692",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570006.1722581,
+        "event": "run:sat-hold-003:halo-harness-only:r2",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.04823518,
+        "meta": {
+          "trace_id": "ad89c20fcb989a46e7db0a3bfbbfb05e",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570019.3785312,
+        "event": "run:sat-hold-004:halo-harness-only:r3",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.04978428,
+        "meta": {
+          "trace_id": "d7ea0a74ee944ba1bffc00919e90ab5e",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570026.933184,
+        "event": "run:sat-hold-002:halo-repo-toolkit-only:r1",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.05098576,
+        "meta": {
+          "trace_id": "9663c9eb7133bd53d1b49b45f6ebc837",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570030.0737782,
+        "event": "run:sat-hold-003:halo-repo-toolkit-only:r2",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.05118736,
+        "meta": {
+          "trace_id": "04045068fb805ede8979755fa245ad40",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570043.02606,
+        "event": "run:sat-hold-004:halo-combined:r2",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.05273646,
+        "meta": {
+          "trace_id": "e780dcbcb6b54db46471353a44126bb0",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570046.0194302,
+        "event": "run:sat-hold-003:halo-repo-toolkit-only:r3",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.05293806,
+        "meta": {
+          "trace_id": "9bd73c1cd6576a9cdfde1413479079aa",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570059.275004,
+        "event": "run:sat-hold-004:baseline-harness:r1",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.05448716,
+        "meta": {
+          "trace_id": "798db806da0d8bea7d1910449738dd24",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570062.335173,
+        "event": "run:sat-hold-003:baseline-harness:r2",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.05468876,
+        "meta": {
+          "trace_id": "f4b77e82ce901ac7cbed3c18217323ac",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570069.7850509,
+        "event": "run:sat-hold-002:halo-repo-toolkit-only:r3",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.05589024,
+        "meta": {
+          "trace_id": "daa4df56d71a2799453023ff6dd47a62",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570077.4481044,
+        "event": "run:sat-hold-002:halo-combined:r2",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.05709172,
+        "meta": {
+          "trace_id": "763f760ea9ea2ead6a7397e21e4bd9fd",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570090.3426604,
+        "event": "run:sat-hold-004:halo-combined:r3",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.05864082,
+        "meta": {
+          "trace_id": "c6ad7aa381987ad874ba0bc805d97ffa",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570104.0081074,
+        "event": "run:sat-hold-004:halo-repo-toolkit-only:r3",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.06018992,
+        "meta": {
+          "trace_id": "a616d993abfc30cb1eb241aeedc19b52",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570105.696161,
+        "event": "run:sat-hold-001:baseline-harness:r1",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.06030304,
+        "meta": {
+          "trace_id": "f383b6f8e69f408caaa673fa1d70eb64",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570114.1852791,
+        "event": "run:sat-hold-002:halo-repo-toolkit-only:r2",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.06150452,
+        "meta": {
+          "trace_id": "04b78511e0a417addb43577615bef468",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570122.2502177,
+        "event": "run:sat-hold-002:halo-harness-only:r2",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.062706,
+        "meta": {
+          "trace_id": "be66b1e646f77d83c92cd1b1be94e001",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570136.3890002,
+        "event": "run:sat-hold-004:halo-repo-toolkit-only:r1",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.0642551,
+        "meta": {
+          "trace_id": "ca5884b12ed651bee23e327f1f0e9c84",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570144.5362313,
+        "event": "run:sat-hold-002:baseline-harness:r2",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.06545658,
+        "meta": {
+          "trace_id": "85ecf8d97b682ac06e396928461e84a1",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570157.8744051,
+        "event": "run:sat-hold-004:baseline-harness:r3",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.06700568,
+        "meta": {
+          "trace_id": "358de9dcd46ad038e0e3e7b6b9b0e4eb",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570171.7177348,
+        "event": "run:sat-hold-004:halo-combined:r1",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.06855478,
+        "meta": {
+          "trace_id": "09013a5a478efe301cbabb7ae957911a",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570173.3897753,
+        "event": "run:sat-hold-001:baseline-harness:r3",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.0686679,
+        "meta": {
+          "trace_id": "effd500a1c34591492df0a00fea6ee09",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570176.5951965,
+        "event": "run:sat-hold-003:halo-harness-only:r1",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.0688695,
+        "meta": {
+          "trace_id": "53938384fb4bbd62ddcff042a19974cc",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570190.8281455,
+        "event": "run:sat-hold-004:baseline-harness:r2",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.0704186,
+        "meta": {
+          "trace_id": "c33c7f9ac15176257c8fd6377459c1f7",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570192.5503309,
+        "event": "run:sat-hold-001:halo-harness-only:r3",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.07053172,
+        "meta": {
+          "trace_id": "f48ec8d22097f4087bedeebd90ecec89",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570195.3933988,
+        "event": "run:sat-hold-003:halo-combined:r2",
+        "cost_usd": 0.0002016,
+        "spent_after": 0.07073332,
+        "meta": {
+          "trace_id": "a1659cf1643854896cf4d4402610ad82",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570196.9336498,
+        "event": "run:sat-hold-001:halo-repo-toolkit-only:r1",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.07084644,
+        "meta": {
+          "trace_id": "4b481f5f841d50115325fea6e9f4e154",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570198.5776765,
+        "event": "run:sat-hold-001:halo-repo-toolkit-only:r3",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.07095956,
+        "meta": {
+          "trace_id": "7abbbd77646ecb6ef4219de66527c87e",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570206.429019,
+        "event": "run:sat-hold-002:baseline-harness:r3",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.07216104,
+        "meta": {
+          "trace_id": "bd777d180bc6d117b357955c9ba15d12",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570214.5721207,
+        "event": "run:sat-hold-002:halo-harness-only:r1",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.07336252,
+        "meta": {
+          "trace_id": "b0e38548de78ed3d5bb7cf5d55962dae",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570222.2495577,
+        "event": "run:sat-hold-002:halo-harness-only:r3",
+        "cost_usd": 0.00120148,
+        "spent_after": 0.074564,
+        "meta": {
+          "trace_id": "db722eef00f6e6d2b2b83e9c94a6f2c4",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570223.9081237,
+        "event": "run:sat-hold-001:baseline-harness:r2",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.07467712,
+        "meta": {
+          "trace_id": "94ad2bf139345039ffc6be0084e54912",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570225.661498,
+        "event": "run:sat-hold-001:halo-repo-toolkit-only:r2",
+        "cost_usd": 0.00011312,
+        "spent_after": 0.07479024,
+        "meta": {
+          "trace_id": "3e503dd2f31b30595deef88e0890b58d",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570239.3195746,
+        "event": "run:sat-hold-004:halo-harness-only:r2",
+        "cost_usd": 0.0015491,
+        "spent_after": 0.07633934,
+        "meta": {
+          "trace_id": "18d1a876d3e29236123c8148abe4bf5f",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570457.4753926,
+        "event": "run:sat-final:halo-repo-toolkit-only:r2",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.07735756,
+        "meta": {
+          "trace_id": "49d1673e221d9129f63bcbdf52e7f063",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570468.1885622,
+        "event": "run:sat-final:halo-combined:r3",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.07837578,
+        "meta": {
+          "trace_id": "cabddfea6fbe259fa85bdd66c5dd55b1",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570478.5670426,
+        "event": "run:sat-final:halo-harness-only:r1",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.079394,
+        "meta": {
+          "trace_id": "2fb8547158b06a7cf668d66f11852783",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570488.694891,
+        "event": "run:sat-final:halo-combined:r2",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.08041222,
+        "meta": {
+          "trace_id": "14fbfe4a1786feb3240c1be0ed62bdbd",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570498.433116,
+        "event": "run:sat-final:halo-repo-toolkit-only:r3",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.08143044,
+        "meta": {
+          "trace_id": "be59a0ca91b23522743c45c09fe28104",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570509.2110884,
+        "event": "run:sat-final:halo-harness-only:r2",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.08244866,
+        "meta": {
+          "trace_id": "ea8866b6dd683d80c15d13c71ff317e2",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570520.0105424,
+        "event": "run:sat-final:halo-combined:r1",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.08346688,
+        "meta": {
+          "trace_id": "1c84ddb7f6df268404cd8ca723a97a3a",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570530.1346006,
+        "event": "run:sat-final:baseline-harness:r2",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.0844851,
+        "meta": {
+          "trace_id": "aed795e2edc4d49f474b48123fcf85a5",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570540.366795,
+        "event": "run:sat-final:baseline-harness:r1",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.08550332,
+        "meta": {
+          "trace_id": "36c2331a350090da9fe801421e2d81cd",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570550.266114,
+        "event": "run:sat-final:halo-repo-toolkit-only:r1",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.08652154,
+        "meta": {
+          "trace_id": "2c2b6d0f54b1066008f21a727b8f061e",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570560.589827,
+        "event": "run:sat-final:baseline-harness:r3",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.08753976,
+        "meta": {
+          "trace_id": "e05b6c80515a7a741f7e89f7b0d81e79",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570570.770445,
+        "event": "run:sat-final:halo-harness-only:r3",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.08855798,
+        "meta": {
+          "trace_id": "1bd26a04af44a0f0eb07eca76c199255",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570581.9249084,
+        "event": "run:sat-final-replay:halo-repo-toolkit-only+replay:r2",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.0895762,
+        "meta": {
+          "trace_id": "842d6a97e564470449070a216c88beed",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570592.9935465,
+        "event": "run:sat-final-replay:halo-combined+replay:r3",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.09059442,
+        "meta": {
+          "trace_id": "34ef60ff8bc0dbe3824181ef13a74bf2",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570604.311448,
+        "event": "run:sat-final-replay:halo-harness-only+replay:r1",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.09161264,
+        "meta": {
+          "trace_id": "22cda9241f1128ee0fe8d43c4376e8c7",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570614.9731834,
+        "event": "run:sat-final-replay:halo-combined+replay:r2",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.09263086,
+        "meta": {
+          "trace_id": "ad5670d09baeceb9fbf4808a4ea484fd",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570625.9012678,
+        "event": "run:sat-final-replay:halo-repo-toolkit-only+replay:r3",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.09364908,
+        "meta": {
+          "trace_id": "538014251e816072ad8e77e76eb8d1ad",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570637.30519,
+        "event": "run:sat-final-replay:halo-harness-only+replay:r2",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.0946673,
+        "meta": {
+          "trace_id": "8176d686d4875ca50f446de67a1887aa",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570647.909879,
+        "event": "run:sat-final-replay:halo-combined+replay:r1",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.09568552,
+        "meta": {
+          "trace_id": "a5a55daea2e8e54dbfa2c9617c21209b",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570657.2832747,
+        "event": "run:sat-final-replay:baseline-harness+replay:r2",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.09670374,
+        "meta": {
+          "trace_id": "026e069c6c0976ea9c35ae5ebd622bdd",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570667.9629192,
+        "event": "run:sat-final-replay:baseline-harness+replay:r1",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.09772196,
+        "meta": {
+          "trace_id": "ad57b47929e31e5b14a963d03ac22cf9",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570677.8300936,
+        "event": "run:sat-final-replay:halo-repo-toolkit-only+replay:r1",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.09874018,
+        "meta": {
+          "trace_id": "ff8b20c81fa8362a1e10b92feeb6256e",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570688.0424426,
+        "event": "run:sat-final-replay:baseline-harness+replay:r3",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.0997584,
+        "meta": {
+          "trace_id": "002b747f3cac41f77a821974dd61cc14",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      },
+      {
+        "ts": 1786570698.4858406,
+        "event": "run:sat-final-replay:halo-harness-only+replay:r3",
+        "cost_usd": 0.00101822,
+        "spent_after": 0.10077662,
+        "meta": {
+          "trace_id": "1d6c1edbbed65bf1ba9de4bb224a80a1",
+          "passed": false,
+          "model": "gemini-2.5-flash-lite"
+        }
+      }
+    ],
+    "halo_note": "HALO local engine cost not fully attributed in local ledger; platform spend should be checked separately when inferences API recovers"
+  }
+}

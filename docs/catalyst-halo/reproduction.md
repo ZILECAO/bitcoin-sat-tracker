@@ -129,3 +129,34 @@ harness scores the broken baseline, not that agents have fixed it.
 
 See [`supply-chain-report.md`](supply-chain-report.md) for package decisions
 required before Phase 2.
+
+## Phase 2B Sat-Hunt Reproduction
+
+Authoritative work order: `docs/catalyst-halo/phase-2b-sat-hunt-work-order.md`.  
+Report: `docs/catalyst-halo/phase-2b-sat-hunt-report.md`.
+
+```bash
+git fetch origin diligence/catalyst-halo
+git checkout diligence/catalyst-halo
+
+python3 -m unittest tests.test_diligence_offline tests.test_sat_hunt tests.test_sat_hunt_phase2b -v
+
+# Private raw directory (Patoshi CSV + raw traces; never commit)
+mkdir -p "$HOME/diligence-raw-phase2b" && chmod 700 "$HOME/diligence-raw-phase2b"
+export DILIGENCE_RAW_DIR="$HOME/diligence-raw-phase2b"
+export CATALYST_SERVICE_NAME=bitcoin-sat-tracker-sat-hunt
+export CATALYST_OTLP_ENDPOINT=https://telemetry.inference.net
+export INFERENCE_BASE_URL=https://api.inference.net/v1
+# INFERENCE_API_KEY / CATALYST_OTLP_TOKEN required for hosted stages
+
+# After placing verified Patoshi CSV at
+# $DILIGENCE_RAW_DIR/patoshi/patoshi_pubkeys_COMPLETE.csv :
+python3 -m diligence.sat_hunt.run_phase2b select
+python3 -m diligence.sat_hunt.run_phase2b baseline --model gemini-2.5-flash-lite
+python3 -m diligence.sat_hunt.run_phase2b freeze-arms --model gemini-2.5-flash-lite
+python3 -m diligence.sat_hunt.run_phase2b heldout --model gemini-2.5-flash-lite --reps 3
+python3 -m diligence.sat_hunt.run_phase2b final --model gemini-2.5-flash-lite --reps 3
+```
+
+Gateway calls must use a browser-like User-Agent (see
+`diligence/sat_hunt/agent/gateway.py`). Do not republish the Patoshi CSV.

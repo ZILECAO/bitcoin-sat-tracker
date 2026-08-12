@@ -1,0 +1,13 @@
+{
+  "bundle_sha256": "e809e3aadafe0d02fa390efa5273f34d3707c07e986bf1d58f5020b5b991d5c2",
+  "endpoints": [
+    "https://mempool.space/api/blocks/tip/height",
+    "https://ordinals.com/r/blockheight"
+  ],
+  "snapshot": {
+    "height": 10000,
+    "block_hash": "06f6fd0959f5e9052fce897166e17367f3d7a87bbc1fade4daac42352f34df7b",
+    "confirmations": 6
+  },
+  "note": "Pinned public-mainnet response shapes frozen for replay; no executable inscription content."
+}
