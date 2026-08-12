@@ -67,7 +67,8 @@ class ToolRegistry:
     ) -> None:
         self.workspace = workspace
         self.fixture = fixture
-        self.cache_dir = cache_dir or (workspace / ".agent_cache")
+        # Scorers expect a content-addressed `cache/` directory at workspace root.
+        self.cache_dir = cache_dir or (workspace / "cache")
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.calls = 0
         self.handlers: dict[str, Callable[[dict[str, Any]], Any]] = {

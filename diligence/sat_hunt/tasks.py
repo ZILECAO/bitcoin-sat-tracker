@@ -238,9 +238,14 @@ def prepare_task_workspace(
     create_baseline_checkout(dest, repo_root=repo_root or REPO_ROOT)
     (dest / "answers").mkdir(exist_ok=True)
     (dest / "tests").mkdir(exist_ok=True)
+    (dest / "cache").mkdir(exist_ok=True)
     (dest / "fixture.json").write_text(json.dumps(fixture, indent=2) + "\n")
-    # Copy public benchmark definition only
+    # Copy public benchmark definition and attribution-source metadata only
+    # (never the Patoshi CSV).
     shutil.copy2(TASKS_DIR / "benchmark.json", dest / "benchmark.json")
+    shutil.copy2(
+        TASKS_DIR / "attribution-sources.json", dest / "attribution-sources.json"
+    )
     if include_toolkit:
         toolkit_src = TASKS_DIR / "toolkit" / "fixture_api.py"
         pkg = dest / "sat_hunt_toolkit"

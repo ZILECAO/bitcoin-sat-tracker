@@ -17,8 +17,10 @@ SERVICE_NAME = "bitcoin-sat-tracker-sat-hunt"
 BASELINE_SYSTEM = """You are a specialized Bitcoin/ordinal research coding agent.
 You must write Python scripts and tests in the workspace, use only the provided tools,
 and produce machine-checkable answer artifacts. Never claim certainty about wallet ownership.
-Use the fixture tools for deterministic data. Prefer small scripts and explicit evidence.
-When finished, call submit_answer with the required JSON artifact for the task.
+Use the fixture_* tools for deterministic data. Prefer small scripts and explicit evidence.
+Workspace includes fixture.json, benchmark.json, and attribution-sources.json (metadata only).
+When finished, call submit_answer with name set to the required answer path
+(for example answers/fifo.json) and answer set to the JSON object.
 """
 
 
@@ -121,11 +123,31 @@ class SatHuntAgent:
         try:
             for turn in range(self.max_turns):
                 try:
-                    response = self.gateway.chat(
-                        messages,
-                        tools=self.tools.schemas(),
-                        max_tokens=1200,
-                    )
+                    if catalyst is not None:
+                        from catalyst_tracing import SpanKindValues, manual_span
+
+                        with manual_span(
+                            catalyst.tracer,
+                            name=f"llm.{self.model}",
+                            span_kind=SpanKindValues.LLM,
+                            model=self.model,
+                            input={"messages": len(messages)},
+                        ) as llm_ctx:
+                            response = self.gateway.chat(
+                                messages,
+                                tools=self.tools.schemas(),
+                                max_tokens=1200,
+                            )
+                            llm_ctx.record_tokens(
+                                prompt=response.get("_diligence", {}).get("input_tokens", 0),
+                                completion=response.get("_diligence", {}).get("output_tokens", 0),
+                            )
+                    else:
+                        response = self.gateway.chat(
+                            messages,
+                            tools=self.tools.schemas(),
+                            max_tokens=1200,
+                        )
                 except GatewayError as exc:
                     errors.append(str(exc))
                     retries += 1
@@ -155,8 +177,24 @@ class SatHuntAgent:
                     fn = call.get("function") or {}
                     name = fn.get("name") or ""
                     arguments = fn.get("arguments") or "{}"
-                    # TOOL span via nested OTEL if available
-                    result = self.tools.call(name, arguments)
+                    result = None
+                    if catalyst is not None:
+                        try:
+                            from catalyst_tracing import SpanKindValues, manual_span
+
+                            with manual_span(
+                                catalyst.tracer,
+                                name=f"tool.{name}",
+                                span_kind=SpanKindValues.TOOL,
+                                tool_name=name,
+                                input=str(arguments)[:1500],
+                            ) as tool_ctx:
+                                result = self.tools.call(name, arguments)
+                                tool_ctx.set_output(json.dumps(result.as_dict())[:1500])
+                        except Exception:  # noqa: BLE001
+                            result = self.tools.call(name, arguments)
+                    else:
+                        result = self.tools.call(name, arguments)
                     tool_events.append(result.as_dict())
                     if not result.ok and result.retryable:
                         retries += 1
