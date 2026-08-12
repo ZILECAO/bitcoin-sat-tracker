@@ -7,12 +7,20 @@ or production traffic.
 ## Current State
 
 - Phase 0 environment isolation: complete.
-- Phase 1 offline harness and static supply-chain audit: authorized.
+- Phase 1 offline harness and static supply-chain audit: complete on this
+  branch; waiting for explicit Phase 2 approval.
 - Phase 2 local HALO and synthetic Catalyst testing: not authorized.
 - Phase 3 fine-tuning: not authorized.
 - External GPU rental: not authorized.
 
 No real API key belongs in this branch or in a Phase 1 environment.
+
+Phase 1 deliverables:
+
+- Offline evaluator: `python -m diligence {prepare,run,verify,report}`
+- Reproduction guide: [`reproduction.md`](reproduction.md)
+- Supply-chain report: [`supply-chain-report.md`](supply-chain-report.md)
+- Scrubbed offline results: [`results/`](results/)
 
 ## Start Here
 

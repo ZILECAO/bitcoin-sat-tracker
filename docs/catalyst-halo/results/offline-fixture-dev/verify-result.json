@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "run_dir": "/home/ubuntu/diligence-raw/runs/offline-fixture-dev-20260812T031915Z-24d3c7c3",
+  "arm": "offline-fixture",
+  "split": "dev",
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "network": "disabled",
+  "record_count": 6,
+  "privacy_matrix_ok": true,
+  "memory_secret_compare_ok": true
+}

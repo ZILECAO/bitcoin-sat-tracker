@@ -14,7 +14,7 @@ Accepted facts:
 
 ## Phase 1 — Offline Harness and Static Audit
 
-Status: authorized.
+Status: complete (awaiting explicit Phase 2 approval).
 
 Allowed:
 

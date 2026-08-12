@@ -1,0 +1,139 @@
+{
+  "bitcoin_rpc": {
+    "errors": {
+      "getrawtransaction:4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b:True": {
+        "code": -5,
+        "message": "The genesis block coinbase is not considered an ordinary transaction"
+      }
+    },
+    "password": "regtest-fake-pass-NOT-A-SECRET",
+    "responses": {
+      "getblock:0000000000000000000fakeblockhash000000000000000000000000000001": {
+        "hash": "0000000000000000000fakeblockhash000000000000000000000000000001",
+        "height": 800000,
+        "time": 1700000000,
+        "tx": [
+          "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      },
+      "getblockchaininfo": {
+        "blocks": 101,
+        "chain": "regtest"
+      },
+      "getrawtransaction:5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451:True": {
+        "blockhash": "0000000000000000000fakeblockhash000000000000000000000000000001",
+        "txid": "5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451",
+        "vin": [
+          {
+            "txid": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "vout": 0
+          }
+        ],
+        "vout": [
+          {
+            "n": 0,
+            "scriptPubKey": {
+              "address": "bc1qfakeaddress0000000000000000000000001",
+              "type": "witness_v0_keyhash"
+            },
+            "value": 0.5
+          },
+          {
+            "n": 1,
+            "scriptPubKey": {
+              "address": "bc1qfakeaddress0000000000000000000000002",
+              "type": "witness_v0_keyhash"
+            },
+            "value": 0.49
+          }
+        ]
+      },
+      "getrawtransaction:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:True": {
+        "blockhash": "0000000000000000000fakeblockhash000000000000000000000000000001",
+        "txid": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "vin": [
+          {
+            "txid": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "vout": 0
+          }
+        ],
+        "vout": [
+          {
+            "n": 0,
+            "scriptPubKey": {
+              "address": "bc1qfakeaddress0000000000000000000000001",
+              "type": "witness_v0_keyhash"
+            },
+            "value": 0.5
+          },
+          {
+            "n": 1,
+            "scriptPubKey": {
+              "address": "bc1qfakeaddress0000000000000000000000002",
+              "type": "witness_v0_keyhash"
+            },
+            "value": 0.49
+          }
+        ]
+      }
+    },
+    "url": "http://127.0.0.1:18443",
+    "user": "regtest-fake-user"
+  },
+  "block_rewards": {
+    "0": 5000000000,
+    "1260000": 78125000,
+    "209999": 5000000000,
+    "210000": 2500000000,
+    "420000": 1250000000
+  },
+  "edge_cases": {
+    "out_of_range_vout": {
+      "txid": "5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451",
+      "vout": 99
+    },
+    "satpoint_invalid": "5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451:0:-1",
+    "satpoint_valid": "5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451:0:0",
+    "unconfirmed_tx": {
+      "txid": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "vin": [
+        {
+          "txid": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "vout": 0
+        }
+      ],
+      "vout": [
+        {
+          "n": 0,
+          "scriptPubKey": {
+            "address": "bc1qfakeaddress0000000000000000000000001",
+            "type": "witness_v0_keyhash"
+          },
+          "value": 0.5
+        },
+        {
+          "n": 1,
+          "scriptPubKey": {
+            "address": "bc1qfakeaddress0000000000000000000000002",
+            "type": "witness_v0_keyhash"
+          },
+          "value": 0.49
+        }
+      ]
+    }
+  },
+  "mempool": {
+    "base_url": "https://example.invalid/mempool-fake",
+    "outspends": {
+      "5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451:0": {
+        "spent": true,
+        "txid": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "vin": 0
+      },
+      "5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451:1": {
+        "spent": false
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "diligence_version": "0.1.0",
+  "tasks": {
+    "development_count": 6,
+    "holdout_count": 6,
+    "families": [
+      "block_reward_tests",
+      "bounded_wallet_polling",
+      "fee_flow_edge_cases",
+      "injectable_dependencies",
+      "missing_config_safe",
+      "no_sys_exit_in_library",
+      "rpc_config_externalized",
+      "safe_cli_layer",
+      "satpoint_validation",
+      "structured_errors",
+      "timeouts_and_status",
+      "tx_output_edge_cases"
+    ],
+    "development_ids": [
+      "btc-dev-001",
+      "btc-dev-002",
+      "btc-dev-003",
+      "btc-dev-004",
+      "btc-dev-005",
+      "btc-dev-006"
+    ],
+    "holdout_ids": [
+      "btc-hold-001",
+      "btc-hold-002",
+      "btc-hold-003",
+      "btc-hold-004",
+      "btc-hold-005",
+      "btc-hold-006"
+    ]
+  },
+  "phase": 1,
+  "phase2_configured": false,
+  "evaluator_commands": [
+    "python -m diligence prepare",
+    "python -m diligence run --arm <arm> --split <dev|holdout> --repeats <n>",
+    "python -m diligence verify --run-dir <path>",
+    "python -m diligence report --run-dir <path>"
+  ],
+  "raw_results_mode": "0700",
+  "network": "disabled",
+  "created_at": "2026-08-12T03:24:48Z"
+}

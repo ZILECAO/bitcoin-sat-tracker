@@ -1,0 +1,47 @@
+{
+  "task_id": "btc-dev-006",
+  "arm": "offline-fixture",
+  "split": "dev",
+  "repeat": 1,
+  "model": "offline-fixture",
+  "codex_version": null,
+  "adapter_version": "0.1.0",
+  "started_at": "2026-08-12T03:19:15Z",
+  "duration_ms": 3,
+  "input_tokens": null,
+  "output_tokens": null,
+  "cost_usd": null,
+  "exit_status": 0,
+  "tests_passed": false,
+  "trace_complete": null,
+  "privacy_checks_passed": true,
+  "trace_id": null,
+  "suggestion_ids": [],
+  "budget": {
+    "timeout_seconds": 900,
+    "max_tokens": 50000,
+    "max_cost_usd": 10,
+    "enforced": true,
+    "tokens_used": null,
+    "cost_used_usd": null,
+    "within_budget": true
+  },
+  "scorer_detail": {
+    "scorer_id": "block_reward_tests",
+    "passed": false,
+    "checks": [
+      {
+        "name": "fixture_rewards_consistent",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "workspace_has_block_reward_tests",
+        "passed": false,
+        "detail": "no test files"
+      }
+    ],
+    "detail": ""
+  },
+  "notes": "Offline fixture scored the immutable baseline without a model call. Baseline tasks are expected to fail most scorers until a future agent patch."
+}

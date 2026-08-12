@@ -1,0 +1,16 @@
+{
+  "run_id": "20260812T032239Z-ed5c673a",
+  "arm": "offline-fixture",
+  "split": "holdout",
+  "repeats": 1,
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "records": [
+    "scrubbed/btc-hold-001-r1.json",
+    "scrubbed/btc-hold-002-r1.json",
+    "scrubbed/btc-hold-003-r1.json",
+    "scrubbed/btc-hold-004-r1.json",
+    "scrubbed/btc-hold-005-r1.json",
+    "scrubbed/btc-hold-006-r1.json"
+  ],
+  "count": 6
+}

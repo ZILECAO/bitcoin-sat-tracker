@@ -1,0 +1,16 @@
+{
+  "run_id": "20260812T031915Z-24d3c7c3",
+  "arm": "offline-fixture",
+  "split": "dev",
+  "repeats": 1,
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "records": [
+    "scrubbed/btc-dev-001-r1.json",
+    "scrubbed/btc-dev-002-r1.json",
+    "scrubbed/btc-dev-003-r1.json",
+    "scrubbed/btc-dev-004-r1.json",
+    "scrubbed/btc-dev-005-r1.json",
+    "scrubbed/btc-dev-006-r1.json"
+  ],
+  "count": 6
+}

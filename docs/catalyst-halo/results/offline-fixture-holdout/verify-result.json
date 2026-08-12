@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "run_dir": "/home/ubuntu/diligence-raw/runs/offline-fixture-holdout-20260812T032239Z-ed5c673a",
+  "arm": "offline-fixture",
+  "split": "holdout",
+  "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",
+  "network": "disabled",
+  "record_count": 6,
+  "privacy_matrix_ok": true,
+  "memory_secret_compare_ok": true
+}

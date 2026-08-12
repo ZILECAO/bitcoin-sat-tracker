@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "description": "Clearly fake privacy canaries for later-phase leakage detection. None of these values are real credentials.",
+  "channels": [
+    "codex_jsonl",
+    "local_halo_storage",
+    "hosted_catalyst_trace_tree",
+    "raw_catalyst_span_json",
+    "downloaded_traces",
+    "cli_output",
+    "evaluator_output",
+    "scrubbed_committed_reports"
+  ],
+  "canaries": {
+    "user_prompt": {
+      "id": "CANARY-USER-PROMPT-FAKE-7f3a91",
+      "location": "user_prompt",
+      "value": "FAKE_CANARY_USER_PROMPT_7f3a91_DO_NOT_USE",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "model_response": {
+      "id": "CANARY-MODEL-RESPONSE-FAKE-2c88de",
+      "location": "model_response",
+      "value": "FAKE_CANARY_MODEL_RESPONSE_2c88de_DO_NOT_USE",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "tool_name": {
+      "id": "CANARY-TOOL-NAME-FAKE-91ab22",
+      "location": "tool_name",
+      "value": "fake_canary_tool_91ab22",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "tool_arguments": {
+      "id": "CANARY-TOOL-ARGS-FAKE-44d0fe",
+      "location": "tool_arguments",
+      "value": "FAKE_CANARY_TOOL_ARGS_44d0fe_DO_NOT_USE",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "tool_result": {
+      "id": "CANARY-TOOL-RESULT-FAKE-b19c55",
+      "location": "tool_result",
+      "value": "FAKE_CANARY_TOOL_RESULT_b19c55_DO_NOT_USE",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "repository_file": {
+      "id": "CANARY-REPO-FILE-FAKE-88e1aa",
+      "location": "repository_file",
+      "value": "FAKE_CANARY_REPO_FILE_88e1aa_DO_NOT_USE",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "outside_workspace_file": {
+      "id": "CANARY-OUTSIDE-FILE-FAKE-09cc71",
+      "location": "outside_workspace_file",
+      "value": "FAKE_CANARY_OUTSIDE_WORKSPACE_09cc71_DO_NOT_USE",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "synthetic_environment_variable": {
+      "id": "CANARY-ENV-VAR-FAKE-55aaf0",
+      "location": "synthetic_environment_variable",
+      "value": "FAKE_CANARY_ENV_DILIGENCE_55aaf0",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "fake_api_key_shaped_value": {
+      "id": "CANARY-APIKEY-FAKE-c0ffee",
+      "location": "fake_api_key_shaped_value",
+      "value": "FAKESECRET_canary_c0ffee_NOT_A_REAL_KEY",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    },
+    "url_query_and_header_shaped_value": {
+      "id": "CANARY-URL-HEADER-FAKE-dead42",
+      "location": "url_query_and_header_shaped_value",
+      "value": "https://example.invalid/canary?token=FAKE_CANARY_QUERY_dead42&x-canary-header=FAKE_CANARY_HEADER_dead42",
+      "states": {
+        "codex_jsonl": "not_yet_measured",
+        "local_halo_storage": "not_yet_measured",
+        "hosted_catalyst_trace_tree": "not_yet_measured",
+        "raw_catalyst_span_json": "not_yet_measured",
+        "downloaded_traces": "not_yet_measured",
+        "cli_output": "not_yet_measured",
+        "evaluator_output": "not_yet_measured",
+        "scrubbed_committed_reports": "absent"
+      }
+    }
+  }
+}

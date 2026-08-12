@@ -5,11 +5,14 @@ These instructions apply to the entire repository on the
 
 ## Current Authorization
 
-Phase 0 is complete. Phase 1 is authorized.
+Phase 0 is complete. Phase 1 is complete on this branch and is waiting for
+explicit Phase 2 approval.
 
-Follow [the Phase 1 work order](docs/catalyst-halo/phase-1-work-order.md) and
-[the experiment specification](docs/catalyst-halo/experiment-spec.md). Treat
-those files as the source of truth for this task.
+The Phase 1 sources of truth remain
+[the Phase 1 work order](docs/catalyst-halo/phase-1-work-order.md) and
+[the experiment specification](docs/catalyst-halo/experiment-spec.md). See
+[the reproduction guide](docs/catalyst-halo/reproduction.md) and
+[the supply-chain report](docs/catalyst-halo/supply-chain-report.md).
 
 Do not begin Phase 2 or Phase 3. In particular, do not:
 
