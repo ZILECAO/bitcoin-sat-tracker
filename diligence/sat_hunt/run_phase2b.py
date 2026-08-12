@@ -467,8 +467,12 @@ def cmd_final(args: argparse.Namespace) -> None:
             "https://ordinals.com/r/blockheight",
         ],
         "normalized": {
-            "earliest_active_uninscribed": state["oracle"]["earliest_active_uninscribed"],
-            "earliest_active_inscribed": state["oracle"]["earliest_active_inscribed"],
+            "earliest_active_uninscribed": state["oracle"]["earliest_active_sat"][
+                "sat_number"
+            ],
+            "earliest_active_inscribed": state["oracle"]["earliest_active_inscribed_sat"][
+                "sat_number"
+            ],
         },
         "bundle_sha256": hashlib.sha256(
             json.dumps(

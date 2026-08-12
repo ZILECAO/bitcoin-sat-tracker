@@ -3,8 +3,8 @@
   "patoshi_csv_sha256": "f649579e286085325a881bec1168e88bbb6f5d67e10b7ef8cb5c65e916a34a2e",
   "derived_attribution_set_sha256": "c9641d86ba93c71fc550c63fd97b6da8246f46a9410125a6c2d4326fc461c71d",
   "fixture_sha256": "5ff3dbbb1c11c7b0ba4e34959c94385cc9b69cfb17b384a4f01e2847d8c7dd08",
-  "selected_model": null,
-  "harness_hash": "e84ba07ced7716d25bee17e24474ac7aef142ed3ab66c19c33c439bf0a02946e",
+  "selected_model": "gemini-2.5-flash-lite",
+  "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
   "toolkit_hash": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a",
   "files": {
     "benchmark.json": "c0f60a9b376f5567942ef61b3b77fc021a5c4c20c9f2b0235a6486d66bdb9548",
@@ -18,11 +18,11 @@
     "attribution.py": "3ad1b59ba946076253b4c291d5b6ac4e19aaf002c5ee5d90b9e79e4d6d522da8",
     "fixtures.py": "a735bb6ac20b0ee42daa4da1a18812909364d4c25c2bf527be91e3fed847b784",
     "scorers.py": "64c90daeddb7538315825c7f52accce981f1ae8b3084dbdbddfe7694ee7dafa4",
-    "tasks.py": "ded8121486e5c771cad5589693b50baf67ba3cdbb4d5582b6e9efb140dbf43ea",
+    "tasks.py": "7ab61596f02a8ce272d822350ef5a59a7b7d36f745e3bfb00b05b43431867f2d",
     "fixture_deterministic_v1": "bb25199b3a6cb76e34b05d689288a46a55ae792f079a6763c16e98b72e18c1ee",
     "final_exam_prompt": "02ad7664f9a01d55843e80321b815a8a66f02457c6b2d27acbdda407c333e2fb",
-    "agent_runtime": "46a2e99335da7045318e82b860acc11d2c396533a59f601d3300bc9e6e6c2aec",
-    "agent_tools": "36248fd271409ddb246895f3bf422d44d6c1523f5a77d6d589bab8728ea90f57",
+    "agent_runtime": "9b8134ef0da299d143a79c1c86c4c00d2999bfed1ae389e711b0af68fc4bd5a2",
+    "agent_tools": "cde74bd428ee6ff1d0a3d4ca4d4ef006b53fce249d9cb56f44fb3dfd0eb8d0fe",
     "agent_gateway": "73d84311e40e4d84671e7f94652893671c9ce6b2f08253352aaac465f61c9f1c",
     "toolkit_fixture_api": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a"
   }
