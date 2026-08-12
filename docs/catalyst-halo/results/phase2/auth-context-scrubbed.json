@@ -1,0 +1,18 @@
+{
+  "authMethod": "api-key",
+  "teamId": "jHdZ0TBO0VJamqMZGBUQfXbjQrqWHtv1",
+  "resolvedProject": {
+    "id": "b69a2722-d305-47e9-9931-b28b6dfcbd6d",
+    "name": "My First Project"
+  },
+  "scopedProjects": [
+    {
+      "id": "b69a2722-d305-47e9-9931-b28b6dfcbd6d",
+      "name": "My First Project",
+      "permissions": [
+        "read",
+        "write"
+      ]
+    }
+  ]
+}

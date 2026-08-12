@@ -1,0 +1,19 @@
+{
+  "domains_reachable": {
+    "api.inference.net": true,
+    "telemetry.inference.net": true,
+    "observability-api.inference.net": true,
+    "cdn.jsdelivr.net": true,
+    "deno.land": true
+  },
+  "credentials_present": {
+    "INFERENCE_API_KEY": true,
+    "CATALYST_OTLP_TOKEN": true,
+    "same_value": true
+  },
+  "inf_auth_status_json": "not_run_in_visible_logs_by_policy",
+  "cloudflare_note": "Python urllib/requests to api.inference.net returns CF 1010 without browser-like User-Agent; curl+UA and telemetry.inference.net OK",
+  "selected_model": "deepseek-v4-flash",
+  "project_id": "b69a2722-d305-47e9-9931-b28b6dfcbd6d",
+  "service_name": "bitcoin-sat-tracker-diligence"
+}

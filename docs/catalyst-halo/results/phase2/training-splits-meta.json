@@ -1,7 +1,7 @@
 {
   "splits": {
     "train": {
-      "path": "<DILIGENCE_RAW_DIR>/phase2-artifacts/training-splits/train.jsonl",
+      "path": "/home/ubuntu/diligence-raw-phase2/phase2-artifacts/training-splits/train.jsonl",
       "count": 4,
       "task_ids": [
         "btc-dev-001",
@@ -12,7 +12,7 @@
       "sha256": "8b59b6180dd1a092aa3020cf78696d8f8bcb0b8d956b205fccf519a3cdd65cb2"
     },
     "validation": {
-      "path": "<DILIGENCE_RAW_DIR>/phase2-artifacts/training-splits/validation.jsonl",
+      "path": "/home/ubuntu/diligence-raw-phase2/phase2-artifacts/training-splits/validation.jsonl",
       "count": 2,
       "task_ids": [
         "btc-dev-005",
@@ -21,7 +21,7 @@
       "sha256": "157898a1fd5dcd68ad0056de7d599074321cd308cf5287c41455febab5e8fb6c"
     },
     "holdout": {
-      "path": "<DILIGENCE_RAW_DIR>/phase2-artifacts/training-splits/holdout.jsonl",
+      "path": "/home/ubuntu/diligence-raw-phase2/phase2-artifacts/training-splits/holdout.jsonl",
       "count": 8,
       "task_ids": [
         "btc-hold-001",

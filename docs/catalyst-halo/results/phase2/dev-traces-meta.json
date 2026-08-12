@@ -1,5 +1,5 @@
 {
-  "path": "<DILIGENCE_RAW_DIR>/phase2-artifacts/development-traces.jsonl",
+  "path": "/home/ubuntu/diligence-raw-phase2/phase2-artifacts/development-traces.jsonl",
   "span_count": 18,
   "task_ids": [
     "btc-dev-001",
@@ -9,7 +9,7 @@
     "btc-dev-005",
     "btc-dev-006"
   ],
-  "sha256": "50c9fe6b07381104c2b6b6776149747a6a9a82415320f899e2dfa0bb905009ea",
+  "sha256": "065ce5d63783593ee3f77f1d8316e0e1078d0cd394373a022e52c3d51d3fa0d0",
   "bytes": 16716,
   "held_out_included": false
 }

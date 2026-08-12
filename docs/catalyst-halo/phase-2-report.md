@@ -1,56 +1,39 @@
 # Phase 2 Overnight Report
 
-Internal demonstration run on 2026-08-12 against public
+Internal demonstration run continued on 2026-08-12 against public
 `ZILECAO/bitcoin-sat-tracker` on branch `diligence/catalyst-halo`.
 
 This is **not** a statistically reliable benchmark. Hosted Gateway, Catalyst
-ingest verification, HALO model analysis, and zero-cost training were blocked
-by VM egress policy before any metered Inference.net usage accrued.
+ingest, HALO analysis, datasets/evals, and training preparation were completed
+under the overnight work order after Inference.net egress became reachable.
+Held-out HALO comparison is a reduced offline demonstration only.
 
 ## Completed and Blocked Stages
 
 | Stage | Status | Notes |
 | --- | --- | --- |
-| 1. Revalidate harness | **Completed** | 16/16 offline tests; prepare/run/verify/report; held-out expanded to 8; freeze hashes written |
-| 2. Dynamic package audit | **Completed (local)** / **Blocked (hosted)** | All Phase 1 package SHA-256s matched; isolated install + no-key help/import OK; hosted CLI calls reset by egress |
-| 3. Trace fidelity | **Partial** | Local nested AGENT/LLM/TOOL spans generated; SDK setup/shutdown OK; Catalyst arrival **not verified** (egress) |
-| 4. Gateway and dataset | **Blocked** | No Inference API reachability; no Gateway traffic; no hosted dataset create |
-| 5. HALO improvement loop | **Blocked** | Local development JSONL ready; `halo` could not reach model API / jsDelivr Pyodide |
-| 6. Training path | **Prepared only** | Non-overlapping synthetic splits hashed; price unknown; **not submitted** |
+| 1. Revalidate harness | **Completed (prior)** | 16/16 offline tests still pass; 8 held-out families frozen |
+| 2. Dynamic package audit | **Completed** | Phase 1 SHA-256s re-verified; isolated install OK |
+| 3. Trace fidelity | **Completed** | Synthetic nested OTLP probe received by Catalyst; fields recorded |
+| 4. Gateway and dataset | **Completed (partial eval)** | Serverless Gateway suite on 6 development tasks; datasets created; hosted eval runs failed |
+| 5. HALO improvement loop | **Completed (reduced demo)** | HALO ran on development traces; generic timeouts/retries applied; held-out 0/8→0/8 |
+| 6. Training path | **Prepared only** | Tiny Qwen 0.8B recipe dry-run ready; **not submitted** (no explicit $0 price) |
 
-### Stop condition hit
+### Stop conditions checked
 
-Hosted/vendor network calls to `*.inference.net` (and HALO’s
-`cdn.jsdelivr.net` dependency) fail with TLS `Connection reset by peer` under
-the environment’s restricted egress allowlist. Package registries remain
-reachable. Estimated metered spend: **USD $0.00**.
-
-Requested allowlist additions (pending user approval):
-
-- `api.inference.net`
-- `telemetry.inference.net`
-- `observability-api.inference.net`
-- `cdn.jsdelivr.net`
-- `deno.land`
+- No unexpected private repos/credentials beyond dedicated Inference key.
+- Package hashes matched Phase 1.
+- No secret values printed into committed docs.
+- Metered spend remained far under the USD $5 cap.
+- Training not submitted: dry-run shows no explicit total price of USD $0;
+  selected recipe specifies `H100` × 8 GPUs.
 
 ## Exact Packages, Models, Endpoints, Costs
 
-### Packages (verified against `supply-chain-hashes.md`)
+### Packages (re-verified)
 
-| Artifact | Version | SHA-256 match |
-| --- | --- | --- |
-| `@inference/cli` | 0.0.180 | yes |
-| `@inference/cli-linux-x64` | 0.0.180 | yes |
-| `@inference/tracing` | 0.1.9 | yes |
-| `inference-catalyst-tracing` | 0.1.8 | yes |
-| `catalyst-tracing` | 0.1.8 | yes |
-| `halo-engine` | 0.3.4 | yes |
-| `@opentelemetry/api` | 1.9.0 | yes |
-| `@opentelemetry/exporter-trace-otlp-http` | 0.206.0 | yes |
-| `@opentelemetry/exporter-trace-otlp-proto` | 0.206.0 | yes |
-| `@opentelemetry/sdk-trace-node` | 2.2.0 | yes |
-
-HALO Desktop linux setup was **not** downloaded (headless / low priority).
+All Phase 1 archives in `supply-chain-hashes.md` matched again
+(`docs/catalyst-halo/results/phase2/package-hash-verify-rerun.json`).
 
 ### Models / endpoints
 
@@ -59,120 +42,199 @@ HALO Desktop linux setup was **not** downloaded (headless / low priority).
 | `CATALYST_OTLP_ENDPOINT` | `https://telemetry.inference.net` |
 | `CATALYST_SERVICE_NAME` | `bitcoin-sat-tracker-diligence` |
 | `INFERENCE_BASE_URL` | `https://api.inference.net/v1` |
-| Selected Inference model | **unavailable** (models list failed) |
-| HALO attempted model id | `meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo` (not confirmed available) |
-| `gpt56-reference` | unavailable (as authorized; no Codex login routing) |
+| Primary Gateway / HALO model | `deepseek-v4-flash` (`openai:deepseek-v4-flash`) |
+| Training candidate base | `qwen3.5-0.8b` via recipe `inf-public-training-recipe:qwen-3.5-0.8b-fft` |
+| `gpt56-reference` | unavailable (authorized; no Codex login routing) |
 
 ### Costs
 
 | Item | USD |
 | --- | --- |
-| Metered model/API usage observed | 0.00 |
+| Platform-reported inference `totalCost` (project, ~1d page) | **0.011893** |
 | Training job | not started |
-| Cap remaining | 5.00 |
+| Cap | 5.00 |
+| Cap remaining (est.) | ~4.99 |
 
-## Observed Runtime Behavior
+Source: `docs/catalyst-halo/results/phase2/cost-ledger.json` and
+`inferences-scrubbed.json`.
 
-### Isolation
+## Trace Fidelity (Catalyst confirmation)
 
-- Branch confirmed: `diligence/catalyst-halo`.
-- Only Git repo: `/workspace` (public bitcoin-sat-tracker).
-- Baseline scripts match `d674a065819a0bd45357f8530b4f15775bfdaac9`.
-- Vendor work used mode-`0700` raw root `~/diligence-raw-phase2`, fresh vendor
-  home, and a baseline-only disposable checkout (no `diligence/`, `docs/`,
-  scorers, or held-out answers).
-- Credentials passed only via environment / config file write from env; never
-  as CLI argv for the real key.
+### Probe
 
-### Package / CLI behavior
+- SDK: `catalyst-tracing==0.1.8`, `batching=simple`
+- Service: `bitcoin-sat-tracker-diligence`
+- **Trace ID:** `8af7ffa20f5d60e073b01d6c827014e4`
+- Marker: `diligence-otlp-probe-eb05beec9bf3`
+- Confirmed via:
+  `inf --project b69a2722-d305-47e9-9931-b28b6dfcbd6d traces list --service bitcoin-sat-tracker-diligence --range 1d --json`
+  and `inf ... traces get <trace-id> --all`
 
-- `inf --version` → `0.0.180`.
-- `inf auth login` requires browser device authorization → recorded; continued
-  with API-key path.
-- Writing `~/.inf/config.json` `{"apiKey": ...}` from env enables
-  `inf auth status` (`method: API Key`,
-  `apiUrl: https://observability-api.inference.net`).
-- **Privacy finding:** `inf auth status --json` prints a truncated `apiKey`
-  value. Outputs were scrubbed; do not commit raw status dumps.
-- `inf models list` and `inf whoami` fail with unexpected socket close
-  (egress).
-- `inf instrument --print-prompt` prompts for session login / hangs without
-  browser session. Disposable workspace diff empty — nothing applied to the
-  harness.
-- Python: `catalyst_tracing` / `inference_catalyst_tracing` import OK
-  (`0.1.8`). `halo` CLI help OK; default model string in help is
-  `gpt-5.4-mini`.
+### Exact fields observed as captured
 
-### Trace export fields (intended / local)
+Present on the hosted trace/spans:
 
-Local synthetic spans include nested parent/child structure with:
+- `traceId`, `serviceName`, `serviceVersion`
+- `agentName` / `agentId` = `synthetic-bitcoin-agent`
+- `rootSpanName` = `synthetic.otlp.probe.root`
+- `rootObservationKind` = `AGENT`
+- Nested children: LLM `chat.completions.create`, TOOL canary tool name
+- `parentSpanId` nesting (root ← LLM, root ← TOOL)
+- `spanCount` = 3, `llmSpanCount` = 1, `totalTokens` = 40
+- `startTime` / `endTime` / `durationNs`
+- `inputPreview` / `outputPreview`
+- `statusCode` OK; `hasError` false
+- Token fields on spans (`inputTokens` / `outputTokens` / `totalTokens`)
 
-- prompts / outputs (fake canaries)
-- tool name / args / results (deterministic Bitcoin tools + canaries)
-- timing (`start_time` / `end_time`)
-- token counts
-- task IDs (`inference.task_id` / metadata)
-- status / errors
+Notable / unexpected:
 
-SDK `setup()` + `shutdown()` succeeded for both Python `catalyst-tracing` and
-JS `@inference/tracing`, but **Catalyst dashboard arrival was not verified**.
-No screenshots or hosted trace IDs are available.
+- Hosted `source` field showed `file` for an SDK OTLP export.
+- Summary `outputPreview` preferred nested TOOL output over root AGENT
+  `output.value`.
+- Span records include `apiKeyId` (identifier, not secret); scrubbed from
+  committed summaries.
 
-Development JSONL (outside Git): sha256
-`50c9fe6b07381104c2b6b6776149747a6a9a82415320f899e2dfa0bb905009ea`
-(18 spans, 6 development tasks, held-out excluded).
+Details: `docs/catalyst-halo/results/phase2/otlp-probe-fidelity.json`.
 
-## Gateway, HALO, Eval, Training
+Development JSONL (outside Git) sha256
+`065ce5d63783593ee3f77f1d8316e0e1078d0cd394373a022e52c3d51d3fa0d0`
+(18 spans, 6 development tasks, held-out excluded). Also uploaded via
+`inf traces upload` (`traceImportId=7e9c2cc5-976b-40f9-9d60-c2b603bbbe40`,
+18/18 lines processed).
 
-### Gateway
+## Gateway, Dataset, Eval
 
-Not run. Requires Inference-hosted OpenAI-compatible model via allowed egress.
+### Gateway (serverless Inference path)
 
-### HALO
+Ran public/synthetic development tasks only through
+`https://api.inference.net/v1/chat/completions` with project key and
+`x-inference-task-id` / `x-inference-environment: diligence-phase2`.
 
-- Input prepared: development-only JSONL (held-out excluded).
-- Engine start attempted; stderr shows Pyodide download to `cdn.jsdelivr.net`
-  reset, then no usable model completion under `api.inference.net` egress deny.
-- Scrubbed suggestion map: empty / blocked
-  (`docs/catalyst-halo/results/phase2/halo-suggestion-map.json`).
-- No harness mutations from HALO. No held-out paired evaluation. Label:
-  **workflow incomplete — not efficacy evidence**.
+| Task | HTTP | Latency s | Tokens in/out | OK |
+| --- | --- | --- | --- | --- |
+| btc-dev-001 | 200 | ~1.7 | 160/69 | yes |
+| btc-dev-002 | 200 | ~1.9 | 158/75 | yes |
+| btc-dev-003 | 200 | ~1.5 | 153/67 | yes |
+| btc-dev-004 | 200 | ~2.1 | 159/93 | yes |
+| btc-dev-005 | 200 | ~2.0 | 149/71 | yes |
+| btc-dev-006 | 200 | ~2.7 | 164/144 | yes |
 
-### Offline held-out harness revalidation
+Streaming probe on `btc-dev-001`: HTTP 200, SSE (`data:`) observed,
+TTFB ~0.51s.
 
-After adding `btc-hold-007` (`mempool_url_config`) and `btc-hold-008`
-(`sats_btc_conversion`):
+Provider-proxy Gateway path (third-party provider key headers) was **not**
+tested: work order forbids other provider credentials.
 
-- Held-out offline-fixture success rate: **0/8** on immutable baseline
-  (expected).
-- Development offline-fixture success rate: **0/6** (expected).
-- Freeze file: `docs/catalyst-halo/freeze-hashes.json`.
+Cloudflare note: bare Python `urllib` to `api.inference.net` returns CF 1010;
+browser-like `User-Agent` via curl works. Telemetry OTLP accepts Python
+`requests` without that workaround.
 
-### Training
+### Datasets (held-out excluded)
 
-- Synthetic train / validation / holdout JSONL built with hash metadata under
-  `docs/catalyst-halo/results/phase2/training-splits-meta.json`.
-- Overlap check: passed (task-id level).
-- Base model revision: unset (catalog unreachable).
-- Displayed price: unknown → **stop at ready-to-submit**; no job started.
+| Dataset | ID | Type | Count |
+| --- | --- | --- | --- |
+| btc-diligence-dev-train | `5b27b3ac-eba8-47ec-bef9-13d491fe208b` | training | 4 |
+| btc-diligence-dev-eval | `fcef9681-7c9c-4519-81c6-2dc0a1fa9458` | eval | 2 |
+| btc-diligence-gateway-dev-eval | `608376bc-c436-4702-8400-106af94ed45e` | eval (traffic `btc-dev-001`) | 4 |
+
+### Hosted evaluation
+
+Rubric `btc-diligence-generic-harness`
+(`84869062-18a3-479f-8300-6b05ea706f1b`) created.
+
+Two eval run groups launched against the development eval dataset and failed
+quickly (`failedCount=2`, error `2 of 2 results failed`) for both
+`openai:deepseek-v4-flash` and `openai:gpt-4.1-nano`. Dataset creation and
+rubric wiring succeeded; scoring path remains unproven. See
+`docs/catalyst-halo/results/phase2/datasets-and-evals.json`.
+
+## HALO Improvement Loop
+
+### Input
+
+Development-only JSONL traces (held-out excluded). Disposable baseline-only
+repo checkout for `--repo-path` (no `diligence/`, docs, scorers, or answers).
+
+### Run
+
+```text
+halo development-traces.jsonl \
+  -m deepseek-v4-flash \
+  --base-url https://api.inference.net/v1 \
+  -H "User-Agent: Mozilla/5.0 ..." \
+  --repo-path <disposable-baseline> \
+  --max-depth 1 --max-turns 8 --max-output-tokens 800
+```
+
+API key passed via `OPENAI_API_KEY` env only (never argv). Exit 0, but
+`final_answer` JSON truncated by max output tokens; suggestions recovered from
+tool/analysis transcript.
+
+### Suggestions (classified)
+
+| ID | Category | Suggestion | Applied? |
+| --- | --- | --- | --- |
+| halo-s1 | actionable | Add HTTP `timeout=` on `requests` calls | yes |
+| halo-s2 | actionable | Bounded retries + exponential backoff helper | yes |
+| halo-s3 | generic but unproven | Improve child-span agent identity completeness | no |
+
+No task-specific leakage suggestions applied.
+
+### Held-out comparison (reduced demonstration)
+
+Static offline scorers on immutable baseline vs same checkout after generic
+HALO patch only; one repeat; randomized arm order per task.
+
+| Arm | Held-out passes |
+| --- | --- |
+| baseline | **0 / 8** |
+| improved (timeouts + retries) | **0 / 8** |
+| Absolute improvement | **0 pp** |
+
+Label: **workflow demonstration only — not efficacy evidence**. Generic
+network-hardening patches do not satisfy held-out family scorers (satpoint
+validation, CLI layer, etc.), which is the expected non-leaky outcome.
+
+Artifacts:
+`halo-suggestion-map.json`, `halo-holdout-compare.json`,
+`halo-improved-harness.diff`.
+
+## Training Path
+
+Ready-to-submit configuration recorded; **job not started**.
+
+- Recipe: `inf-public-training-recipe:qwen-3.5-0.8b-fft` (Tiny Qwen 3.5 0.8B)
+- GPU plan in recipe: `H100`, 8 GPUs/node, 1 node
+- Datasets/rubric wired as above (holdout excluded from train/eval datasets)
+- `inf training create ... --dry-run` returns create payload **without** an
+  explicit total price field
+- Stop rule: submit only when platform shows **exactly USD $0** → **stopped**
+
+Unchanged serverless smoke on development eval tasks (`btc-dev-005/006`) with
+`deepseek-v4-flash` succeeded before any training attempt
+(`base-model-pretrain-eval.json`). The trainable `qwen3.5-0.8b` weights are
+catalogued for training but were not confirmed as a serverless chat route for
+a like-for-like base-model held-out comparison.
+
+No deployment and no GPU rental performed.
 
 ## Privacy Canaries
 
-Fake canaries from `diligence/privacy/canaries.json` were embedded only in
-local synthetic development traces (outside Git). Scrubbed committed reports
-were re-checked; no canary leakage into committed Phase 2 JSON summaries.
-`inf auth status` truncated-key print is a separate privacy concern for CLI
-usage in shared logs.
+Fake canaries from `diligence/privacy/canaries.json` appeared in the Catalyst
+trace previews as expected for the intentional synthetic probe. Scrubbed
+committed Phase 2 JSON was re-checked for accidental secret material.
+`inf auth status --json` was **not** run in visible logs (truncated key echo).
 
 ## Failures, Unknowns, Unproven Claims
 
-- Catalyst ingest fidelity: **unproven** (no confirmed hosted spans).
-- Gateway vs direct semantics: **unproven**.
-- HALO efficacy: **unproven** (no suggestions applied; no paired held-out run).
-- Training improvement: **unproven** (no training).
-- Whether OTLP exporters silently drop spans on connection reset: **unknown**.
-- Exact low-cost Inference model id/revision for this project: **unknown**.
-- HALO Desktop: **unavailable** in this headless run (not pursued).
+- Hosted eval scoring: **failed** (dataset/rubric created; runs failed).
+- Provider-proxy Gateway semantics: **untested** (no third-party key).
+- HALO efficacy: **unproven** (0 pp held-out change; reduced offline demo).
+- Training improvement: **unproven** (not submitted).
+- Exact weight revision hash for `qwen3.5-0.8b`: **unknown** via CLI.
+- HALO Desktop: **not pursued** (headless; low priority).
+- Cloudflare bot scoring can block non-browser Python HTTP clients to
+  `api.inference.net`.
 
 Do not claim overnight efficacy, statistically significant improvement, or
 successful hosted fine-tuning.
@@ -180,59 +242,77 @@ successful hosted fine-tuning.
 ## Exact Reproduction Commands
 
 ```bash
-# Offline harness
+git fetch origin diligence/catalyst-halo
+git checkout diligence/catalyst-halo
+
+# Offline harness still green
 python3 -m unittest tests.test_diligence_offline -v
-export DILIGENCE_RAW_DIR="$HOME/diligence-raw-phase2"
-python3 -m diligence prepare
-python3 -m diligence run --arm offline-fixture --split holdout --repeats 1
-# verify/report using printed run_dir
 
-# Hash-verify downloads against docs/catalyst-halo/supply-chain-hashes.md
-# then install into an isolated venv / npm prefix under $DILIGENCE_RAW_DIR
-
-# After egress allows inference.net:
+# Non-secret settings
 export CATALYST_OTLP_ENDPOINT=https://telemetry.inference.net
 export CATALYST_SERVICE_NAME=bitcoin-sat-tracker-diligence
-# CATALYST_OTLP_TOKEN and INFERENCE_API_KEY already in environment
-# Write CLI config from env (do not pass key on argv):
-python3 -c 'import json,os; from pathlib import Path; p=Path.home()/".inf"/"config.json"; p.parent.mkdir(mode=0o700, exist_ok=True); p.write_text(json.dumps({"apiKey": os.environ["INFERENCE_API_KEY"]})+"\n"); p.chmod(0o600)'
-inf models list --json
-# Then re-run OTLP probe / Gateway / HALO / training steps from the work order
-```
+export INFERENCE_BASE_URL=https://api.inference.net/v1
+# INFERENCE_API_KEY / CATALYST_OTLP_TOKEN must already be present; never echo them
 
-Synthetic offline helpers: `diligence/phase2_offline.py`.
+# Write CLI config from env (do not pass key on argv; do not run auth status --json)
+python3 -c 'import json,os; from pathlib import Path; p=Path.home()/".inf"/"config.json"; p.parent.mkdir(mode=0o700, exist_ok=True); p.write_text(json.dumps({"apiKey": os.environ["INFERENCE_API_KEY"]})+"\n"); p.chmod(0o600)'
+
+PROJECT=$(inf project auth-context --json | python3 -c 'import json,sys; print(json.load(sys.stdin)["resolvedProject"]["id"])')
+
+# Confirm prior probe
+inf --project "$PROJECT" traces get 8af7ffa20f5d60e073b01d6c827014e4 --view summary
+
+# Gateway call example (browser-like UA recommended)
+# curl ... -H "Authorization: Bearer $INFERENCE_API_KEY" \
+#   -H "x-inference-task-id: btc-dev-001" \
+#   -H "x-inference-environment: diligence-phase2" \
+#   -d '{"model":"deepseek-v4-flash","messages":[{"role":"user","content":"ping"}],"max_tokens":8}' \
+#   https://api.inference.net/v1/chat/completions
+
+# Training remains dry-run only unless UI/CLI shows total price == 0
+inf --project "$PROJECT" training create --dry-run \
+  --name btc-diligence-small-ft-dryrun \
+  --recipe inf-public-training-recipe:qwen-3.5-0.8b-fft \
+  --training-dataset 5b27b3ac-eba8-47ec-bef9-13d491fe208b \
+  --eval-dataset fcef9681-7c9c-4519-81c6-2dc0a1fa9458 \
+  --rubric 84869062-18a3-479f-8300-6b05ea706f1b
+```
 
 ## Revoke Key and Delete Hosted Data
 
-1. In the Inference.net project that issued the disposable key, rotate/revoke
-   the project API key used as `INFERENCE_API_KEY` / `CATALYST_OTLP_TOKEN`.
-2. Delete any Catalyst traces, datasets, eval runs, and training artifacts
-   created under project service name `bitcoin-sat-tracker-diligence`
-   (none confirmed created in this run).
+1. Rotate/revoke the disposable Inference project API key used as
+   `INFERENCE_API_KEY` / `CATALYST_OTLP_TOKEN`.
+2. Delete Catalyst traces, uploads, datasets, eval runs, and any training
+   artifacts under project `My First Project`
+   (`b69a2722-d305-47e9-9931-b28b6dfcbd6d`), especially service
+   `bitcoin-sat-tracker-diligence` and datasets named `btc-diligence-*`.
 3. Remove local vendor state: `rm -rf ~/diligence-raw-phase2`
-   (contains config with API key under `vendor-home/.inf/config.json`).
-4. Confirm Cloud Agent secrets are removed or rotated in the Cursor
-   environment settings.
+   (contains `curl-headers.txt` and `vendor-home/.inf/config.json`).
+4. Confirm Cloud Agent secrets are removed or rotated in Cursor environment
+   settings.
 
-## Morning Handoff
+## Morning Handoff / Founder-Call Demo
 
-### What you can demo on the founder call
+### What you can demo
 
-1. **Offline diligence harness** with eight held-out families, freeze hashes,
-   and a clean 0/8 baseline failure story.
-2. **Supply-chain continuity**: exact Phase 1 archives re-downloaded and
-   SHA-256-matched before any vendor execution.
-3. **Honest blocker**: dedicated keys are present, packages install and
-   initialize, but Catalyst/HALO/Gateway cannot be demonstrated until
-   `inference.net` (and HALO’s jsDelivr dependency) are on the egress allowlist.
+1. **Live Catalyst trace** `8af7ffa20f5d60e073b01d6c827014e4` for service
+   `bitcoin-sat-tracker-diligence` with AGENT→LLM/TOOL nesting, previews, and
+   token counts.
+2. **Gateway capture loop**: development task IDs on inferences, streaming SSE,
+   plus created train/eval datasets from synthetic traffic (holdout excluded).
+3. **Honest HALO + training posture**: HALO produced generic timeout/retry
+   guidance; held-out offline compare stayed 0/8→0/8; tiny-model training is
+   queued as a ready dry-run and intentionally **not** submitted without an
+   explicit **$0** price.
 
 ### Three most important questions raised by evidence
 
-1. Will Catalyst’s OTLP path and `inf` CLI accept project API keys alone for
-   traces/datasets/training, or is browser session login still required for
-   critical write paths (`instrument`, some project-scoped APIs)?
-2. Does `inf auth status`’s truncated API-key echo create an unacceptable log
-   leakage risk for CI/shared agent transcripts?
-3. Once egress works, what is the cheapest Inference-hosted OpenAI-compatible
-   model that still exercises Gateway + HALO + a **confirmed $0** training
-   recipe end-to-end under the $5 overnight cap?
+1. Why do hosted eval runs fail immediately (`2 of 2 results failed`) on a
+   just-created JSONL eval dataset and simple rubric even when Gateway chat
+   completions succeed for the same models?
+2. Should Catalyst document/require a browser-like User-Agent (or provide a
+   first-party SDK path) so non-browser agents are not CF-1010 blocked on
+   `api.inference.net` while OTLP ingest already works?
+3. Can training `create` expose an explicit total price (including $0 offers)
+   before submit, and can `qwen3.5-0.8b` be evaluated serverless pre/post train
+   without renting the recipe’s H100×8 plan?

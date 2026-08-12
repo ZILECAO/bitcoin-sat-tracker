@@ -1,0 +1,735 @@
+{
+  "evaluation_label": "reduced_demonstration_workflow_only_not_efficacy_evidence",
+  "repeats_per_arm": 1,
+  "held_out_task_count": 8,
+  "randomization": [
+    {
+      "task_id": "btc-hold-001",
+      "order": [
+        "baseline",
+        "improved"
+      ]
+    },
+    {
+      "task_id": "btc-hold-002",
+      "order": [
+        "improved",
+        "baseline"
+      ]
+    },
+    {
+      "task_id": "btc-hold-003",
+      "order": [
+        "baseline",
+        "improved"
+      ]
+    },
+    {
+      "task_id": "btc-hold-004",
+      "order": [
+        "baseline",
+        "improved"
+      ]
+    },
+    {
+      "task_id": "btc-hold-005",
+      "order": [
+        "baseline",
+        "improved"
+      ]
+    },
+    {
+      "task_id": "btc-hold-006",
+      "order": [
+        "baseline",
+        "improved"
+      ]
+    },
+    {
+      "task_id": "btc-hold-007",
+      "order": [
+        "improved",
+        "baseline"
+      ]
+    },
+    {
+      "task_id": "btc-hold-008",
+      "order": [
+        "improved",
+        "baseline"
+      ]
+    }
+  ],
+  "suggestion_ids_applied": [
+    "halo-s1",
+    "halo-s2"
+  ],
+  "suggestion_ids_not_applied": [
+    "halo-s3"
+  ],
+  "baseline_pass": 0,
+  "improved_pass": 0,
+  "absolute_improvement_pp": 0.0,
+  "pairs": [
+    {
+      "task_id": "btc-hold-001",
+      "baseline_passed": false,
+      "improved_passed": false,
+      "delta": 0
+    },
+    {
+      "task_id": "btc-hold-002",
+      "baseline_passed": false,
+      "improved_passed": false,
+      "delta": 0
+    },
+    {
+      "task_id": "btc-hold-003",
+      "baseline_passed": false,
+      "improved_passed": false,
+      "delta": 0
+    },
+    {
+      "task_id": "btc-hold-004",
+      "baseline_passed": false,
+      "improved_passed": false,
+      "delta": 0
+    },
+    {
+      "task_id": "btc-hold-005",
+      "baseline_passed": false,
+      "improved_passed": false,
+      "delta": 0
+    },
+    {
+      "task_id": "btc-hold-006",
+      "baseline_passed": false,
+      "improved_passed": false,
+      "delta": 0
+    },
+    {
+      "task_id": "btc-hold-007",
+      "baseline_passed": false,
+      "improved_passed": false,
+      "delta": 0
+    },
+    {
+      "task_id": "btc-hold-008",
+      "baseline_passed": false,
+      "improved_passed": false,
+      "delta": 0
+    }
+  ],
+  "sample_improved_snippet": {
+    "applied_files": [
+      "track-forwards.py",
+      "watch-wallet.py"
+    ],
+    "track_snippet": [
+      "import random as _diligence_random",
+      "def http_with_retries(do_request, retries=3, backoff=1.0):",
+      "            time.sleep(backoff * (2 ** attempt) + _diligence_random.uniform(0, 0.5))",
+      "    response = requests.get(f\"https://mempool.space/api/tx/{txid}/outspend/{vout}\", timeout=30).json()"
+    ]
+  },
+  "records": [
+    {
+      "task_id": "btc-hold-001",
+      "arm": "codex-baseline",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [],
+      "scorer_id": "satpoint_validation",
+      "scorer_detail": {
+        "scorer_id": "satpoint_validation",
+        "passed": false,
+        "checks": [
+          {
+            "name": "validates_satpoint_format",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "rejects_negative_or_non_int",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "bounds_check_before_use",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "has_parse_or_validate_helper",
+            "passed": false,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-001",
+      "arm": "codex-halo",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [
+        "halo-s1",
+        "halo-s2"
+      ],
+      "scorer_id": "satpoint_validation",
+      "scorer_detail": {
+        "scorer_id": "satpoint_validation",
+        "passed": false,
+        "checks": [
+          {
+            "name": "validates_satpoint_format",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "rejects_negative_or_non_int",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "bounds_check_before_use",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "has_parse_or_validate_helper",
+            "passed": false,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-002",
+      "arm": "codex-halo",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 1,
+      "tests_passed": false,
+      "suggestion_ids": [
+        "halo-s1",
+        "halo-s2"
+      ],
+      "scorer_id": "no_sys_exit_in_library",
+      "scorer_detail": {
+        "scorer_id": "no_sys_exit_in_library",
+        "passed": false,
+        "checks": [
+          {
+            "name": "library_functions_avoid_sys_exit",
+            "passed": false,
+            "detail": "get_raw_transaction,get_raw_transaction,get_raw_transaction,track_satpoint,track_satpoint"
+          },
+          {
+            "name": "uses_exceptions_instead",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-002",
+      "arm": "codex-baseline",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 1,
+      "tests_passed": false,
+      "suggestion_ids": [],
+      "scorer_id": "no_sys_exit_in_library",
+      "scorer_detail": {
+        "scorer_id": "no_sys_exit_in_library",
+        "passed": false,
+        "checks": [
+          {
+            "name": "library_functions_avoid_sys_exit",
+            "passed": false,
+            "detail": "get_raw_transaction,get_raw_transaction,get_raw_transaction,track_satpoint,track_satpoint"
+          },
+          {
+            "name": "uses_exceptions_instead",
+            "passed": false,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-003",
+      "arm": "codex-baseline",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [],
+      "scorer_id": "safe_cli_layer",
+      "scorer_detail": {
+        "scorer_id": "safe_cli_layer",
+        "passed": false,
+        "checks": [
+          {
+            "name": "track_uses_argparse_or_click",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "watch_uses_argparse_or_click",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "main_guard_present",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-003",
+      "arm": "codex-halo",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [
+        "halo-s1",
+        "halo-s2"
+      ],
+      "scorer_id": "safe_cli_layer",
+      "scorer_detail": {
+        "scorer_id": "safe_cli_layer",
+        "passed": false,
+        "checks": [
+          {
+            "name": "track_uses_argparse_or_click",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "watch_uses_argparse_or_click",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "main_guard_present",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-004",
+      "arm": "codex-baseline",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [],
+      "scorer_id": "bounded_wallet_polling",
+      "scorer_detail": {
+        "scorer_id": "bounded_wallet_polling",
+        "passed": false,
+        "checks": [
+          {
+            "name": "poll_interval_configurable",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "has_max_iterations_or_stop",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "not_only_hardcoded_sleep_60",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "has_polling_test",
+            "passed": false,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-004",
+      "arm": "codex-halo",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [
+        "halo-s1",
+        "halo-s2"
+      ],
+      "scorer_id": "bounded_wallet_polling",
+      "scorer_detail": {
+        "scorer_id": "bounded_wallet_polling",
+        "passed": false,
+        "checks": [
+          {
+            "name": "poll_interval_configurable",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "has_max_iterations_or_stop",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "not_only_hardcoded_sleep_60",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "has_polling_test",
+            "passed": false,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-005",
+      "arm": "codex-baseline",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [],
+      "scorer_id": "fee_flow_edge_cases",
+      "scorer_detail": {
+        "scorer_id": "fee_flow_edge_cases",
+        "passed": false,
+        "checks": [
+          {
+            "name": "fee_helper_handles_missing_inputs",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "has_fee_or_coinbase_tests",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "avoids_unbounded_recursive_fee_lookups_comment_or_guard",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-005",
+      "arm": "codex-halo",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [
+        "halo-s1",
+        "halo-s2"
+      ],
+      "scorer_id": "fee_flow_edge_cases",
+      "scorer_detail": {
+        "scorer_id": "fee_flow_edge_cases",
+        "passed": false,
+        "checks": [
+          {
+            "name": "fee_helper_handles_missing_inputs",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "name": "has_fee_or_coinbase_tests",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "avoids_unbounded_recursive_fee_lookups_comment_or_guard",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-006",
+      "arm": "codex-baseline",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [],
+      "scorer_id": "tx_output_edge_cases",
+      "scorer_detail": {
+        "scorer_id": "tx_output_edge_cases",
+        "passed": false,
+        "checks": [
+          {
+            "name": "has_tests",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "covers_unconfirmed",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "covers_out_of_range_vout",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "uses_fixture_or_generated_data",
+            "passed": false,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-006",
+      "arm": "codex-halo",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [
+        "halo-s1",
+        "halo-s2"
+      ],
+      "scorer_id": "tx_output_edge_cases",
+      "scorer_detail": {
+        "scorer_id": "tx_output_edge_cases",
+        "passed": false,
+        "checks": [
+          {
+            "name": "has_tests",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "covers_unconfirmed",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "covers_out_of_range_vout",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "uses_fixture_or_generated_data",
+            "passed": false,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-007",
+      "arm": "codex-halo",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [
+        "halo-s1",
+        "halo-s2"
+      ],
+      "scorer_id": "mempool_url_config",
+      "scorer_detail": {
+        "scorer_id": "mempool_url_config",
+        "passed": false,
+        "checks": [
+          {
+            "name": "no_hardcoded_mempool_space_url",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "mempool_url_from_env_or_config",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "spending_txid_still_present",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-007",
+      "arm": "codex-baseline",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [],
+      "scorer_id": "mempool_url_config",
+      "scorer_detail": {
+        "scorer_id": "mempool_url_config",
+        "passed": false,
+        "checks": [
+          {
+            "name": "no_hardcoded_mempool_space_url",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "mempool_url_from_env_or_config",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "spending_txid_still_present",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-008",
+      "arm": "codex-halo",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [
+        "halo-s1",
+        "halo-s2"
+      ],
+      "scorer_id": "sats_btc_conversion",
+      "scorer_detail": {
+        "scorer_id": "sats_btc_conversion",
+        "passed": false,
+        "checks": [
+          {
+            "name": "has_sats_to_btc",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "has_btc_to_sats",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "has_conversion_unit_tests",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "uses_1e8_scale",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    },
+    {
+      "task_id": "btc-hold-008",
+      "arm": "codex-baseline",
+      "split": "holdout",
+      "repeat": 1,
+      "model": "offline-fixture-static-score",
+      "duration_ms": 0,
+      "tests_passed": false,
+      "suggestion_ids": [],
+      "scorer_id": "sats_btc_conversion",
+      "scorer_detail": {
+        "scorer_id": "sats_btc_conversion",
+        "passed": false,
+        "checks": [
+          {
+            "name": "has_sats_to_btc",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "has_btc_to_sats",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "has_conversion_unit_tests",
+            "passed": false,
+            "detail": ""
+          },
+          {
+            "name": "uses_1e8_scale",
+            "passed": true,
+            "detail": ""
+          }
+        ],
+        "detail": ""
+      },
+      "notes": "Reduced demonstration: static scoring of baseline vs HALO-derived generic patch; not model-agent efficacy evidence."
+    }
+  ]
+}

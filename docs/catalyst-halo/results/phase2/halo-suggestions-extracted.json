@@ -1,8 +1,9 @@
 {
-  "status": "completed_with_truncated_final_answer",
-  "development_traces_only": true,
-  "held_out_excluded": true,
+  "halo_exit": 0,
+  "final_answer_status": "truncated_json_failed_due_to_max_output_tokens",
   "model": "deepseek-v4-flash",
+  "max_turns": 8,
+  "max_depth": 1,
   "suggestions": [
     {
       "id": "halo-s1",
@@ -29,25 +30,17 @@
       "encodes_task_answer": false
     }
   ],
-  "applied_changes": [
-    {
-      "suggestion_id": "halo-s1",
-      "change": "Add timeout=30 to requests.get/post in baseline copies for improved harness"
-    },
-    {
-      "suggestion_id": "halo-s2",
-      "change": "Add http_with_retries helper with exponential backoff in improved harness copies"
-    }
+  "snippet_count": 9,
+  "snippets_sample": [
+    "Wait before retrying\\\\n    74\\\\t\\\\n    75\\\\tif __name__ == \\\\\"__main__\\\\\":\\\\n",
+    "`BitcoinToolError` at the top level and decide whether to retry, skip, or abort.",
+    "timeouts) without crashing.\\\\n\\\\n### 1.2 Silent `None` returns from",
+    "data\\\\\" from \\\\\"error\\\\\". Log the error before returning.\\\\n\\\\n### 1.3 No retry",
+    "scripts fail immediately.\\\\n\\\\n**Fix:** Add exponential backoff retry with",
+    "retries=3, backoff=1.0):\\\\n    for attempt in range(retries):\\\\n        try:\\\\n",
+    "attempt == retries - 1:\\\\n                raise\\\\n            time.sleep(backoff",
+    "Timeouts\\\\n\\\\n### 2.1 No HTTP timeout on RPC calls\\\\n\\\\n**`track-forwards.py`",
+    "called without a `timeout` parameter. A hung Bitcoin Core node will hang the"
   ],
-  "classification_counts": {
-    "actionable": 2,
-    "generic_but_unproven": 1,
-    "task_specific_leakage": 0,
-    "incorrect": 0,
-    "unverifiable": 0
-  },
-  "evaluation_label": "reduced_demonstration_workflow_only_not_efficacy_evidence",
-  "holdout_baseline_pass": 0,
-  "holdout_improved_pass": 0,
-  "absolute_improvement_pp": 0.0
+  "held_out_included": false
 }

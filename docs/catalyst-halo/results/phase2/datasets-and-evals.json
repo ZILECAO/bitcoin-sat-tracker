@@ -1,0 +1,44 @@
+{
+  "train": {
+    "id": "5b27b3ac-eba8-47ec-bef9-13d491fe208b",
+    "name": "btc-diligence-dev-train",
+    "type": "training",
+    "inferenceCount": 4
+  },
+  "eval": {
+    "id": "fcef9681-7c9c-4519-81c6-2dc0a1fa9458",
+    "name": "btc-diligence-dev-eval",
+    "type": "eval",
+    "inferenceCount": 2
+  },
+  "gateway_traffic_eval": {
+    "id": "608376bc-c436-4702-8400-106af94ed45e",
+    "name": "btc-diligence-gateway-dev-eval",
+    "type": "eval",
+    "inferenceCount": 4,
+    "taskIds": [
+      "btc-dev-001"
+    ]
+  },
+  "rubric": {
+    "id": "84869062-18a3-479f-8300-6b05ea706f1b",
+    "name": "btc-diligence-generic-harness"
+  },
+  "eval_runs": [
+    {
+      "id": "197808cc-30f4-4e87-8e44-f96fa8119f10",
+      "name": "btc-diligence-dev-eval-smoke",
+      "model": "deepseek-v4-flash",
+      "status": "failed",
+      "error": "2 of 2 results failed"
+    },
+    {
+      "id": "7e45d2d7-edca-4b72-a1ee-829113d44909",
+      "name": "btc-diligence-dev-eval-nano",
+      "model": "gpt-4.1-nano",
+      "status": "failed",
+      "error": "2 of 2 results failed"
+    }
+  ],
+  "held_out_excluded": true
+}
