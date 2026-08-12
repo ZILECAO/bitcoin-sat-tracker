@@ -1,5 +1,11 @@
 Python scripts to index Bitcoin transactions. Need to be run on a server with Bitcoin Core installed. 
 
+> The `diligence/catalyst-halo` branch contains a staged, synthetic-only
+> Catalyst and HALO technical-diligence project. Agents working on that branch
+> must read [`AGENTS.md`](AGENTS.md) and
+> [`docs/catalyst-halo/README.md`](docs/catalyst-halo/README.md) before making
+> changes.
+
 ## Quickstart
 1. Install a Bitcoin Core node on an AWS EC2 instance. Ensure that the node is synced to the latest block with:
 ```
@@ -36,4 +42,3 @@ txindex=1
 python3 track-forwards.py 5435a6f76793a55e20626fb3fda796e93462f62ccb0f244c382127043f495451:0
 python3 watch-wallet.py <insert_wallet_address_here>
 ```
-
