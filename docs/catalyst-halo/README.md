@@ -1,19 +1,20 @@
 # Catalyst and HALO Public-Sandbox Diligence
 
-This branch is a public, synthetic-only sandbox for evaluating Inference.net
-Catalyst and HALO without exposing private source, prompts, files, credentials,
-or production traffic.
+This branch is a public-data-only sandbox for evaluating Inference.net Catalyst
+and HALO without exposing private source, prompts, files, credentials, or
+production traffic. It uses deterministic fixtures first and may replay public
+Bitcoin mainnet data under the active work order.
 
 ## Current State
 
 - Phase 0 environment isolation: complete.
 - Phase 1 offline harness and static supply-chain audit: complete.
-- Phase 2 local HALO and synthetic Catalyst testing: overnight run partially
-  completed; hosted Catalyst/Gateway/HALO/training blocked by egress.
-  See [`phase-2-overnight-work-order.md`](phase-2-overnight-work-order.md) and
-  [`phase-2-report.md`](phase-2-report.md).
-- Phase 3 fine-tuning: preparation is allowed; a training job may start only
-  when the platform shows an explicit zero-dollar price before submission.
+- Phase 2 Catalyst/Gateway/HALO plumbing test: complete. Catalyst traces,
+  Gateway calls, and datasets worked; hosted eval failed; HALO showed no
+  held-out improvement. See [`phase-2-report.md`](phase-2-report.md).
+- Phase 2B heavier sat-hunt benchmark: authorized and specified in
+  [`phase-2b-sat-hunt-work-order.md`](phase-2b-sat-hunt-work-order.md).
+- Phase 3 fine-tuning: explicitly out of scope for the current work.
 - External GPU rental: not authorized.
 
 No real API key belongs in this branch. Disposable overnight keys must stay in
@@ -29,8 +30,8 @@ Phase 1 deliverables:
 ## Start Here
 
 1. Read the root [`AGENTS.md`](../../AGENTS.md).
-2. For Phase 2, execute
-   [`phase-2-overnight-work-order.md`](phase-2-overnight-work-order.md).
+2. For active work, execute
+   [`phase-2b-sat-hunt-work-order.md`](phase-2b-sat-hunt-work-order.md).
 3. Implement the interfaces and controls in
    [`experiment-spec.md`](experiment-spec.md).
 4. Follow [`security-boundary.md`](security-boundary.md) for every file,
@@ -47,13 +48,13 @@ The diligence tests three independent claims:
    a useful agent/model/tool trace tree?
 2. **HALO efficacy:** does a HALO-recommended harness change improve a frozen
    held-out coding evaluation?
-3. **Gateway and training value:** can captured synthetic LLM calls produce a
-   useful dataset and a small tuned model that beats the unchanged base model?
+3. **Workflow specialization:** can model selection plus HALO-guided harness
+   and repository-toolkit changes make an agent correct, faster, and cheaper
+   on a demanding Bitcoin/ordinal research task without training?
 
-The first two claims will eventually use fresh, isolated Codex subprocesses.
-The Gateway/training claim will use a separate minimal OpenAI-compatible agent.
-Codex's internal authentication and model traffic must not be redirected
-through Catalyst Gateway.
+The active test uses a separate, minimal OpenAI-compatible coding agent through
+Catalyst Gateway. Codex's internal authentication and model traffic must not
+be redirected through Catalyst Gateway.
 
 ## Core Experimental Rule
 

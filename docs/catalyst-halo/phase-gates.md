@@ -37,8 +37,7 @@ Not allowed:
 
 ## Phase 2 — Local HALO and Synthetic Hosted Testing
 
-Status: overnight run **partially completed** on 2026-08-12; hosted stages
-blocked by missing Inference.net egress allowlist domains.
+Status: initial plumbing run complete on 2026-08-12.
 
 Requires a separate human review of:
 
@@ -58,13 +57,32 @@ including its credential, cost, isolation, and reporting rules. This is not
 approval to use private code, private prompts, production traffic, unrelated
 credentials, or the user's local Codex state.
 
-Overnight evidence and handoff: [`phase-2-report.md`](phase-2-report.md).
-Resume hosted stages only after egress allowlist updates and key hygiene
-checks in that report.
+Evidence and handoff: [`phase-2-report.md`](phase-2-report.md).
+
+## Phase 2B — Heavy Sat-Hunt Harness Optimization
+
+Status: authorized on 2026-08-12.
+
+Training-free work is allowed under
+[`phase-2b-sat-hunt-work-order.md`](phase-2b-sat-hunt-work-order.md):
+
+- Build a deterministic Bitcoin Core/ord fixture and hidden evaluator.
+- Build an instrumented coding-agent harness with bounded Bitcoin, ord, file,
+  shell, and test tools.
+- Compare inexpensive Gateway models on development tasks.
+- Let HALO inspect development traces and propose harness or repository-toolkit
+  improvements.
+- Compare baseline, harness-only, toolkit-only, and combined arms.
+- Run the frozen held-out final exam only after the model and arms are frozen.
+- Attempt a live mainnet result only with infrastructure capable of proving a
+  global minimum; otherwise report the exact infrastructure gap.
+
+Correctness is a gate. Cost and time comparisons are invalid for wrong or
+unproven answers.
 
 ## Phase 3 — Fine-Tuning
 
-Status: preparation authorized; paid or unknown-cost execution not authorized.
+Status: out of scope for current work.
 
 Requires:
 
@@ -74,11 +92,8 @@ Requires:
 - Exact base model, recipe, artifact ownership, export, and deletion terms.
 - Separate causal and cross-harness comparison labels.
 
-During the overnight run, the agent may construct and validate a synthetic
-dataset and exercise the hosted training path only if the platform shows an
-explicit total price of USD $0 before submission. Otherwise it must save the
-ready-to-submit configuration and report the displayed or unknown cost without
-starting the job.
+Do not call training create, submit, deploy, or pricing dry-run endpoints during
+Phase 2B. Preserve the prior ready-to-submit artifact without acting on it.
 
 ## External GPU Experiment
 
