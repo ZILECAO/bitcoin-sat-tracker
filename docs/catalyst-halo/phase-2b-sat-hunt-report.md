@@ -11,7 +11,7 @@ an accepted machine-readable change set.
 
 - Branch: `cursor-cloud-zile/phase-2-overnight-18c7` (also fast-forwarded to
   `diligence/catalyst-halo`)
-- Tip at report freeze: see git tip on the PR branch after this commit
+- Tip at report freeze: f47f4bed78c098e533b1c36701ca6dcde94ded79
 - Required start commit: `7381af42856c2b9a52f3dd58546c0b2ba4992d29`
 - Immutable task baseline: `d674a065819a0bd45357f8530b4f15775bfdaac9`
 
