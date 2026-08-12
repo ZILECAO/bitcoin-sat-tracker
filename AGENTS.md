@@ -5,8 +5,11 @@ These instructions apply to the entire repository on the
 
 ## Current Authorization
 
-Phase 0 is complete. Phase 1 is complete on this branch and is waiting for
-explicit Phase 2 approval.
+Phase 0 and Phase 1 are complete. The user approved the bounded overnight
+Phase 2 run described in
+[the Phase 2 overnight work order](docs/catalyst-halo/phase-2-overnight-work-order.md)
+on 2026-08-12. That work order is now the source of truth for what may run,
+what may be uploaded, and when the agent must stop.
 
 The Phase 1 sources of truth remain
 [the Phase 1 work order](docs/catalyst-halo/phase-1-work-order.md) and
@@ -14,20 +17,22 @@ The Phase 1 sources of truth remain
 [the reproduction guide](docs/catalyst-halo/reproduction.md) and
 [the supply-chain report](docs/catalyst-halo/supply-chain-report.md).
 
-Do not begin Phase 2 or Phase 3. In particular, do not:
+Do not exceed the Phase 2 overnight work order. In particular, do not:
 
-- Add or ask for an API key.
-- Authenticate to Inference.net or another model provider.
-- Install or execute `inf`, HALO, Catalyst tracing, Codex, or a model client.
-- Run `inf instrument`, including `inf instrument --dry-run`.
-- Upload traces, datasets, prompts, source, or results.
-- Route a request through Catalyst Gateway.
-- Run an evaluation, training job, deployment, or GPU workload.
 - Access another repository, private data, personal files, or previous agent
   conversations.
+- Print, commit, copy, or expose a credential.
+- Use any credential other than the dedicated Inference project key provided
+  as `INFERENCE_API_KEY` and `CATALYST_OTLP_TOKEN`.
+- Send data other than this public repository's synthetic/public benchmark
+  content to a hosted service.
+- Exceed the overnight total cost cap, start a paid or unknown-cost training
+  job, deploy a model, or rent a GPU.
+- Publish benchmark conclusions outside the private diligence process.
 
-Static package inspection is allowed only under the rules in
-[the supply-chain protocol](docs/catalyst-halo/supply-chain-protocol.md).
+The pinned vendor packages may now be executed only inside the disposable
+cloud VM and under the isolation, recording, and stop rules in the Phase 2
+overnight work order.
 
 ## Immutable Baseline
 

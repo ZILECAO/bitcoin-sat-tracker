@@ -14,7 +14,7 @@ Accepted facts:
 
 ## Phase 1 — Offline Harness and Static Audit
 
-Status: complete (awaiting explicit Phase 2 approval).
+Status: complete.
 
 Allowed:
 
@@ -37,7 +37,7 @@ Not allowed:
 
 ## Phase 2 — Local HALO and Synthetic Hosted Testing
 
-Status: not authorized.
+Status: bounded overnight run authorized on 2026-08-12.
 
 Requires a separate human review of:
 
@@ -50,13 +50,16 @@ Requires a separate human review of:
 - Written authorization for hosted benchmarking if required by applicable
   service terms.
 
-Phase 2 should begin locally with fake canaries and no hosted upload. Hosted
-Catalyst calls require an additional data-transfer approval after local
-verification.
+The authorization accepts execution of the pinned packages in the disposable
+public-repository VM and hosted transfer of synthetic/public benchmark data.
+Follow [`phase-2-overnight-work-order.md`](phase-2-overnight-work-order.md),
+including its credential, cost, isolation, and reporting rules. This is not
+approval to use private code, private prompts, production traffic, unrelated
+credentials, or the user's local Codex state.
 
 ## Phase 3 — Fine-Tuning
 
-Status: not authorized.
+Status: preparation authorized; paid or unknown-cost execution not authorized.
 
 Requires:
 
@@ -65,6 +68,12 @@ Requires:
 - Approved cost and hardware budget.
 - Exact base model, recipe, artifact ownership, export, and deletion terms.
 - Separate causal and cross-harness comparison labels.
+
+During the overnight run, the agent may construct and validate a synthetic
+dataset and exercise the hosted training path only if the platform shows an
+explicit total price of USD $0 before submission. Otherwise it must save the
+ready-to-submit configuration and report the displayed or unknown cost without
+starting the job.
 
 ## External GPU Experiment
 
@@ -77,7 +86,8 @@ infrastructure/training experiment rather than evidence about Catalyst Train.
 ## Universal Stop Conditions
 
 - Another repository or private data becomes visible.
-- A real credential appears.
+- A credential other than the designated disposable Inference project key
+  appears.
 - A privacy check fails.
 - A budget or timeout is reached.
 - An unavailable model or package would require an unapproved substitution.

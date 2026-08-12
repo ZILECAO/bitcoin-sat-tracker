@@ -7,10 +7,11 @@ or production traffic.
 ## Current State
 
 - Phase 0 environment isolation: complete.
-- Phase 1 offline harness and static supply-chain audit: complete on this
-  branch; waiting for explicit Phase 2 approval.
-- Phase 2 local HALO and synthetic Catalyst testing: not authorized.
-- Phase 3 fine-tuning: not authorized.
+- Phase 1 offline harness and static supply-chain audit: complete.
+- Phase 2 local HALO and synthetic Catalyst testing: bounded overnight run
+  authorized; see [`phase-2-overnight-work-order.md`](phase-2-overnight-work-order.md).
+- Phase 3 fine-tuning: preparation is allowed; a training job may start only
+  when the platform shows an explicit zero-dollar price before submission.
 - External GPU rental: not authorized.
 
 No real API key belongs in this branch or in a Phase 1 environment.
@@ -25,7 +26,8 @@ Phase 1 deliverables:
 ## Start Here
 
 1. Read the root [`AGENTS.md`](../../AGENTS.md).
-2. Execute [`phase-1-work-order.md`](phase-1-work-order.md).
+2. For Phase 2, execute
+   [`phase-2-overnight-work-order.md`](phase-2-overnight-work-order.md).
 3. Implement the interfaces and controls in
    [`experiment-spec.md`](experiment-spec.md).
 4. Follow [`security-boundary.md`](security-boundary.md) for every file,
