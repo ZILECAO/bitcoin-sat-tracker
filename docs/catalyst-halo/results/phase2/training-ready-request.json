@@ -1,0 +1,16 @@
+{
+  "status": "ready_to_submit_blocked_by_egress_and_unknown_price",
+  "base_model": null,
+  "base_model_note": "Could not list Inference.net models; no exact revision selected",
+  "dataset": {
+    "train_sha256": "8b59b6180dd1a092aa3020cf78696d8f8bcb0b8d956b205fccf519a3cdd65cb2",
+    "validation_sha256": "157898a1fd5dcd68ad0056de7d599074321cd308cf5287c41455febab5e8fb6c",
+    "holdout_sha256": "3ba17a021862e69878e3f8f6282cff786d28aa7fcdad9d8b30dcf30de29134e8",
+    "overlap_check": "passed"
+  },
+  "recipe": null,
+  "seed": null,
+  "displayed_price_usd": null,
+  "submission": "not_started",
+  "stop_rule": "Submit only when platform explicitly shows total price USD $0"
+}

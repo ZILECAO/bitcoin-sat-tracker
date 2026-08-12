@@ -1,6 +1,6 @@
 {
   "verified": true,
-  "run_dir": "/home/ubuntu/diligence-raw/runs/offline-fixture-dev-20260812T031915Z-24d3c7c3",
+  "run_dir": "<DILIGENCE_RAW_DIR>/runs/offline-fixture-dev-20260812T042002Z-824f9295",
   "arm": "offline-fixture",
   "split": "dev",
   "baseline_commit": "d674a065819a0bd45357f8530b4f15775bfdaac9",

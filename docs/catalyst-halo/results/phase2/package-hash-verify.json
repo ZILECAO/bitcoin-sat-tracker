@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "mismatches": [],
+  "results": [
+    {
+      "file": "inference-cli-0.0.180.tgz",
+      "bytes": 7122,
+      "sha256": "a5518fd6d59bbfa5597e4082252bc5acb79de13cb9a03600c76535cea561ac1b",
+      "expected_sha256": "a5518fd6d59bbfa5597e4082252bc5acb79de13cb9a03600c76535cea561ac1b",
+      "expected_bytes": 7122,
+      "ok": true
+    },
+    {
+      "file": "inference-cli-linux-x64-0.0.180.tgz",
+      "bytes": 37812622,
+      "sha256": "6ce7b89e5e32d4d0599d9b7bf990e2172b54a058bcadceb7b3669cec2df5f800",
+      "expected_sha256": "6ce7b89e5e32d4d0599d9b7bf990e2172b54a058bcadceb7b3669cec2df5f800",
+      "expected_bytes": 37812622,
+      "ok": true
+    },
+    {
+      "file": "inference-tracing-0.1.9.tgz",
+      "bytes": 88674,
+      "sha256": "f774f087ae71562411b8f791f4e963fbf4e974f1ccc848ccad690b9704bf2651",
+      "expected_sha256": "f774f087ae71562411b8f791f4e963fbf4e974f1ccc848ccad690b9704bf2651",
+      "expected_bytes": 88674,
+      "ok": true
+    },
+    {
+      "file": "inference-catalyst-tracing-0.1.8.tar.gz",
+      "bytes": 2708,
+      "sha256": "a781463e376a38c02d9735b77ffc1533511ec89aadfce94182b210a6c4ef6215",
+      "expected_sha256": "a781463e376a38c02d9735b77ffc1533511ec89aadfce94182b210a6c4ef6215",
+      "expected_bytes": 2708,
+      "ok": true
+    },
+    {
+      "file": "catalyst-tracing-0.1.8.tar.gz",
+      "bytes": 52848,
+      "sha256": "907b5c9bd2146779dd66ed7cd87a366f15dff702ac66345e0629f5fd03dd6872",
+      "expected_sha256": "907b5c9bd2146779dd66ed7cd87a366f15dff702ac66345e0629f5fd03dd6872",
+      "expected_bytes": 52848,
+      "ok": true
+    },
+    {
+      "file": "halo-engine-0.3.4.tar.gz",
+      "bytes": 10052791,
+      "sha256": "0afa6986fda5912a2b6fc30113e3c064f19a88e7cb9025162fff7faf7df28e83",
+      "expected_sha256": "0afa6986fda5912a2b6fc30113e3c064f19a88e7cb9025162fff7faf7df28e83",
+      "expected_bytes": 10052791,
+      "ok": true
+    },
+    {
+      "file": "opentelemetry-api-1.9.0.tgz",
+      "bytes": 126777,
+      "sha256": "19a3321bfb87b4ab24532233c6014916a3c711af071959d9147ddf96d8a3da8b",
+      "expected_sha256": "19a3321bfb87b4ab24532233c6014916a3c711af071959d9147ddf96d8a3da8b",
+      "expected_bytes": 126777,
+      "ok": true
+    },
+    {
+      "file": "opentelemetry-exporter-trace-otlp-http-0.206.0.tgz",
+      "bytes": 11586,
+      "sha256": "181ced0402dca397bd1101b453f834c70b048bf33071442b56e6b494dd0ce2e2",
+      "expected_sha256": "181ced0402dca397bd1101b453f834c70b048bf33071442b56e6b494dd0ce2e2",
+      "expected_bytes": 11586,
+      "ok": true
+    },
+    {
+      "file": "opentelemetry-exporter-trace-otlp-proto-0.206.0.tgz",
+      "bytes": 11019,
+      "sha256": "e90154c6bef64d0bf0c5401fdd6cd95cb89627dd511a667db19a4f60cc2f4f49",
+      "expected_sha256": "e90154c6bef64d0bf0c5401fdd6cd95cb89627dd511a667db19a4f60cc2f4f49",
+      "expected_bytes": 11019,
+      "ok": true
+    },
+    {
+      "file": "opentelemetry-sdk-trace-node-2.2.0.tgz",
+      "bytes": 9446,
+      "sha256": "e96ea38d85383296e727d56571293e8bb34b24adbb1a7ccd2996f49bf2b7fd5b",
+      "expected_sha256": "e96ea38d85383296e727d56571293e8bb34b24adbb1a7ccd2996f49bf2b7fd5b",
+      "expected_bytes": 9446,
+      "ok": true
+    }
+  ]
+}

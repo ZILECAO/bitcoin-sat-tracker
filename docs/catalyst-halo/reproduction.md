@@ -48,9 +48,11 @@ fail closed with `notes: "Phase 2 not configured"` and do not call a model.
 | Split | Manifest | Tasks | Families |
 | --- | --- | --- | --- |
 | Development | `diligence/tasks/development.json` | 6 | rpc config, missing-config safety, timeouts/status, structured errors, injectable deps, block-reward tests |
-| Held-out | `diligence/tasks/holdout.json` | 6 | satpoint validation, no library `sys.exit`, safe CLI, bounded wallet polling, fee/coinbase edges, tx-output edges |
+| Held-out | `diligence/tasks/holdout.json` | 8 | satpoint validation, no library `sys.exit`, safe CLI, bounded wallet polling, fee/coinbase edges, tx-output edges, mempool URL config, sats/BTC conversion |
 
-Twelve families total (≥8 required). Manifests are frozen for Phase 1.
+Fourteen families total (≥8 required). Held-out count meets the full HALO
+protocol minimum of eight tasks. Manifests and prompts are frozen via
+`docs/catalyst-halo/freeze-hashes.json` before any model-backed run.
 Future HALO analysis may see development traces only; held-out outcomes must
 remain hidden until the improved harness is frozen.
 

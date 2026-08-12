@@ -8,13 +8,16 @@ or production traffic.
 
 - Phase 0 environment isolation: complete.
 - Phase 1 offline harness and static supply-chain audit: complete.
-- Phase 2 local HALO and synthetic Catalyst testing: bounded overnight run
-  authorized; see [`phase-2-overnight-work-order.md`](phase-2-overnight-work-order.md).
+- Phase 2 local HALO and synthetic Catalyst testing: overnight run partially
+  completed; hosted Catalyst/Gateway/HALO/training blocked by egress.
+  See [`phase-2-overnight-work-order.md`](phase-2-overnight-work-order.md) and
+  [`phase-2-report.md`](phase-2-report.md).
 - Phase 3 fine-tuning: preparation is allowed; a training job may start only
   when the platform shows an explicit zero-dollar price before submission.
 - External GPU rental: not authorized.
 
-No real API key belongs in this branch or in a Phase 1 environment.
+No real API key belongs in this branch. Disposable overnight keys must stay in
+the Cloud Agent secret store / local raw dirs, never in Git.
 
 Phase 1 deliverables:
 

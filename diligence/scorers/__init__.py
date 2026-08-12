@@ -339,6 +339,49 @@ def score_tx_output_edge_cases(workspace: Path) -> ScoreResult:
     return ScoreResult("tx_output_edge_cases", all(c["passed"] for c in checks), checks)
 
 
+def score_mempool_url_config(workspace: Path) -> ScoreResult:
+    """Family 13 (holdout): Externalize the hardcoded mempool.space URL."""
+    text = _read(workspace, "track-forwards.py")
+    hardcoded = "https://mempool.space/" in text
+    configurable = bool(
+        re.search(
+            r"MEMPOOL_(?:URL|BASE|API)|mempool_url|getenv\(|os\.environ|configparser",
+            text,
+        )
+    )
+    checks = [
+        _check("no_hardcoded_mempool_space_url", not hardcoded),
+        _check("mempool_url_from_env_or_config", configurable),
+        _check(
+            "spending_txid_still_present",
+            "def spending_txid" in text,
+        ),
+    ]
+    return ScoreResult("mempool_url_config", all(c["passed"] for c in checks), checks)
+
+
+def score_sats_btc_conversion(workspace: Path) -> ScoreResult:
+    """Family 14 (holdout): Add pure sats <-> BTC conversion helpers with tests."""
+    text = _read(workspace, "track-forwards.py")
+    has_sats_to_btc = bool(re.search(r"def\s+sats_to_btc\b", text))
+    has_btc_to_sats = bool(re.search(r"def\s+btc_to_sats\b", text))
+    test_files = list(workspace.glob("test*.py")) + list(workspace.glob("**/test_*.py"))
+    combined = "\n".join(p.read_text(encoding="utf-8") for p in test_files)
+    has_conversion_tests = bool(test_files) and (
+        "sats_to_btc" in combined or "btc_to_sats" in combined
+    ) and "assert" in combined
+    checks = [
+        _check("has_sats_to_btc", has_sats_to_btc),
+        _check("has_btc_to_sats", has_btc_to_sats),
+        _check("has_conversion_unit_tests", has_conversion_tests),
+        _check(
+            "uses_1e8_scale",
+            "1e8" in text or "100000000" in text or "1_0000_0000" in text or "1_00000000" in text,
+        ),
+    ]
+    return ScoreResult("sats_btc_conversion", all(c["passed"] for c in checks), checks)
+
+
 SCORERS: dict[str, Callable[[Path], ScoreResult]] = {
     "rpc_config_externalized": score_rpc_config_externalized,
     "missing_config_safe": score_missing_config_safe,
@@ -352,6 +395,8 @@ SCORERS: dict[str, Callable[[Path], ScoreResult]] = {
     "bounded_wallet_polling": score_bounded_wallet_polling,
     "fee_flow_edge_cases": score_fee_flow_edge_cases,
     "tx_output_edge_cases": score_tx_output_edge_cases,
+    "mempool_url_config": score_mempool_url_config,
+    "sats_btc_conversion": score_sats_btc_conversion,
 }
 
 

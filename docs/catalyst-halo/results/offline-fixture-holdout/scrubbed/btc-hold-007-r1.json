@@ -1,5 +1,5 @@
 {
-  "task_id": "btc-hold-006",
+  "task_id": "btc-hold-007",
   "arm": "offline-fixture",
   "split": "holdout",
   "repeat": 1,
@@ -27,27 +27,22 @@
     "within_budget": true
   },
   "scorer_detail": {
-    "scorer_id": "tx_output_edge_cases",
+    "scorer_id": "mempool_url_config",
     "passed": false,
     "checks": [
       {
-        "name": "has_tests",
+        "name": "no_hardcoded_mempool_space_url",
         "passed": false,
         "detail": ""
       },
       {
-        "name": "covers_unconfirmed",
+        "name": "mempool_url_from_env_or_config",
         "passed": false,
         "detail": ""
       },
       {
-        "name": "covers_out_of_range_vout",
-        "passed": false,
-        "detail": ""
-      },
-      {
-        "name": "uses_fixture_or_generated_data",
-        "passed": false,
+        "name": "spending_txid_still_present",
+        "passed": true,
         "detail": ""
       }
     ],

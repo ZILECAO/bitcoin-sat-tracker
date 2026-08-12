@@ -1,0 +1,24 @@
+{
+  "sdk": "catalyst-tracing==0.1.8",
+  "endpoint_configured": "https://telemetry.inference.net",
+  "service_name": "bitcoin-sat-tracker-diligence",
+  "token_present": true,
+  "ok": true,
+  "error": null,
+  "note": "setup/shutdown completed; delivery depends on egress",
+  "spans_meta": {
+    "path": "<DILIGENCE_RAW_DIR>/phase2-artifacts/development-traces.jsonl",
+    "span_count": 18,
+    "task_ids": [
+      "btc-dev-001",
+      "btc-dev-002",
+      "btc-dev-003",
+      "btc-dev-004",
+      "btc-dev-005",
+      "btc-dev-006"
+    ],
+    "sha256": "50c9fe6b07381104c2b6b6776149747a6a9a82415320f899e2dfa0bb905009ea",
+    "bytes": 16716,
+    "held_out_included": false
+  }
+}

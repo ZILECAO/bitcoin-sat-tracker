@@ -1,0 +1,16 @@
+{
+  "status": "blocked",
+  "reason": "HALO Engine could not reach Inference-hosted model or jsDelivr Pyodide assets under egress policy",
+  "development_traces_only": true,
+  "held_out_excluded": true,
+  "suggestions": [],
+  "applied_changes": [],
+  "classification_counts": {
+    "actionable": 0,
+    "generic_but_unproven": 0,
+    "task_specific_leakage": 0,
+    "incorrect": 0,
+    "unverifiable": 0
+  },
+  "evaluation_label": "not_run_reduced_demo_unavailable_due_to_egress"
+}

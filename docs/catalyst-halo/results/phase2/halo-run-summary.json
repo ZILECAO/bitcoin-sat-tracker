@@ -1,0 +1,7 @@
+{
+  "status": "blocked_or_failed",
+  "stdout_bytes": 0,
+  "stderr_preview": "HALO run_code disabled: sandbox unavailable.\n\nReason:\n  failed to download Pyodide wheel annotated_types-0.7.0-py3-none-any.whl from https://cdn.jsdelivr.net/pyodide/v0.29.3/full/annotated_types-0.7.0-py3-none-any.whl: <urlopen error [Errno 104] Connection reset by peer>\n\nHow to fix:\n  The ``deno`` PyPI dependency normally ships a per-platform binary\n  alongside the engine. If it didn't (uncommon platforms like musl\n  Linux or FreeBSD, or a broken install), reinstall the engine\n  package or drop",
+  "stdout_preview": "",
+  "note": "HALO Engine attempted against local development JSONL only; hosted model call requires inference.net egress."
+}

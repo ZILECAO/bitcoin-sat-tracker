@@ -21,6 +21,7 @@ from diligence.constants import (
     state_dir,
 )
 from diligence.fixtures import materialize_fixtures
+from diligence.freeze import build_freeze_manifest
 from diligence.isolation import (
     IsolationError,
     ensure_mode_0700,
@@ -76,6 +77,10 @@ def prepare(*, repo_root: Path | None = None) -> dict[str, Any]:
     )
     if len(families) < 8:
         raise IsolationError(f"need at least 8 task families, found {len(families)}")
+    if len(tasks["holdout"]) < 8:
+        raise IsolationError(
+            f"full HALO protocol requires at least 8 held-out tasks, found {len(tasks['holdout'])}"
+        )
 
     # Sample isolated checkout to prove exclusion of diligence materials.
     sample = workspaces / "_prepare_sample_checkout"
@@ -100,6 +105,8 @@ def prepare(*, repo_root: Path | None = None) -> dict[str, Any]:
         "enforcement": "Task workspaces receive network-policy.json and must not be launched with network access in future model-backed phases.",
         "file": NETWORK_CONTRACT_NAME,
     }
+
+    freeze = build_freeze_manifest()
 
     manifest = {
         "created_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -149,8 +156,12 @@ def prepare(*, repo_root: Path | None = None) -> dict[str, Any]:
             "system": platform.system(),
             "machine": platform.machine(),
         },
-        "phase": 1,
+        "phase": 2,
         "phase2_configured": False,
+        "freeze": {
+            "aggregate_sha256": freeze["aggregate_sha256"],
+            "entry_count": freeze["entry_count"],
+        },
     }
 
     manifest_path = state / MANIFEST_NAME
@@ -160,6 +171,11 @@ def prepare(*, repo_root: Path | None = None) -> dict[str, Any]:
 
 
 def write_committed_prepare_summary(manifest: dict[str, Any], dest: Path) -> None:
+    freeze = build_freeze_manifest()
+    from diligence.freeze import write_freeze_manifest
+
+    freeze_path = dest.parent / "freeze-hashes.json"
+    write_freeze_manifest(freeze_path)
     scrubbed = {
         "baseline_commit": manifest["baseline_commit"],
         "diligence_version": manifest["diligence_version"],
@@ -170,6 +186,8 @@ def write_committed_prepare_summary(manifest: dict[str, Any], dest: Path) -> Non
         "raw_results_mode": manifest["raw_results"]["mode"],
         "network": manifest["network_contract"]["network"],
         "created_at": manifest["created_at"],
+        "freeze_aggregate_sha256": freeze["aggregate_sha256"],
+        "freeze_path": str(freeze_path.relative_to(REPO_ROOT)),
     }
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(scrubbed, indent=2) + "\n", encoding="utf-8")

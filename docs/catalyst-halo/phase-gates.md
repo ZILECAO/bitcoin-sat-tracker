@@ -37,7 +37,8 @@ Not allowed:
 
 ## Phase 2 — Local HALO and Synthetic Hosted Testing
 
-Status: bounded overnight run authorized on 2026-08-12.
+Status: overnight run **partially completed** on 2026-08-12; hosted stages
+blocked by missing Inference.net egress allowlist domains.
 
 Requires a separate human review of:
 
@@ -56,6 +57,10 @@ Follow [`phase-2-overnight-work-order.md`](phase-2-overnight-work-order.md),
 including its credential, cost, isolation, and reporting rules. This is not
 approval to use private code, private prompts, production traffic, unrelated
 credentials, or the user's local Codex state.
+
+Overnight evidence and handoff: [`phase-2-report.md`](phase-2-report.md).
+Resume hosted stages only after egress allowlist updates and key hygiene
+checks in that report.
 
 ## Phase 3 — Fine-Tuning
 

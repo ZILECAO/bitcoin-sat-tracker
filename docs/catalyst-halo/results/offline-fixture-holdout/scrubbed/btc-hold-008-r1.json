@@ -1,5 +1,5 @@
 {
-  "task_id": "btc-hold-006",
+  "task_id": "btc-hold-008",
   "arm": "offline-fixture",
   "split": "holdout",
   "repeat": 1,
@@ -27,27 +27,27 @@
     "within_budget": true
   },
   "scorer_detail": {
-    "scorer_id": "tx_output_edge_cases",
+    "scorer_id": "sats_btc_conversion",
     "passed": false,
     "checks": [
       {
-        "name": "has_tests",
+        "name": "has_sats_to_btc",
         "passed": false,
         "detail": ""
       },
       {
-        "name": "covers_unconfirmed",
+        "name": "has_btc_to_sats",
         "passed": false,
         "detail": ""
       },
       {
-        "name": "covers_out_of_range_vout",
+        "name": "has_conversion_unit_tests",
         "passed": false,
         "detail": ""
       },
       {
-        "name": "uses_fixture_or_generated_data",
-        "passed": false,
+        "name": "uses_1e8_scale",
+        "passed": true,
         "detail": ""
       }
     ],
