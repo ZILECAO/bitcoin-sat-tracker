@@ -1,0 +1,79 @@
+[
+  {
+    "id": "sat-dev-001",
+    "family": "ordinal_fifo",
+    "scorer_id": "ordinal_fifo",
+    "prompt_file": "sat-dev-001.md",
+    "answer_name": "answers/fifo.json"
+  },
+  {
+    "id": "sat-dev-002",
+    "family": "fees_and_coinbase",
+    "scorer_id": "fees_and_coinbase",
+    "prompt_file": "sat-dev-002.md",
+    "answer_name": "answers/fees.json"
+  },
+  {
+    "id": "sat-dev-003",
+    "family": "satpoint_history",
+    "scorer_id": "satpoint_history",
+    "prompt_file": "sat-dev-003.md",
+    "answer_name": "answers/satpoint.json"
+  },
+  {
+    "id": "sat-dev-004",
+    "family": "snapshot_utxo",
+    "scorer_id": "snapshot_utxo",
+    "prompt_file": "sat-dev-004.md",
+    "answer_name": "answers/utxo.json"
+  },
+  {
+    "id": "sat-dev-005",
+    "family": "activity_proxy",
+    "scorer_id": "activity_proxy",
+    "prompt_file": "sat-dev-005.md",
+    "answer_name": "answers/activity.json"
+  },
+  {
+    "id": "sat-dev-006",
+    "family": "inscription_attachment",
+    "scorer_id": "inscription_attachment",
+    "prompt_file": "sat-dev-006.md",
+    "answer_name": "answers/inscriptions.json"
+  },
+  {
+    "id": "sat-dev-007",
+    "family": "minimum_certificate",
+    "scorer_id": "minimum_certificate",
+    "prompt_file": "sat-dev-007.md",
+    "answer_name": "answers/minimum.json"
+  },
+  {
+    "id": "sat-dev-008",
+    "family": "checkpoint_resume",
+    "scorer_id": "checkpoint_resume",
+    "prompt_file": "sat-dev-008.md",
+    "answer_name": "checkpoint.json"
+  },
+  {
+    "id": "sat-dev-009",
+    "family": "evidence_provenance",
+    "scorer_id": "evidence_provenance",
+    "prompt_file": "sat-dev-009.md",
+    "answer_name": "answers/evidence.json"
+  },
+  {
+    "id": "sat-dev-010",
+    "family": "new_script",
+    "scorer_id": "new_script",
+    "prompt_file": "sat-dev-010.md",
+    "answer_name": null
+  },
+  {
+    "id": "sat-dev-011",
+    "family": "public_satoshi_attribution",
+    "scorer_id": "public_satoshi_attribution",
+    "prompt_file": "sat-dev-011.md",
+    "answer_name": "answers/attribution.json"
+  }
+]

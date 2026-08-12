@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sat-hold-001",
+    "family": "fifo_plus_fees",
+    "scorer_id": "ordinal_fifo",
+    "prompt_file": "sat-hold-001.md",
+    "answer_name": "answers/fifo.json"
+  },
+  {
+    "id": "sat-hold-002",
+    "family": "activity_plus_utxo",
+    "scorer_id": "activity_proxy",
+    "prompt_file": "sat-hold-002.md",
+    "answer_name": "answers/activity.json"
+  },
+  {
+    "id": "sat-hold-003",
+    "family": "inscription_plus_certificate",
+    "scorer_id": "inscription_attachment",
+    "prompt_file": "sat-hold-003.md",
+    "answer_name": "answers/inscriptions.json"
+  },
+  {
+    "id": "sat-hold-004",
+    "family": "attribution_plus_evidence",
+    "scorer_id": "public_satoshi_attribution",
+    "prompt_file": "sat-hold-004.md",
+    "answer_name": "answers/attribution.json"
+  }
+]

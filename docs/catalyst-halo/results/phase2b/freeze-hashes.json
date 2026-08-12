@@ -1,0 +1,29 @@
+{
+  "benchmark_version": "sat-hunt-v2",
+  "patoshi_csv_sha256": "f649579e286085325a881bec1168e88bbb6f5d67e10b7ef8cb5c65e916a34a2e",
+  "derived_attribution_set_sha256": "c9641d86ba93c71fc550c63fd97b6da8246f46a9410125a6c2d4326fc461c71d",
+  "fixture_sha256": "5ff3dbbb1c11c7b0ba4e34959c94385cc9b69cfb17b384a4f01e2847d8c7dd08",
+  "selected_model": null,
+  "harness_hash": "e84ba07ced7716d25bee17e24474ac7aef142ed3ab66c19c33c439bf0a02946e",
+  "toolkit_hash": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a",
+  "files": {
+    "benchmark.json": "c0f60a9b376f5567942ef61b3b77fc021a5c4c20c9f2b0235a6486d66bdb9548",
+    "attribution-sources.json": "91c5f55fa0a988b459b147c0da63add1f0ff36d54d28e15679543059c9f680d6",
+    "attribution-derived-meta.json": "c05a87883e1809fd3ca9c5f9b082b0d40423b067c4a1a1badc9329de966c91c4",
+    "development.json": "5eaf90e32b476d591094f37376872db0f29328494a04216a266d329223d8aaf0",
+    "development_tasks.json": "2642680a7dca86a70db092f37ee570db3821f8b2b257440825f5ef8f98de1c71",
+    "heldout.json": "1f0f2e2576a4017a3c15a3b10c7dd08d261eff3256918ab2ca3540d7776959c4",
+    "ordinal.py": "63d8f3c6ae250dd3a98f9c691851350d252b89034189b54693dbe7b60e9c3550",
+    "score.py": "c53ee3d8e79343d6a3bf270542b7a5960b309bcc8b3dad88f1698785bebc415e",
+    "attribution.py": "3ad1b59ba946076253b4c291d5b6ac4e19aaf002c5ee5d90b9e79e4d6d522da8",
+    "fixtures.py": "a735bb6ac20b0ee42daa4da1a18812909364d4c25c2bf527be91e3fed847b784",
+    "scorers.py": "64c90daeddb7538315825c7f52accce981f1ae8b3084dbdbddfe7694ee7dafa4",
+    "tasks.py": "ded8121486e5c771cad5589693b50baf67ba3cdbb4d5582b6e9efb140dbf43ea",
+    "fixture_deterministic_v1": "bb25199b3a6cb76e34b05d689288a46a55ae792f079a6763c16e98b72e18c1ee",
+    "final_exam_prompt": "02ad7664f9a01d55843e80321b815a8a66f02457c6b2d27acbdda407c333e2fb",
+    "agent_runtime": "46a2e99335da7045318e82b860acc11d2c396533a59f601d3300bc9e6e6c2aec",
+    "agent_tools": "36248fd271409ddb246895f3bf422d44d6c1523f5a77d6d589bab8728ea90f57",
+    "agent_gateway": "73d84311e40e4d84671e7f94652893671c9ce6b2f08253352aaac465f61c9f1c",
+    "toolkit_fixture_api": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a"
+  }
+}
