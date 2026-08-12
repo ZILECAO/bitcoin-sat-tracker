@@ -1,0 +1,33 @@
+{
+  "benchmark_version": "sat-hunt-v2",
+  "selected_model": "gemini-2.5-flash-lite",
+  "derived_set_sha256": "c9641d86ba93c71fc550c63fd97b6da8246f46a9410125a6c2d4326fc461c71d",
+  "fixture_sha256": "5ff3dbbb1c11c7b0ba4e34959c94385cc9b69cfb17b384a4f01e2847d8c7dd08",
+  "arms": {
+    "baseline-harness": {
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a",
+      "include_toolkit": false,
+      "system_prompt_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36"
+    },
+    "halo-harness-only": {
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a",
+      "include_toolkit": false,
+      "system_prompt_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36"
+    },
+    "halo-repo-toolkit-only": {
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a",
+      "include_toolkit": true,
+      "system_prompt_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36"
+    },
+    "halo-combined": {
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a",
+      "include_toolkit": true,
+      "system_prompt_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36"
+    }
+  },
+  "frozen_at": 1786569815.9518118
+}

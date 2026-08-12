@@ -1,0 +1,357 @@
+{
+  "model": "gemini-2.5-flash-lite",
+  "summary": {
+    "tasks_attempted": 11,
+    "correct_runs": 1,
+    "success_rate": 0.09090909090909091,
+    "median_cost_correct": 0.0002338,
+    "total_cost": 0.00424662,
+    "median_duration_correct_ms": 3422.0,
+    "median_tokens_correct": 1607.0,
+    "median_tool_calls_correct": 2.0,
+    "retry_count": 0,
+    "complete_traces": 11,
+    "efficiency_eligible": 1
+  },
+  "runs": [
+    {
+      "task_id": "sat-dev-001:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "3f54a11b0cd0768c1c1aab4ca539d3e7",
+      "duration_ms": 5760,
+      "cost_usd_est": 0.00021924,
+      "input_tokens": 1542,
+      "output_tokens": 12,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-002:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "337b5a7dbc9f613dbdc0ca778c324454",
+      "duration_ms": 3156,
+      "cost_usd_est": 0.00021588,
+      "input_tokens": 1518,
+      "output_tokens": 12,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "fees_and_coinbase",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-003:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "b155ff547036a226f5da9345225320d8",
+      "duration_ms": 5464,
+      "cost_usd_est": 0.00052262,
+      "input_tokens": 2173,
+      "output_tokens": 780,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "satpoint_history",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-004:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "b126aef9af44eb15a2b02eb4529c246b",
+      "duration_ms": 5991,
+      "cost_usd_est": 0.00066514,
+      "input_tokens": 4553,
+      "output_tokens": 99,
+      "gateway_calls": 4,
+      "tool_calls": 3,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "snapshot_utxo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-005:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "1c305549d38c787f9f12c87b61a2fb19",
+      "duration_ms": 5142,
+      "cost_usd_est": 0.00042994,
+      "input_tokens": 2875,
+      "output_tokens": 98,
+      "gateway_calls": 3,
+      "tool_calls": 2,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-006:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "5cdad521dc8c157fa2ec1d637b042a45",
+      "duration_ms": 7547,
+      "cost_usd_est": 0.00070042,
+      "input_tokens": 3195,
+      "output_tokens": 904,
+      "gateway_calls": 3,
+      "tool_calls": 2,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-007:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "e4e8eaee470e479bfab1dce3f5ab2104",
+      "duration_ms": 5033,
+      "cost_usd_est": 0.00020986,
+      "input_tokens": 1475,
+      "output_tokens": 12,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "minimum_certificate",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-008:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "798b053b04602517f40c679a218fc18e",
+      "duration_ms": 3422,
+      "cost_usd_est": 0.0002338,
+      "input_tokens": 1544,
+      "output_tokens": 63,
+      "gateway_calls": 2,
+      "tool_calls": 2,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": true,
+      "efficiency_eligible": true,
+      "scorer_id": "checkpoint_resume",
+      "include_toolkit": false,
+      "score_passed": true,
+      "score_checks": [
+        {
+          "name": "cache_dir",
+          "passed": true
+        },
+        {
+          "name": "checkpoint",
+          "passed": true
+        },
+        {
+          "name": "has_entries",
+          "passed": true
+        },
+        {
+          "name": "content_addressed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-009:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "f60e68d4dc37a075cb0715546afdc016",
+      "duration_ms": 6263,
+      "cost_usd_est": 0.0004137,
+      "input_tokens": 2515,
+      "output_tokens": 220,
+      "gateway_calls": 2,
+      "tool_calls": 6,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "evidence_provenance",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-010:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "6b1af0f981ef44d40478dd495b903dd0",
+      "duration_ms": 3284,
+      "cost_usd_est": 0.00023338,
+      "input_tokens": 1479,
+      "output_tokens": 94,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "new_script",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "has_script",
+          "passed": true
+        },
+        {
+          "name": "has_tests",
+          "passed": false
+        },
+        {
+          "name": "mentions_rpc_or_ord",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sat-dev-011:baseline-dev:r1",
+      "arm": "baseline-dev",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "a67d1d7951ed0977f2c4ae8d61988a78",
+      "duration_ms": 4207,
+      "cost_usd_est": 0.00040264,
+      "input_tokens": 1950,
+      "output_tokens": 463,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    }
+  ]
+}
