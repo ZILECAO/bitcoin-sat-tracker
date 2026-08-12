@@ -1,0 +1,1501 @@
+{
+  "model": "gemini-2.5-flash-lite",
+  "reps": 3,
+  "seed": 42,
+  "by_arm": {
+    "halo-harness-only": {
+      "tasks_attempted": 12,
+      "correct_runs": 0,
+      "success_rate": 0.0,
+      "median_cost_correct": null,
+      "total_cost": 0.0091959,
+      "median_duration_correct_ms": null,
+      "median_tokens_correct": null,
+      "median_tool_calls_correct": null,
+      "retry_count": 0,
+      "complete_traces": 12,
+      "efficiency_eligible": 0
+    },
+    "halo-combined": {
+      "tasks_attempted": 12,
+      "correct_runs": 0,
+      "success_rate": 0.0,
+      "median_cost_correct": null,
+      "total_cost": 0.0091959,
+      "median_duration_correct_ms": null,
+      "median_tokens_correct": null,
+      "median_tool_calls_correct": null,
+      "retry_count": 0,
+      "complete_traces": 12,
+      "efficiency_eligible": 0
+    },
+    "baseline-harness": {
+      "tasks_attempted": 12,
+      "correct_runs": 0,
+      "success_rate": 0.0,
+      "median_cost_correct": null,
+      "total_cost": 0.0091959,
+      "median_duration_correct_ms": null,
+      "median_tokens_correct": null,
+      "median_tool_calls_correct": null,
+      "retry_count": 0,
+      "complete_traces": 12,
+      "efficiency_eligible": 0
+    },
+    "halo-repo-toolkit-only": {
+      "tasks_attempted": 12,
+      "correct_runs": 0,
+      "success_rate": 0.0,
+      "median_cost_correct": null,
+      "total_cost": 0.0091959,
+      "median_duration_correct_ms": null,
+      "median_tokens_correct": null,
+      "median_tool_calls_correct": null,
+      "retry_count": 0,
+      "complete_traces": 12,
+      "efficiency_eligible": 0
+    }
+  },
+  "runs": [
+    {
+      "task_id": "sat-hold-003:halo-harness-only:r3",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "d44e01876f6137c21bf45f3f6b5f39d4",
+      "duration_ms": 6838,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-combined:r3",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "cb7b3a241094656903f09bdb707580e7",
+      "duration_ms": 8140,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:baseline-harness:r1",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "c4aa886b48fbfe754932996874af2e7a",
+      "duration_ms": 2963,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-combined:r2",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "c5261cc35d518ec94abd65263139bf9c",
+      "duration_ms": 1626,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-combined:r1",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "eca32b3a47047c56c4635ad863e6b1a3",
+      "duration_ms": 7836,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-combined:r1",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "b9e0179985187991ca50761b28a4b53d",
+      "duration_ms": 1839,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:halo-repo-toolkit-only:r1",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "fd0b242e5eace48d490c6784b09db450",
+      "duration_ms": 2876,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-harness-only:r1",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "d02988bb003c689a46d9545b50062790",
+      "duration_ms": 13104,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:baseline-harness:r1",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "1af1d8eee79e6e04addbefddd77f0fd5",
+      "duration_ms": 8107,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-harness-only:r1",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "4edc88881ec366c7080d5d84ed59d83a",
+      "duration_ms": 1729,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:halo-combined:r3",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "94b8abc3489f29e13eb13721c0cdb578",
+      "duration_ms": 2964,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-harness-only:r2",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "922ae60489ff32589d8a8d032b8fbe9e",
+      "duration_ms": 1632,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-repo-toolkit-only:r2",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "9076d7de943599734fdf524f4ea9c491",
+      "duration_ms": 13733,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:baseline-harness:r3",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "f656575565d966933a03b3c15ce23f97",
+      "duration_ms": 2922,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-combined:r3",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "3a14da932d3a4c716e161a781f3c167c",
+      "duration_ms": 1740,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:halo-combined:r1",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "0d3793891a8a20bafb0751c864e0f692",
+      "duration_ms": 2814,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:halo-harness-only:r2",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "ad89c20fcb989a46e7db0a3bfbbfb05e",
+      "duration_ms": 2822,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-harness-only:r3",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "d7ea0a74ee944ba1bffc00919e90ab5e",
+      "duration_ms": 13201,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-repo-toolkit-only:r1",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "9663c9eb7133bd53d1b49b45f6ebc837",
+      "duration_ms": 7548,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:halo-repo-toolkit-only:r2",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "04045068fb805ede8979755fa245ad40",
+      "duration_ms": 3135,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-combined:r2",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "e780dcbcb6b54db46471353a44126bb0",
+      "duration_ms": 12947,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:halo-repo-toolkit-only:r3",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "9bd73c1cd6576a9cdfde1413479079aa",
+      "duration_ms": 2988,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:baseline-harness:r1",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "798db806da0d8bea7d1910449738dd24",
+      "duration_ms": 13250,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:baseline-harness:r2",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "f4b77e82ce901ac7cbed3c18217323ac",
+      "duration_ms": 3055,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-repo-toolkit-only:r3",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "daa4df56d71a2799453023ff6dd47a62",
+      "duration_ms": 7445,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-combined:r2",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "763f760ea9ea2ead6a7397e21e4bd9fd",
+      "duration_ms": 7658,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-combined:r3",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "c6ad7aa381987ad874ba0bc805d97ffa",
+      "duration_ms": 12889,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-repo-toolkit-only:r3",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "a616d993abfc30cb1eb241aeedc19b52",
+      "duration_ms": 13660,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:baseline-harness:r1",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "f383b6f8e69f408caaa673fa1d70eb64",
+      "duration_ms": 1683,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-repo-toolkit-only:r2",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "04b78511e0a417addb43577615bef468",
+      "duration_ms": 8484,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-harness-only:r2",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "be66b1e646f77d83c92cd1b1be94e001",
+      "duration_ms": 8060,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-repo-toolkit-only:r1",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "ca5884b12ed651bee23e327f1f0e9c84",
+      "duration_ms": 14133,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:baseline-harness:r2",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "85ecf8d97b682ac06e396928461e84a1",
+      "duration_ms": 8142,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:baseline-harness:r3",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "358de9dcd46ad038e0e3e7b6b9b0e4eb",
+      "duration_ms": 13333,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-combined:r1",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "09013a5a478efe301cbabb7ae957911a",
+      "duration_ms": 13838,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:baseline-harness:r3",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "effd500a1c34591492df0a00fea6ee09",
+      "duration_ms": 1667,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:halo-harness-only:r1",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "53938384fb4bbd62ddcff042a19974cc",
+      "duration_ms": 3200,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:baseline-harness:r2",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "c33c7f9ac15176257c8fd6377459c1f7",
+      "duration_ms": 14227,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-harness-only:r3",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "f48ec8d22097f4087bedeebd90ecec89",
+      "duration_ms": 1717,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-003:halo-combined:r2",
+      "arm": "halo-combined",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "a1659cf1643854896cf4d4402610ad82",
+      "duration_ms": 2838,
+      "cost_usd_est": 0.0002016,
+      "input_tokens": 1376,
+      "output_tokens": 32,
+      "gateway_calls": 2,
+      "tool_calls": 1,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "inscription_attachment",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-repo-toolkit-only:r1",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "4b481f5f841d50115325fea6e9f4e154",
+      "duration_ms": 1535,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-repo-toolkit-only:r3",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "7abbbd77646ecb6ef4219de66527c87e",
+      "duration_ms": 1639,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:baseline-harness:r3",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "bd777d180bc6d117b357955c9ba15d12",
+      "duration_ms": 7846,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-harness-only:r1",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 1,
+      "trace_id": "b0e38548de78ed3d5bb7cf5d55962dae",
+      "duration_ms": 8138,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-002:halo-harness-only:r3",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 3,
+      "trace_id": "db722eef00f6e6d2b2b83e9c94a6f2c4",
+      "duration_ms": 7672,
+      "cost_usd_est": 0.00120148,
+      "input_tokens": 7874,
+      "output_tokens": 354,
+      "gateway_calls": 5,
+      "tool_calls": 4,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "activity_proxy",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": true
+        },
+        {
+          "name": "answer_object",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:baseline-harness:r2",
+      "arm": "baseline-harness",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "94ad2bf139345039ffc6be0084e54912",
+      "duration_ms": 1653,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-001:halo-repo-toolkit-only:r2",
+      "arm": "halo-repo-toolkit-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "3e503dd2f31b30595deef88e0890b58d",
+      "duration_ms": 1748,
+      "cost_usd_est": 0.00011312,
+      "input_tokens": 658,
+      "output_tokens": 75,
+      "gateway_calls": 1,
+      "tool_calls": 0,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "ordinal_fifo",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "task_id": "sat-hold-004:halo-harness-only:r2",
+      "arm": "halo-harness-only",
+      "model": "gemini-2.5-flash-lite",
+      "repeat": 2,
+      "trace_id": "18d1a876d3e29236123c8148abe4bf5f",
+      "duration_ms": 13653,
+      "cost_usd_est": 0.0015491,
+      "input_tokens": 6877,
+      "output_tokens": 2094,
+      "gateway_calls": 3,
+      "tool_calls": 9,
+      "retries": 0,
+      "errors": [],
+      "catalyst_error": null,
+      "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
+      "toolkit_hash": "4f5fe56bed4364367e72f97b8f17b771c44f477c24d90c89f1417fb1ef3fa704",
+      "tests_passed": false,
+      "efficiency_eligible": false,
+      "scorer_id": "public_satoshi_attribution",
+      "include_toolkit": false,
+      "score_passed": false,
+      "score_checks": [
+        {
+          "name": "answer_exists",
+          "passed": false
+        }
+      ]
+    }
+  ]
+}
