@@ -40,12 +40,12 @@ def _answer() -> dict:
         }
     ]
     return {
-        "benchmark_version": "sat-hunt-v1",
+        "benchmark_version": "sat-hunt-v2",
         "snapshot": {"height": 100, "block_hash": block_hash, "confirmations": 6},
         "interpretation": {
             "earliest_means": "lowest ordinal sat number",
             "activity_is_proxy": True,
-            "wallet_attribution": "not inferable from blockchain data",
+            "wallet_attribution": "public heuristic, not proof of ownership",
         },
         "earliest_active_sat": {
             "sat_number": 12,
@@ -55,6 +55,13 @@ def _answer() -> dict:
             "current_output_height": 99,
             "transfers_in_activity_window": 3,
             "inscription_ids": [],
+            "satoshi_attribution": {
+                "policy_id": "public-satoshi-attribution-v1",
+                "excluded": False,
+                "match_source_ids": [],
+                "sources_checked": ["patoshi-addresses-2025-07-15"],
+                "claim": "No exact match in the frozen public Satoshi-attribution set; this does not prove who controls the output.",
+            },
             "evidence_refs": ["ev-all"],
         },
         "earliest_active_inscribed_sat": {
@@ -65,6 +72,13 @@ def _answer() -> dict:
             "current_output_height": 98,
             "transfers_in_activity_window": 4,
             "inscription_ids": [f"{txid}i0"],
+            "satoshi_attribution": {
+                "policy_id": "public-satoshi-attribution-v1",
+                "excluded": False,
+                "match_source_ids": [],
+                "sources_checked": ["patoshi-addresses-2025-07-15"],
+                "claim": "No exact match in the frozen public Satoshi-attribution set; this does not prove who controls the output.",
+            },
             "evidence_refs": ["ev-all"],
         },
         "active_sat_minimality": {
@@ -131,16 +145,33 @@ class SatHuntContractTests(unittest.TestCase):
         benchmark = json.loads(
             (REPO_ROOT / "diligence" / "sat_hunt" / "benchmark.json").read_text()
         )
-        self.assertEqual(benchmark["benchmark_version"], "sat-hunt-v1")
+        self.assertEqual(benchmark["benchmark_version"], "sat-hunt-v2")
         self.assertEqual(benchmark["training"], "out_of_scope")
         self.assertEqual(len(benchmark["arms"]), 4)
         self.assertEqual(benchmark["definitions"]["activity_proxy"]["lookback_blocks"], 4320)
+        self.assertTrue(
+            benchmark["definitions"]["public_satoshi_attribution_filter"]
+            ["origin_rule"]
+            .startswith("Do not exclude a sat only because")
+        )
+
+    def test_attribution_source_is_pinned(self):
+        manifest = json.loads(
+            (REPO_ROOT / "diligence" / "sat_hunt" / "attribution-sources.json").read_text()
+        )
+        self.assertEqual(manifest["benchmark_version"], "sat-hunt-v2")
+        source = manifest["sources"][0]
+        self.assertEqual(source["commit"], "414637ce52aa4819926bf1934b2235ed182a0280")
+        self.assertEqual(
+            source["sha256"],
+            "f649579e286085325a881bec1168e88bbb6f5d67e10b7ef8cb5c65e916a34a2e",
+        )
 
     def test_valid_answer_and_oracle_score(self):
         answer = _answer()
         validated = validate_final_answer(answer)
         oracle = {
-            "benchmark_version": "sat-hunt-v1",
+            "benchmark_version": "sat-hunt-v2",
             "snapshot": answer["snapshot"],
             "earliest_active_sat": answer["earliest_active_sat"],
             "earliest_active_inscribed_sat": answer["earliest_active_inscribed_sat"],
@@ -153,7 +184,7 @@ class SatHuntContractTests(unittest.TestCase):
     def test_wrong_answer_cannot_win_on_cost(self):
         answer = _answer()
         oracle = {
-            "benchmark_version": "sat-hunt-v1",
+            "benchmark_version": "sat-hunt-v2",
             "snapshot": answer["snapshot"],
             "earliest_active_sat": {**answer["earliest_active_sat"], "sat_number": 11},
             "earliest_active_inscribed_sat": answer["earliest_active_inscribed_sat"],
@@ -165,7 +196,16 @@ class SatHuntContractTests(unittest.TestCase):
 
     def test_rejects_wallet_attribution_claim(self):
         answer = _answer()
-        answer["interpretation"]["wallet_attribution"] = "not Satoshi"
+        answer["interpretation"]["wallet_attribution"] = "definitely not Satoshi"
+        with self.assertRaises(SatHuntValidationError):
+            validate_final_answer(answer)
+
+    def test_rejects_candidate_matching_public_attribution_set(self):
+        answer = _answer()
+        answer["earliest_active_sat"]["satoshi_attribution"]["excluded"] = True
+        answer["earliest_active_sat"]["satoshi_attribution"]["match_source_ids"] = [
+            "patoshi-addresses-2025-07-15"
+        ]
         with self.assertRaises(SatHuntValidationError):
             validate_final_answer(answer)
 

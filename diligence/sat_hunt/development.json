@@ -48,5 +48,10 @@
     "id": "sat-dev-010",
     "family": "new_script",
     "goal": "Write and test a new command-line research script that combines Bitcoin RPC and ord data-source interfaces."
+  },
+  {
+    "id": "sat-dev-011",
+    "family": "public_satoshi_attribution",
+    "goal": "Pin, hash, normalize, and test the public Patoshi attribution set; reject exact matches on a candidate's current output without treating Patoshi coinbase origin alone as current ownership."
   }
 ]

@@ -12,13 +12,19 @@ following at the supplied frozen snapshot:
 
 The supplied benchmark definition is authoritative. “Earliest” means the
 lowest ordinal sat number. Recent movement is only a measurable proxy for the
-user's “hot wallet” intent. Blockchain data cannot prove wallet ownership, so
-do not claim that an address is or is not Satoshi Nakamoto's.
+user's “hot wallet” intent. Apply the benchmark's frozen public
+Satoshi-attribution policy to each candidate's **current output**. Exclude an
+exact match, record the source and normalized identifier, and report a passing
+candidate as “no exact match in the frozen public Satoshi-attribution set.”
+This is a public heuristic, not proof of who controls an output. A Patoshi
+coinbase origin alone does not exclude a sat after it has moved to a current
+output that does not match the frozen set.
 
 Your result is not accepted merely because a public explorer returns a
 candidate. You must prove the fixed snapshot, current UTXO, ordinal location,
-recent movement history, inscription state, and global minimality. Global
-minimality requires continuous interval coverage below each candidate.
+recent movement history, public-attribution result, inscription state, and
+global minimality. Global minimality requires continuous interval coverage
+below each candidate.
 
 Create the following in the task workspace:
 

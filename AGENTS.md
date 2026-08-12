@@ -100,7 +100,10 @@ Before pushing Phase 2B results:
 4. Score correctness and proof before cost or speed.
 5. Never call a public-explorer candidate a global Bitcoin minimum unless the
    complete-index and continuous-minimum certificate requirements pass.
-6. Commit only scrubbed traces and results; keep raw model/tool data outside
+6. Apply the frozen public Satoshi-attribution filter to current outputs, not
+   merely to a sat's coinbase origin, and describe it as a heuristic rather
+   than proof of ownership.
+7. Commit only scrubbed traces and results; keep raw model/tool data outside
    Git.
-7. Run the old offline suite and the new sat-hunt suite.
-8. Push the safe implementation and report to `diligence/catalyst-halo`.
+8. Run the old offline suite and the new sat-hunt suite.
+9. Push the safe implementation and report to `diligence/catalyst-halo`.

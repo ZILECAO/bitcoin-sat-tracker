@@ -18,7 +18,8 @@ repository toolkit, not merely suggest a narrow fix to one script.
 
 - No model training, training dry-run, deployment, or GPU rental.
 - Do not instrument or redirect Cursor/Codex's internal model traffic.
-- Do not claim wallet ownership from blockchain data.
+- Do not turn public Satoshi/Patoshi attribution into a claim of certain
+  ownership. Use the frozen sources and their uncertainty labels.
 - Do not claim a globally earliest mainnet sat from an incomplete explorer
   search.
 - Do not optimize cost or latency at the expense of a correct, proven answer.
@@ -33,17 +34,20 @@ Read, in order:
 1. Root `AGENTS.md`.
 2. `docs/catalyst-halo/phase-2-report.md`.
 3. `diligence/sat_hunt/benchmark.json`.
-4. `diligence/sat_hunt/development.json`.
-5. `diligence/sat_hunt/prompts/final-exam.md`.
-6. `diligence/sat_hunt/ordinal.py` and `score.py`.
+4. `diligence/sat_hunt/attribution-sources.json`.
+5. `diligence/sat_hunt/development.json`.
+6. `diligence/sat_hunt/prompts/final-exam.md`.
+7. `diligence/sat_hunt/ordinal.py` and `score.py`.
 
 The prior trace, datasets, HALO result, and failed hosted evals are evidence,
 not inputs to the held-out final exam.
 
 ## Fixed Interpretation of the User's Question
 
-The original wording contains two facts the blockchain cannot prove: who owns
-a wallet and whether it is a “hot wallet.” Use these measurable definitions:
+The original wording contains two facts the blockchain cannot prove by itself:
+who owns a wallet and whether it is a “hot wallet.” Public attribution lists
+do exist, so use a pinned public heuristic for the first question and an
+on-chain movement proxy for the second:
 
 - **Earliest:** the lowest ordinal sat number.
 - **Snapshot:** the mainnet block at tip minus six, frozen once before any
@@ -53,9 +57,17 @@ a wallet and whether it is a “hot wallet.” Use these measurable definitions:
 - **Active:** during the previous 4,320 blocks, the sat moved through at least
   three confirmed non-coinbase transactions, and its current output was also
   created during that window.
-- **Wallet ownership:** not inferable from blockchain data. The activity rule
-  ensures the current output is not an untouched dormant early-miner output;
-  it does not prove who controls it.
+- **Public Satoshi-attribution exclusion:** freeze the sources in
+  `attribution-sources.json` before any final run. Compare the candidate's
+  current outpoint, locking script, standard address, and revealed public key
+  against normalized source records. Exclude exact matches. The accepted
+  claim is “no exact match in the frozen public Satoshi-attribution set,” not
+  “definitely not owned by Satoshi.”
+- **Patoshi origin is not current ownership:** do not exclude a sat merely
+  because it originated in a Patoshi-attributed coinbase. If it moved and its
+  current output is not in the frozen set, it may qualify.
+- **Wallet ownership limit:** the activity and attribution filters do not prove
+  who controls a passing output. Preserve source labels and uncertainty.
 - **Inscribed:** an ord sat index shows at least one inscription attached to the
   sat at or before the snapshot.
 - **Earliest active inscribed sat:** the lowest sat number satisfying both the
@@ -64,6 +76,16 @@ a wallet and whether it is a “hot wallet.” Use these measurable definitions:
 If the user later wants a labeled exchange/custodian requirement, add it as a
 separate, explicitly sourced heuristic. Do not silently equate recent movement
 with a known hot-wallet entity.
+
+The primary membership source is the 21,953-record Patoshi public-key dataset
+at commit `414637ce52aa4819926bf1934b2235ed182a0280`, CSV SHA-256
+`f649579e286085325a881bec1168e88bbb6f5d67e10b7ef8cb5c65e916a34a2e`.
+It covers attributed coinbase outputs, not every later output the same person
+may control. Keep the downloaded CSV outside Git because the source repository
+does not declare a license. Use Sergio Demian Lerner's Patoshi research as the
+method source and Arkham's public Satoshi entity as an independent count/entity
+cross-check. Do not pretend that a count-only Arkham check adds address-level
+coverage.
 
 ## Why the Final Exam Needs a Full Index
 
@@ -108,6 +130,9 @@ Approved data domains when needed:
 - `observability-api.inference.net`
 - `ordinals.com`
 - `mempool.space`
+- `arkm.com`
+- `info.arkm.com`
+- `raw.githubusercontent.com`
 - official Bitcoin Core and ord GitHub/documentation hosts
 
 Treat inscription HTML and SVG content as untrusted. The benchmark needs
@@ -116,7 +141,10 @@ metadata, IDs, satpoints, and hashes—not browser rendering or script execution
 ## Stage 1 — Freeze the Benchmark Before Model Calls
 
 1. Run all existing offline tests and `tests.test_sat_hunt`.
-2. Validate `benchmark.json` and the development manifest.
+2. Validate `benchmark.json`, `attribution-sources.json`, and the development
+   manifest. Fetch the pinned public dataset outside Git, verify its exact
+   SHA-256, normalize exact-match identifiers deterministically, and freeze the
+   derived-set hash. Stop if the content hash differs.
 3. Build a deterministic regtest-like chain fixture large enough to cover:
    - multiple ordered inputs and outputs;
    - split and merged sat ranges;
@@ -126,6 +154,8 @@ metadata, IDs, satpoints, and hashes—not browser rendering or script execution
    - an uninscribed earliest active sat;
    - a different earliest active inscribed sat;
    - inscription pointers and reinscriptions;
+   - exact attribution matches and non-matches on current outputs;
+   - a sat with Patoshi origin that later moved to a nonmatching current output;
    - misleading lower candidates that fail exactly one predicate.
 4. Build two independent implementations of the fixture truth calculation or
    cross-check the generator with pinned `ord` behavior on local regtest.
@@ -172,7 +202,7 @@ Every run record includes:
 
 ## Stage 3 — Development Curriculum and Model Selection
 
-Turn the ten families in `development.json` into deterministic tasks with
+Turn the eleven families in `development.json` into deterministic tasks with
 public prompts and hidden scorers. Add at least four smaller held-out tasks
 that combine capabilities without duplicating the capstone.
 
@@ -233,10 +263,12 @@ Correctness gates include:
 - generated tests pass;
 - exact snapshot and candidate match the hidden oracle;
 - ordinal path, UTXO, activity, and inscription proofs replay;
+- public-attribution source hashes, normalization, and current-output result
+  replay;
 - evidence hashes resolve;
 - continuous interval minimum certificate covers every lower sat range;
 - no hard-coded answer or evaluator access;
-- no unsupported wallet-ownership claim.
+- no unsupported certainty about wallet ownership.
 
 Only correct runs enter cost/latency rankings. Report paired success, cost,
 duration, tokens, tool calls, retries, and trace completeness with uncertainty.
@@ -255,7 +287,8 @@ frozen.
    real transactions, ord responses, and expected evidence. Run the same
    comparison without live-chain drift.
 3. **Live mainnet:** run only if a complete sat index and required transaction
-   history are available. Otherwise exercise the live CLI on bounded candidate
+   history are available. The same frozen public attribution snapshot must be
+   used by every arm. Otherwise exercise the live CLI on bounded candidate
    verification and report that global minimality is not proven.
 
 For the final leaderboard use lexicographic ordering:
@@ -289,6 +322,8 @@ Commit and push:
   workspaces;
 - agent runtime and bounded tool implementations;
 - development and held-out manifests/prompts;
+- pinned attribution-source metadata and a derived-set hash, but not the
+  unlicensed source CSV;
 - baseline and accepted HALO diffs;
 - frozen hash manifest;
 - scrubbed per-run records and aggregate comparisons;

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "benchmark_version": "sat-hunt-v1",
+  "benchmark_version": "sat-hunt-v2",
   "name": "earliest-active-sat-hunt",
   "purpose": "Measure whether an instrumented coding agent can learn a Bitcoin and ordinal research workflow, write reliable scripts, and prove a minimum result.",
   "definitions": {
@@ -21,10 +21,24 @@
       "current_output_must_be_created_in_window": true,
       "claim_limit": "Recent movement is an observable proxy. It does not prove that an output belongs to a hot wallet."
     },
+    "public_satoshi_attribution_filter": {
+      "policy_id": "public-satoshi-attribution-v1",
+      "source_manifest": "diligence/sat_hunt/attribution-sources.json",
+      "rule": "At the frozen snapshot, exclude a candidate when its current output exactly matches a normalized identifier in the frozen public Satoshi-attribution set.",
+      "match_targets": [
+        "current outpoint",
+        "current scriptPubKey hex",
+        "current output address when the script has a standard address",
+        "current output public key when the script reveals one"
+      ],
+      "origin_rule": "Do not exclude a sat only because its coinbase origin is in the Patoshi block set. If it later moved and its current output has no exact match in the frozen attribution set, it may qualify.",
+      "accepted_claim": "No exact match in the frozen public Satoshi-attribution set.",
+      "claim_limit": "This is a sourced public heuristic, not cryptographic proof that Satoshi does or does not control the current output."
+    },
     "wallet_attribution": {
-      "rule": "Wallet ownership, including ownership by Satoshi Nakamoto, is not inferable from blockchain data alone.",
-      "practical_interpretation": "The active candidate cannot be an untouched dormant early-miner output because its current output and recent movement must satisfy the activity proxy.",
-      "prohibited_claim": "Do not state that an address or output is or is not owned by Satoshi without an explicit external attribution source and uncertainty label."
+      "rule": "Use the frozen public attribution filter for the benchmark, while treating real-world ownership as uncertain.",
+      "practical_interpretation": "The candidate must pass both the recent-activity rule and the public-attribution exclusion rule.",
+      "prohibited_claim": "Do not say that an address is definitely owned or not owned by Satoshi. Report exact source matches, source versions, and uncertainty."
     },
     "inscribed": "At least one inscription is attached to the sat by the frozen snapshot according to an ord sat index.",
     "mainnet_proof": "A global minimum requires a Bitcoin Core mainnet node with transaction data plus an ord index created with --index-sats, or an independently verified equivalent. A public explorer candidate without complete minimum coverage is not proof."

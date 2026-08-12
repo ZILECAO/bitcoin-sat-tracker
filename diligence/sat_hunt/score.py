@@ -8,6 +8,12 @@ from typing import Any
 HEX_64 = re.compile(r"^[0-9a-f]{64}$")
 OUTPOINT = re.compile(r"^[0-9a-f]{64}:[0-9]+$")
 TRACE_ID = re.compile(r"^[0-9a-f]{32}$")
+ATTRIBUTION_POLICY_ID = "public-satoshi-attribution-v1"
+ATTRIBUTION_SOURCE_ID = "patoshi-addresses-2025-07-15"
+ATTRIBUTION_PASS_CLAIM = (
+    "No exact match in the frozen public Satoshi-attribution set; "
+    "this does not prove who controls the output."
+)
 
 
 class SatHuntValidationError(ValueError):
@@ -44,6 +50,7 @@ def _validate_candidate(value: Any, label: str, *, require_inscription: bool) ->
             "current_output_height",
             "transfers_in_activity_window",
             "inscription_ids",
+            "satoshi_attribution",
             "evidence_refs",
         ),
         label,
@@ -68,6 +75,41 @@ def _validate_candidate(value: Any, label: str, *, require_inscription: bool) ->
             raise SatHuntValidationError(f"{label}.{field} must be a list of strings")
     if require_inscription and not candidate["inscription_ids"]:
         raise SatHuntValidationError(f"{label} must contain at least one inscription")
+
+    attribution = _require_object(
+        candidate["satoshi_attribution"], f"{label}.satoshi_attribution"
+    )
+    _require_keys(
+        attribution,
+        ("policy_id", "excluded", "match_source_ids", "sources_checked", "claim"),
+        f"{label}.satoshi_attribution",
+    )
+    if attribution["policy_id"] != ATTRIBUTION_POLICY_ID:
+        raise SatHuntValidationError(
+            f"{label}.satoshi_attribution.policy_id must be {ATTRIBUTION_POLICY_ID}"
+        )
+    if attribution["excluded"] is not False:
+        raise SatHuntValidationError(
+            f"{label} cannot be selected when its current output matches the attribution set"
+        )
+    if attribution["match_source_ids"] != []:
+        raise SatHuntValidationError(
+            f"{label}.satoshi_attribution.match_source_ids must be empty for a passing candidate"
+        )
+    if not isinstance(attribution["sources_checked"], list) or not all(
+        isinstance(item, str) and item for item in attribution["sources_checked"]
+    ):
+        raise SatHuntValidationError(
+            f"{label}.satoshi_attribution.sources_checked must be a list of strings"
+        )
+    if ATTRIBUTION_SOURCE_ID not in attribution["sources_checked"]:
+        raise SatHuntValidationError(
+            f"{label}.satoshi_attribution.sources_checked must include {ATTRIBUTION_SOURCE_ID}"
+        )
+    if attribution["claim"] != ATTRIBUTION_PASS_CLAIM:
+        raise SatHuntValidationError(
+            f"{label}.satoshi_attribution.claim must use the benchmark uncertainty language"
+        )
     return candidate
 
 
@@ -123,8 +165,8 @@ def validate_final_answer(answer: Any) -> dict[str, Any]:
         ),
         "answer",
     )
-    if answer["benchmark_version"] != "sat-hunt-v1":
-        raise SatHuntValidationError("benchmark_version must be sat-hunt-v1")
+    if answer["benchmark_version"] != "sat-hunt-v2":
+        raise SatHuntValidationError("benchmark_version must be sat-hunt-v2")
 
     snapshot = _require_object(answer["snapshot"], "snapshot")
     _require_keys(snapshot, ("height", "block_hash", "confirmations"), "snapshot")
@@ -143,8 +185,10 @@ def validate_final_answer(answer: Any) -> dict[str, Any]:
         raise SatHuntValidationError("earliest must mean lowest ordinal sat number")
     if interpretation["activity_is_proxy"] is not True:
         raise SatHuntValidationError("answer must state that activity is a proxy")
-    if interpretation["wallet_attribution"] != "not inferable from blockchain data":
-        raise SatHuntValidationError("answer must not claim wallet ownership from chain data")
+    if interpretation["wallet_attribution"] != "public heuristic, not proof of ownership":
+        raise SatHuntValidationError(
+            "answer must describe public wallet attribution as a heuristic"
+        )
 
     active = _validate_candidate(answer["earliest_active_sat"], "earliest_active_sat", require_inscription=False)
     inscribed = _validate_candidate(
