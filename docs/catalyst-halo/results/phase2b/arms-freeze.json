@@ -19,15 +19,16 @@
     "halo-repo-toolkit-only": {
       "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
       "toolkit_hash": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a",
-      "include_toolkit": true,
+      "include_toolkit": false,
       "system_prompt_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36"
     },
     "halo-combined": {
       "harness_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36",
       "toolkit_hash": "8b1cecd465ebfe17e8f4a4cad44ebc50e4144fa94390ce8372d44ca2d1793c0a",
-      "include_toolkit": true,
+      "include_toolkit": false,
       "system_prompt_hash": "b7b1fabb7403b7ca77efc9ca37eaf546a60b65d1c677d2b6c739c8cda5e78a36"
     }
   },
-  "frozen_at": 1786569815.9518118
+  "frozen_at": 1786569854.4725378,
+  "halo_status": "fail_closed_incomplete_final_answer"
 }

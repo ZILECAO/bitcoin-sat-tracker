@@ -110,17 +110,33 @@ def score_task(task: dict[str, Any], workspace: Path, state: dict[str, Any]):
 
 
 def arm_config(arm: str) -> tuple[str, bool]:
+    """Return (system_prompt, include_toolkit) for a frozen comparison arm.
+
+    When HALO fail-closed with no accepted diffs, harness and toolkit hashes
+    match baseline for every arm (include_toolkit stays False).
+    """
+    # Loaded accepted-change flags from suggestion map when present.
+    suggestion_map = Path("docs/catalyst-halo/results/phase2b/halo-suggestion-map.json")
+    accepted_harness = False
+    accepted_toolkit = False
+    if suggestion_map.exists():
+        payload = json.loads(suggestion_map.read_text())
+        for change in payload.get("accepted_changes") or []:
+            kind = change.get("kind") or change.get("classification")
+            if kind in ("harness-only", "harness"):
+                accepted_harness = True
+            if kind in ("repository-toolkit-only", "toolkit"):
+                accepted_toolkit = True
+    halo_system = HALO_HARNESS_SYSTEM if accepted_harness else BASELINE_SYSTEM
     if arm == "baseline-harness":
         return BASELINE_SYSTEM, False
     if arm == "halo-harness-only":
-        return HALO_HARNESS_SYSTEM, False
+        return halo_system, False
     if arm == "halo-repo-toolkit-only":
-        return BASELINE_SYSTEM, True
+        return BASELINE_SYSTEM, bool(accepted_toolkit)
     if arm == "halo-combined":
-        return HALO_HARNESS_SYSTEM, True
-    if arm == "model-select":
-        return BASELINE_SYSTEM, False
-    if arm == "baseline-dev":
+        return halo_system, bool(accepted_toolkit)
+    if arm in ("model-select", "baseline-dev"):
         return BASELINE_SYSTEM, False
     raise ValueError(f"unknown arm: {arm}")
 
@@ -153,7 +169,17 @@ def run_one(
     )
     prompt = load_prompt(task)
     run = agent.run(prompt)
-    score = score_task(task, ws, state)
+    try:
+        score = score_task(task, ws, state)
+    except Exception as exc:  # noqa: BLE001
+        from diligence.sat_hunt.scorers import ScoreResult
+
+        score = ScoreResult(
+            task.get("scorer_id") or "unknown",
+            False,
+            [{"name": "scorer_exception", "passed": False, "detail": f"{type(exc).__name__}: {exc}"}],
+            detail=str(exc),
+        )
     record = {
         **run,
         "repeat": repeat,
@@ -541,32 +567,20 @@ def cmd_final(args: argparse.Namespace) -> None:
 def cmd_freeze_arms(args: argparse.Namespace) -> None:
     state = load_state()
     model = args.model or json.loads((RESULTS / "model-selection.json").read_text())["selected_model"]
-    arms = {
-        "baseline-harness": {
-            "harness_hash": harness_hash(BASELINE_SYSTEM),
+    arms: dict[str, Any] = {}
+    for arm in (
+        "baseline-harness",
+        "halo-harness-only",
+        "halo-repo-toolkit-only",
+        "halo-combined",
+    ):
+        system, toolkit = arm_config(arm)
+        arms[arm] = {
+            "harness_hash": harness_hash(system),
             "toolkit_hash": _toolkit_hash(),
-            "include_toolkit": False,
-            "system_prompt_hash": harness_hash(BASELINE_SYSTEM),
-        },
-        "halo-harness-only": {
-            "harness_hash": harness_hash(HALO_HARNESS_SYSTEM),
-            "toolkit_hash": _toolkit_hash(),
-            "include_toolkit": False,
-            "system_prompt_hash": harness_hash(HALO_HARNESS_SYSTEM),
-        },
-        "halo-repo-toolkit-only": {
-            "harness_hash": harness_hash(BASELINE_SYSTEM),
-            "toolkit_hash": _toolkit_hash(),
-            "include_toolkit": True,
-            "system_prompt_hash": harness_hash(BASELINE_SYSTEM),
-        },
-        "halo-combined": {
-            "harness_hash": harness_hash(HALO_HARNESS_SYSTEM),
-            "toolkit_hash": _toolkit_hash(),
-            "include_toolkit": True,
-            "system_prompt_hash": harness_hash(HALO_HARNESS_SYSTEM),
-        },
-    }
+            "include_toolkit": toolkit,
+            "system_prompt_hash": harness_hash(system),
+        }
     payload = {
         "benchmark_version": "sat-hunt-v2",
         "selected_model": model,
@@ -574,6 +588,11 @@ def cmd_freeze_arms(args: argparse.Namespace) -> None:
         "fixture_sha256": fixture_sha256(state["fixture"]),
         "arms": arms,
         "frozen_at": time.time(),
+        "halo_status": (
+            json.loads((RESULTS / "halo-suggestion-map.json").read_text()).get("status")
+            if (RESULTS / "halo-suggestion-map.json").exists()
+            else None
+        ),
     }
     write_json(RESULTS / "arms-freeze.json", payload)
     print(json.dumps(payload, indent=2))

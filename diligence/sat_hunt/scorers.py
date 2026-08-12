@@ -54,6 +54,10 @@ def _read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _as_object(data: Any) -> dict[str, Any] | None:
+    return data if isinstance(data, dict) else None
+
+
 def score_ordinal_fifo(workspace: Path, fixture: dict[str, Any]) -> ScoreResult:
     demo = fixture["fee_demo"]
     answer_path = workspace / "answers" / "fifo.json"
@@ -61,6 +65,9 @@ def score_ordinal_fifo(workspace: Path, fixture: dict[str, Any]) -> ScoreResult:
     if not answer_path.exists():
         return ScoreResult("ordinal_fifo", False, checks, "missing answers/fifo.json")
     data = _read_json(answer_path)
+    if not isinstance(data, dict):
+        checks.append(_check("answer_object", False, "expected JSON object"))
+        return ScoreResult("ordinal_fifo", False, checks, "answer not object")
     expected_out, expected_fee = assign_ordinal_ranges(demo["input_ranges"], demo["output_values"])
     checks.append(_check("output_ranges", data.get("output_ranges") == expected_out))
     checks.append(_check("fee_ranges", data.get("fee_ranges") == expected_fee))
@@ -75,6 +82,9 @@ def score_fees_and_coinbase(workspace: Path, fixture: dict[str, Any]) -> ScoreRe
     if not path.exists():
         return ScoreResult("fees_and_coinbase", False, checks)
     data = _read_json(path)
+    if not isinstance(data, dict):
+        checks.append(_check("answer_object", False, "expected JSON object"))
+        return ScoreResult("fees_and_coinbase", False, checks)
     expected = fixture["fee_demo"]["coinbase_fee_reassignment"]["assigned_ranges"]
     checks.append(_check("coinbase_ranges", data.get("coinbase_assigned_ranges") == expected))
     checks.append(_check("mentions_coinbase", "coinbase" in json.dumps(data).lower()))
@@ -88,6 +98,9 @@ def score_satpoint_history(workspace: Path, fixture: dict[str, Any]) -> ScoreRes
     if not path.exists():
         return ScoreResult("satpoint_history", False, checks)
     data = _read_json(path)
+    if not isinstance(data, dict):
+        checks.append(_check("answer_object", False, "expected JSON object"))
+        return ScoreResult("satpoint_history", False, checks)
     hops = data.get("hops") or data.get("history") or []
     checks.append(_check("has_hops", isinstance(hops, list) and len(hops) >= 4))
     final = fixture["sat_index"][str(sat)]["outpoint"]
@@ -106,6 +119,9 @@ def score_snapshot_utxo(workspace: Path, fixture: dict[str, Any]) -> ScoreResult
     if not path.exists():
         return ScoreResult("snapshot_utxo", False, checks)
     data = _read_json(path)
+    if not isinstance(data, dict):
+        checks.append(_check("answer_object", False, "expected JSON object"))
+        return ScoreResult("snapshot_utxo", False, checks)
     checks.append(_check("height", data.get("snapshot_height") == fixture["snapshot"]["height"]))
     checks.append(
         _check("block_hash", data.get("snapshot_block_hash") == fixture["snapshot"]["block_hash"])
@@ -121,6 +137,9 @@ def score_activity_proxy(workspace: Path, fixture: dict[str, Any]) -> ScoreResul
     if not path.exists():
         return ScoreResult("activity_proxy", False, checks)
     data = _read_json(path)
+    if not isinstance(data, dict):
+        checks.append(_check("answer_object", False, "expected JSON object"))
+        return ScoreResult("activity_proxy", False, checks)
     checks.append(
         _check(
             "transfers",
@@ -142,6 +161,9 @@ def score_inscription_attachment(workspace: Path, fixture: dict[str, Any]) -> Sc
     if not path.exists():
         return ScoreResult("inscription_attachment", False, checks)
     data = _read_json(path)
+    if not isinstance(data, dict):
+        checks.append(_check("answer_object", False, "expected JSON object"))
+        return ScoreResult("inscription_attachment", False, checks)
     got = data.get("inscription_ids") or []
     checks.append(_check("ids_match", sorted(got) == sorted(expected)))
     checks.append(_check("reinscription_count", len(got) >= 2))
@@ -155,6 +177,9 @@ def score_minimum_certificate(workspace: Path, fixture: dict[str, Any]) -> Score
     if not path.exists():
         return ScoreResult("minimum_certificate", False, checks)
     data = _read_json(path)
+    if not isinstance(data, dict):
+        checks.append(_check("answer_object", False, "expected JSON object"))
+        return ScoreResult("minimum_certificate", False, checks)
     intervals = data.get("covered_intervals") or []
     checks.append(_check("complete", data.get("complete") is True))
     checks.append(_check("candidate", data.get("candidate_sat") == sat))
@@ -178,8 +203,11 @@ def score_checkpoint_resume(workspace: Path, fixture: dict[str, Any]) -> ScoreRe
     ]
     if checkpoint.exists():
         data = _read_json(checkpoint)
-        checks.append(_check("has_entries", bool(data.get("completed_queries"))))
-        checks.append(_check("content_addressed", bool(data.get("content_hashes"))))
+        if not isinstance(data, dict):
+            checks.append(_check("checkpoint_object", False))
+        else:
+            checks.append(_check("has_entries", bool(data.get("completed_queries"))))
+            checks.append(_check("content_addressed", bool(data.get("content_hashes"))))
     return ScoreResult("checkpoint_resume", all(c["passed"] for c in checks), checks)
 
 
@@ -223,6 +251,9 @@ def score_public_satoshi_attribution(
     if not path.exists():
         return ScoreResult("public_satoshi_attribution", False, checks)
     data = _read_json(path)
+    if not isinstance(data, dict):
+        checks.append(_check("answer_object", False, "expected JSON object"))
+        return ScoreResult("public_satoshi_attribution", False, checks)
     checks.append(_check("csv_sha", data.get("csv_sha256") == EXPECTED_CSV_SHA256))
     checks.append(_check("records", data.get("record_count") == EXPECTED_RECORDS))
     tracked = fixture["tracked_sats"]
